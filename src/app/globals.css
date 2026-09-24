@@ -1,0 +1,475 @@
+@import 'tailwindcss';
+@import '../styles/tokens.css';
+
+/* ═══════════════════════════════════════════════════════════════════════
+   Tailwind is used for layout only (grid, flex, spacing). Every visual
+   decision lives in a named class below, so changing how something looks
+   means editing one rule here — not hunting through JSX.
+   ═══════════════════════════════════════════════════════════════════════ */
+
+@theme inline {
+  --font-sans: var(--sans);
+  --font-serif: var(--serif);
+  --font-mono: var(--mono);
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-line: var(--line);
+  --color-ink: var(--ink);
+  --color-accent: var(--accent);
+}
+
+/* ══ BASE ══════════════════════════════════════════════════════════════ */
+@layer base {
+  * { -webkit-tap-highlight-color: transparent; }
+  html { scroll-behavior: smooth; font-size: 16px; -webkit-text-size-adjust: 100%; }
+  @media (min-width: 1800px) { html { font-size: 17.5px } }
+  @media (min-width: 2400px) { html { font-size: 19px } }
+
+  body {
+    background: var(--canvas);
+    color: var(--ink);
+    font: 400 1.02rem/1.7 var(--sans);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    transition: background 0.35s var(--ease), color 0.35s var(--ease);
+  }
+  /* Arabic and Chinese get their own faces; the serif display is Latin-only. */
+  html[dir='rtl'] body { font-family: var(--font-arabic), var(--sans); }
+  html[lang='zh-Hans'] body { font-family: var(--font-sc), var(--sans); }
+
+  a { color: inherit; text-decoration: none; }
+  img, svg { display: block; max-width: 100%; }
+  ::selection { background: var(--accent); color: var(--on-accent); }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+}
+
+/* ══ TYPE ══════════════════════════════════════════════════════════════
+   Named display sizes rather than raw h1/h2, so heading level (semantics)
+   and heading size (visual) can be chosen independently.                */
+@layer components {
+  .t-hero, .t-title, .t-sub {
+    font-family: var(--serif);
+    font-weight: 400;
+    text-wrap: balance;
+  }
+  .t-hero  { font-size: clamp(2.5rem, 6vw, 5.2rem);  line-height: 1.02; letter-spacing: -0.028em }
+  .t-title { font-size: clamp(1.7rem, 3.6vw, 3rem);  line-height: 1.1;  letter-spacing: -0.022em; max-width: 22ch }
+  .t-sub   { font-size: clamp(1.15rem, 1.9vw, 1.5rem); line-height: 1.22; letter-spacing: -0.014em }
+  /* Italic is the emphasis mechanism in this system — never bold, never a
+     second colour on Latin text. */
+  .t-hero em, .t-title em { font-style: italic; color: var(--ink-2) }
+
+  /* Arabic and Chinese have no true italic, and browsers synthesise a slant
+     that looks broken in those scripts. Those locales get a tonal shift
+     instead, which carries the same emphasis without faking a cut. */
+  html[dir='rtl'] :is(.t-hero, .t-title) em,
+  html[lang='zh-Hans'] :is(.t-hero, .t-title) em {
+    font-style: normal;
+    color: var(--accent);
+  }
+
+  .t-lede { font-size: clamp(1.05rem, 1.5vw, 1.28rem); line-height: 1.62; color: var(--ink-2); font-weight: 300; max-width: 48ch }
+  .t-mono { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 500 }
+  .t-num  { font-variant-numeric: tabular-nums }
+
+  .shell { max-width: var(--measure); margin-inline: auto; padding-inline: var(--gutter); width: 100% }
+  .section { padding-block: clamp(56px, 8vw, 116px) }
+  .section-tight { padding-block: 0 clamp(56px, 8vw, 116px) }
+
+  /* ── the signature motif: a labelled hairline that runs to the edge ── */
+  .rail { display: flex; align-items: center; gap: 14px; color: var(--ink-3) }
+  .rail::after { content: ''; flex: 1; height: 1px; background: var(--line) }
+  .rail-tick { width: 6px; height: 6px; border: 1px solid var(--accent); flex: none }
+
+  /* ── reveal on scroll ── */
+  .reveal { opacity: 0; transform: translateY(12px); transition: opacity var(--slow) var(--ease), transform var(--slow) var(--ease) }
+  .reveal.is-in { opacity: 1; transform: none }
+
+  /* ── buttons ── */
+  .btn {
+    height: 52px; padding-inline: 26px;
+    display: inline-flex; align-items: center; gap: 11px;
+    border: 1px solid transparent; border-radius: var(--r);
+    font: 500 0.93rem var(--sans); cursor: pointer;
+    transition: var(--fast) var(--ease); white-space: nowrap;
+  }
+  .btn svg { width: 15px; height: 15px; flex: none; transition: transform var(--fast) var(--ease) }
+  .btn--primary { background: var(--accent); color: var(--on-accent) }
+  .btn--primary:hover { background: var(--accent-hover) }
+  .btn--primary:hover svg:last-child { transform: translateX(4px) }
+  html[dir='rtl'] .btn--primary:hover svg:last-child { transform: translateX(-4px) }
+  .btn--ghost { border-color: var(--line-strong); color: var(--ink) }
+  .btn--ghost:hover { border-color: var(--ink); background: var(--surface) }
+  .btn-row { display: flex; gap: 12px; flex-wrap: wrap }
+
+  .link-accent { color: var(--accent); font-size: 0.9rem; font-weight: 500; display: inline-flex; align-items: center; gap: 9px }
+  .link-accent svg { width: 14px; height: 14px; transition: transform var(--fast) var(--ease) }
+  .link-accent:hover svg { transform: translateX(4px) }
+  html[dir='rtl'] .link-accent:hover svg { transform: translateX(-4px) }
+
+  /* ── chips ── */
+  .chips { display: flex; gap: 6px; flex-wrap: wrap }
+  .chips > span {
+    font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.09em;
+    text-transform: uppercase; color: var(--ink-3);
+    border: 1px solid var(--line); padding: 0.22rem 0.5rem;
+  }
+
+  /* ══ HEADER ══ */
+  .site-header {
+    position: sticky; top: 0; z-index: 80;
+    background: color-mix(in srgb, var(--canvas) 88%, transparent);
+    backdrop-filter: blur(14px); border-bottom: 1px solid var(--line);
+    padding-top: env(safe-area-inset-top);
+  }
+  .site-nav { max-width: var(--measure); margin-inline: auto; padding-inline: var(--gutter);
+    height: clamp(62px, 8vh, 74px); display: flex; align-items: center; justify-content: space-between; gap: 20px }
+  /* min-width:0 lets the name truncate instead of forcing the header wider
+     than the viewport — the cause of a 39px mobile overflow if omitted. */
+  .brand { display: flex; align-items: center; gap: 13px; min-width: 0 }
+  .brand-name { display: block; font-family: var(--serif); font-weight: 500; font-size: 1.02rem;
+    letter-spacing: -0.015em; line-height: 1.2; white-space: nowrap;
+    overflow: hidden; text-overflow: ellipsis }
+  .brand-role { display: block; color: var(--ink-3); font-size: 0.58rem }
+  .sigil { width: 34px; height: 34px; border: 1px solid var(--line-strong); display: grid; place-items: center; flex: none }
+  .sigil i { display: block; width: 12px; height: 12px; border-top: 1px solid var(--accent);
+    border-right: 1px solid var(--accent); transform: rotate(45deg) translate(-1px, 1px) }
+
+  .nav-links { display: flex; gap: 4px }
+  .nav-link { padding: 0.5rem 0.78rem; font-size: 0.87rem; color: var(--ink-2); transition: color var(--fast); position: relative }
+  .nav-link:hover { color: var(--ink) }
+  .nav-link[aria-current='page'] { color: var(--ink) }
+  .nav-link[aria-current='page']::after { content: ''; position: absolute; inset-inline: 0.78rem;
+    bottom: -0.15rem; height: 1.5px; background: var(--accent) }
+
+  .icon-btn { width: 38px; height: 38px; border: 1px solid var(--line); border-radius: var(--r);
+    background: none; color: var(--ink-2); display: grid; place-items: center; cursor: pointer; transition: var(--fast) }
+  .icon-btn:hover { border-color: var(--line-strong); color: var(--ink) }
+  .icon-btn svg { width: 16px; height: 16px }
+
+  .pill-btn { height: 38px; padding-inline: 12px; border: 1px solid var(--line); border-radius: var(--r);
+    background: none; color: var(--ink-2); font: 400 0.82rem var(--sans); cursor: pointer;
+    display: flex; align-items: center; gap: 7px; transition: var(--fast) }
+  .pill-btn:hover { border-color: var(--line-strong); color: var(--ink) }
+  .pill-btn svg { width: 14px; height: 14px }
+  .pill-cta { height: 38px; padding-inline: 16px; display: grid; place-items: center;
+    background: var(--accent); color: var(--on-accent); border-radius: var(--r); font: 500 0.82rem var(--sans) }
+  .pill-cta:hover { background: var(--accent-hover) }
+
+  /* language menu */
+  .menu-pop { position: absolute; inset-inline-end: 0; top: 46px; width: 214px; z-index: 90;
+    background: var(--raised); border: 1px solid var(--line-strong); border-radius: var(--r-lg); padding: 5px }
+  .menu-item { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    padding: 0.6rem 0.7rem; background: none; border: 0; color: var(--ink-2); font: 400 0.9rem var(--sans);
+    cursor: pointer; text-align: start; transition: var(--fast) }
+  .menu-item:hover { background: var(--surface); color: var(--ink) }
+  .menu-item[aria-current='true'] { color: var(--accent) }
+
+  /* ══ MOBILE DRAWER ══ */
+  .drawer { position: fixed; inset: 0; z-index: 200; display: flex; flex-direction: column;
+    background: var(--canvas); overflow-y: auto; overscroll-behavior: contain;
+    padding: calc(env(safe-area-inset-top) + 14px) var(--gutter) calc(env(safe-area-inset-bottom) + 24px);
+    transform: translateY(-100%); transition: transform 0.42s var(--ease) }
+  .drawer[data-open='true'] { transform: none }
+  .drawer-link { display: flex; align-items: baseline; gap: 14px;
+    padding-block: clamp(14px, 2.4vh, 20px); border-bottom: 1px solid var(--line);
+    font-family: var(--serif); font-size: clamp(1.6rem, 7vw, 2.2rem); letter-spacing: -0.022em; color: var(--ink) }
+  .drawer-link[aria-current='page'] { color: var(--accent) }
+
+  /* ══ HERO ══ */
+  .hero { position: relative; overflow: hidden; border-bottom: 1px solid var(--line);
+    padding-block: clamp(48px, 8vw, 112px) clamp(44px, 6vw, 84px) }
+  /* the visible 12-column rule grid — the institutional cue */
+  .hero-grid { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(12, 1fr);
+    max-width: var(--measure); margin-inline: auto; padding-inline: var(--gutter);
+    pointer-events: none; opacity: 0.55 }
+  .hero-grid > span { border-inline-start: 1px solid var(--line) }
+  .hero-grid > span:last-child { border-inline-end: 1px solid var(--line) }
+  .hero-body { position: relative; display: grid; grid-template-columns: 1.55fr 0.95fr;
+    gap: clamp(28px, 5vw, 72px); align-items: end }
+
+  .availability { display: inline-flex; align-items: center; gap: 9px; font-size: 0.82rem; color: var(--ink-2) }
+  .availability i { width: 7px; height: 7px; border-radius: 50%; background: var(--ok); flex: none;
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--ok) 20%, transparent) }
+
+  /* ── Photography ──
+     Every image sits in a bordered plate. A hairline border is this system's
+     only vocabulary for "distinct object", so a bled image reads as a mistake. */
+  .figure-plate { position: relative; overflow: hidden;
+    border: 1px solid var(--line-strong); background: var(--surface) }
+  .figure-img { width: 100%; height: 100%; object-fit: cover; object-position: center 22% }
+  .figure-caption { position: absolute; inset-block-end: 0; inset-inline: 0;
+    display: flex; justify-content: space-between; gap: 8px; padding: 9px 13px;
+    color: var(--ink-3); background: var(--canvas); border-top: 1px solid var(--line-strong) }
+  /* Wide plates frame a scene, but the subject's head still sits in the upper
+     third — computed against the 1111×596 source at a 300px band height, his
+     face lands at ~25% rather than the centre. */
+  .figure-plate.is-wide .figure-img { object-position: center 30% }
+  .figure-plate.is-band .figure-img { object-position: center 25% }
+
+  .portrait { max-width: 380px }
+  .hero-aside { display: flex; flex-direction: column; gap: 22px }
+  .hero-facts { display: grid; gap: 14px; max-width: 380px }
+  .hero-fact { display: flex; gap: 12px; align-items: flex-start;
+    border-top: 1px solid var(--line); padding-block-start: 14px }
+  .hero-fact-icon { width: 17px; height: 17px; flex: none; margin-block-start: 3px; color: var(--accent) }
+  .hero-fact .fact-value { font-size: 0.92rem; line-height: 1.45 }
+
+  /* ══ INTRO WITH PHOTO (about, contact) ══ */
+  .intro-split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 0.44fr);
+    gap: clamp(28px, 5vw, 64px); align-items: start }
+  .intro-split .figure-plate { max-width: 420px }
+
+  /* A full-width scene plate between sections. Height is capped rather than
+     driven by aspect ratio: at 1440px wide a 21:9 strip would be 617px tall and
+     dominate the page, and it would upscale the source well past what it can
+     carry. 300px keeps the widest photo (1111px) inside ~1.3x. */
+  .band { border-block: 1px solid var(--line) }
+  .band .figure-plate { border-inline: 0; border-block: 0 }
+  .figure-plate.is-band { height: clamp(180px, 24vw, 300px) }
+
+  /* ══ FIGURES — numbers are the hero ══ */
+  .figures { border-bottom: 1px solid var(--line) }
+  .figures-row { display: grid; grid-template-columns: repeat(4, 1fr) }
+  .figure { padding-block: clamp(30px, 4vw, 52px); padding-inline-end: 24px }
+  .figure + .figure { padding-inline-start: clamp(18px, 3vw, 40px); border-inline-start: 1px solid var(--line) }
+  .figure-key { display: block; color: var(--ink-3); margin-block-end: 14px }
+  .figure-value { font-family: var(--serif); font-size: clamp(2.3rem, 5vw, 3.9rem); line-height: 0.92;
+    letter-spacing: -0.03em; font-variant-numeric: tabular-nums }
+  .figure-value sup { font-family: var(--mono); font-size: 0.24em; font-weight: 500;
+    letter-spacing: 0.08em; color: var(--accent); top: -1.4em; margin-inline-start: 4px }
+  .figure-note { margin-block-start: 12px; font-size: 0.85rem; line-height: 1.5 }
+
+  /* ══ SECTION HEAD ══ */
+  .sec-head { display: grid; grid-template-columns: 0.3fr 0.7fr; gap: clamp(20px, 4vw, 56px);
+    align-items: start; margin-block-end: clamp(34px, 5vw, 60px) }
+
+  /* ══ PLATES (capabilities / services) ══ */
+  .plates { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px;
+    background: var(--line); border: 1px solid var(--line) }
+  .plate { background: var(--canvas); padding: clamp(24px, 3vw, 38px); transition: background 0.3s var(--ease); position: relative }
+  .plate:hover { background: var(--surface) }
+  .plate::before { content: ''; position: absolute; inset-block: 0; inset-inline-start: 0; width: 2px;
+    background: var(--accent); transform: scaleY(0); transform-origin: top; transition: transform 0.3s var(--ease) }
+  .plate:hover::before { transform: scaleY(1) }
+  .plate-index { display: block; color: var(--ink-3); margin-block-end: 20px }
+  .plate p { font-size: 0.94rem; line-height: 1.62; margin-block-start: 12px }
+
+  /* ══ REGISTER ══ */
+  .register { border-block-start: 1px solid var(--line-strong) }
+  .reg-grid { display: grid; grid-template-columns: 104px 1fr 0.38fr 132px 62px; gap: clamp(12px, 2vw, 24px); align-items: center }
+  .reg-head { padding-block: 12px; border-bottom: 1px solid var(--line); color: var(--ink-3) }
+  .reg-row { padding-block: clamp(15px, 2vw, 19px); border-bottom: 1px solid var(--line);
+    position: relative; transition: background var(--fast) var(--ease) }
+  .reg-row::before { content: ''; position: absolute; inset-block: 0; inset-inline-start: calc(var(--gutter) * -1);
+    width: 2px; background: var(--accent); opacity: 0; transition: opacity var(--fast) var(--ease) }
+  .reg-row:hover { background: var(--surface) }
+  .reg-row:hover::before { opacity: 1 }
+  .reg-capacity { font-family: var(--serif); font-size: 1.32rem; letter-spacing: -0.022em;
+    font-variant-numeric: tabular-nums; white-space: nowrap }
+  .reg-capacity sub { font-family: var(--mono); font-size: 0.5em; letter-spacing: 0.06em;
+    color: var(--ink-3); bottom: 0; margin-inline-start: 3px }
+  .reg-title { font-size: 0.97rem }
+  .reg-client { font-size: 0.86rem; color: var(--ink-2); font-weight: 300 }
+  .reg-stage { display: flex; align-items: center; gap: 8px; color: var(--ink-2); justify-self: end; white-space: nowrap }
+  .reg-stage i { width: 6px; height: 6px; flex: none; border: 1px solid var(--ink-3) }
+  .reg-stage[data-tone='mid'] i { border-color: var(--accent) }
+  .reg-stage[data-tone='on'] i { background: var(--accent); border-color: var(--accent) }
+  .reg-year { justify-self: end; color: var(--ink-3); font-variant-numeric: tabular-nums }
+  .reg-foot { display: flex; justify-content: space-between; align-items: center; gap: 18px;
+    flex-wrap: wrap; padding-block-start: 22px }
+
+  /* ══ PORTFOLIO BY TECHNOLOGY ══
+     Replaces the old icon-tile coverage grid. Bar length is the only magnitude
+     encoding; the accent colour is constant across rows because there is one
+     series, not seven categories. */
+  .pf-head, .pf-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 96px 104px minmax(120px, 0.9fr);
+    gap: clamp(12px, 2.4vw, 28px);
+    align-items: center;
+  }
+  .pf-head { padding-block: 12px; border-block: 1px solid var(--line); color: var(--ink-3) }
+  .pf-row { padding-block: clamp(14px, 1.9vw, 18px); border-bottom: 1px solid var(--line);
+    position: relative; transition: background var(--fast) var(--ease) }
+  .pf-row::before { content: ''; position: absolute; inset-block: 0; inset-inline-start: calc(var(--gutter) * -1);
+    width: 2px; background: var(--accent); opacity: 0; transition: opacity var(--fast) var(--ease) }
+  .pf-row:hover { background: var(--surface) }
+  .pf-row:hover::before { opacity: 1 }
+  .pf-tech { font-family: var(--serif); font-size: clamp(1rem, 1.6vw, 1.22rem); letter-spacing: -0.016em }
+  .pf-count { color: var(--ink-3); white-space: nowrap }
+  .pf-mw { justify-self: end; font-family: var(--serif); font-size: 1.16rem;
+    letter-spacing: -0.02em; font-variant-numeric: tabular-nums; white-space: nowrap }
+  .pf-mw sub { font-family: var(--mono); font-size: 0.5em; letter-spacing: 0.06em;
+    color: var(--ink-3); bottom: 0; margin-inline-start: 3px }
+  .pf-dash { color: var(--ink-3) }
+  .pf-track { height: 6px; background: var(--surface); border: 1px solid var(--line); position: relative }
+  .pf-bar { position: absolute; inset-block: -1px; inset-inline-start: -1px;
+    background: var(--accent); transition: width 0.7s var(--ease) }
+  .pf-note { margin-block-start: 18px; color: var(--ink-3); text-transform: none;
+    letter-spacing: 0.02em; font-size: 0.72rem; line-height: 1.6; max-width: 62ch }
+
+  /* ══ PARTNER GRID (replaces the marquee) ══ */
+  .partner-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr));
+    gap: 1px; background: var(--line); border: 1px solid var(--line) }
+  .partner-grid > div { background: var(--canvas); padding: 22px 20px; font-size: 0.86rem;
+    color: var(--ink-2); transition: var(--fast) }
+  .partner-grid > div:hover { background: var(--surface); color: var(--ink) }
+
+  /* ══ POST LIST ══ */
+  .post-row { display: grid; grid-template-columns: 118px 1fr 140px 34px; gap: clamp(14px, 3vw, 36px);
+    align-items: center; padding-block: clamp(20px, 2.6vw, 28px); border-bottom: 1px solid var(--line);
+    transition: background var(--fast) var(--ease) }
+  .post-row:first-child { border-top: 1px solid var(--line) }
+  .post-row:hover { background: var(--surface) }
+  .post-row:hover .t-sub { color: var(--accent) }
+  .post-row .t-sub { transition: color var(--fast) }
+  .post-meta { color: var(--ink-3); justify-self: end }
+  .post-go { width: 32px; height: 32px; border: 1px solid var(--line); display: grid; place-items: center;
+    color: var(--ink-3); justify-self: end; transition: var(--fast) var(--ease) }
+  .post-row:hover .post-go { border-color: var(--accent); color: var(--accent) }
+  .post-go svg { width: 13px; height: 13px }
+  .badge { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.11em; text-transform: uppercase;
+    padding: 0.22rem 0.55rem; border: 1px solid var(--line); justify-self: start; color: var(--ink-2) }
+  .badge[data-kind='Article'] { color: var(--accent); border-color: var(--accent-line); background: var(--accent-wash) }
+
+  /* ══ TIMELINE ══ */
+  .tl-row { display: grid; grid-template-columns: 0.28fr 0.72fr; gap: clamp(14px, 3vw, 48px);
+    padding-block: clamp(24px, 3.4vw, 38px); border-bottom: 1px solid var(--line) }
+  .tl-row:first-child { border-top: 1px solid var(--line) }
+  .tl-when { color: var(--ink-3) }
+  .tl-org { font-family: var(--serif); font-size: clamp(1.1rem, 1.9vw, 1.35rem); letter-spacing: -0.016em }
+  .tl-role { color: var(--accent); font-size: 0.85rem; margin-block-start: 5px }
+  .tl-list { margin-block-start: 14px; list-style: none; display: grid; gap: 8px }
+  .tl-list li { color: var(--ink-2); font-size: 0.9rem; font-weight: 300; display: flex; gap: 10px; line-height: 1.55 }
+  .tl-list li::before { content: ''; width: 4px; height: 4px; background: var(--line-strong);
+    margin-block-start: 0.66em; flex: none }
+
+  /* ══ FACTS (project detail) ══ */
+  .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
+    gap: 1px; background: var(--line); border: 1px solid var(--line) }
+  .fact { background: var(--canvas); padding: 20px }
+  .fact-key { display: block; color: var(--ink-3); margin-block-end: 8px }
+  .fact-value { font-size: 0.98rem }
+
+  /* ══ CTA ══ */
+  .cta-band { border-block: 1px solid var(--line); background: var(--surface) }
+  .cta-body { padding-block: clamp(58px, 8vw, 104px); display: grid; grid-template-columns: 1fr auto;
+    gap: clamp(28px, 5vw, 64px); align-items: end }
+  .cta-mail { display: inline-block; font-family: var(--serif); font-size: clamp(1.05rem, 2vw, 1.5rem);
+    color: var(--ink-2); border-bottom: 1px solid var(--line-strong); padding-block-end: 4px;
+    transition: var(--fast); word-break: break-all }
+  .cta-mail:hover { color: var(--accent); border-color: var(--accent) }
+
+  /* ══ FORM ══ */
+  .field label { display: block; color: var(--ink-3); margin-block-end: 7px }
+  .field :is(input, select, textarea) { width: 100%; background: var(--raised); border: 1px solid var(--line-strong);
+    border-radius: var(--r); padding: 0.78rem 0.9rem; color: var(--ink); font: 400 0.94rem var(--sans); transition: var(--fast) }
+  .field textarea { min-height: 136px; resize: vertical }
+  .field :is(input, select, textarea):focus { outline: none; border-color: var(--accent) }
+  .field ::placeholder { color: var(--ink-3) }
+  .notice { border: 1px solid var(--line-strong); border-inline-start: 2px solid var(--accent);
+    background: var(--surface); padding: clamp(16px, 2.4vw, 22px); font-size: 0.92rem; font-weight: 300; color: var(--ink-2) }
+
+  /* ══ FOOTER ══ */
+  .site-footer { padding-block: clamp(44px, 6vw, 72px) 0; border-top: 1px solid var(--line) }
+  .footer-grid { display: grid; grid-template-columns: 1.8fr 1fr 1fr 1fr; gap: clamp(24px, 4vw, 48px); padding-block-end: 44px }
+  .footer-grid h4 { color: var(--ink-3); margin-block-end: 16px }
+  .footer-grid :is(a, p) { display: block; font-size: 0.87rem; color: var(--ink-2); font-weight: 300;
+    margin-block-end: 9px; transition: color var(--fast) }
+  .footer-grid a:hover { color: var(--accent) }
+  .social-row { display: flex; gap: 8px; margin-block-start: 20px }
+  .social-row a { width: 38px; height: 38px; border: 1px solid var(--line); display: grid; place-items: center;
+    color: var(--ink-2); margin: 0; transition: var(--fast) }
+  .social-row a:hover { border-color: var(--accent); color: var(--accent) }
+  .social-row svg { width: 15px; height: 15px }
+  .footer-bottom { border-top: 1px solid var(--line); padding-block: 20px clamp(28px, 5vw, 44px);
+    display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap; color: var(--ink-3) }
+  .wordmark { font-family: var(--serif); font-size: clamp(2.4rem, 12vw, 7.5rem); line-height: 0.84;
+    letter-spacing: -0.04em; color: transparent; -webkit-text-stroke: 1px var(--line-strong);
+    padding-block-end: 32px; user-select: none }
+
+  /* ══ PROSE (article + case-study bodies) ══ */
+  .prose { max-width: 68ch }
+  .prose > * + * { margin-block-start: 1.15em }
+  .prose h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(1.4rem, 2.6vw, 1.9rem); margin-block-start: 2em }
+  .prose h3 { font-family: var(--serif); font-weight: 400; font-size: clamp(1.15rem, 2vw, 1.4rem); margin-block-start: 1.6em }
+  .prose :is(p, li) { color: var(--ink-2); font-weight: 300; line-height: 1.78 }
+  .prose :is(ul, ol) { padding-inline-start: 1.3em; display: grid; gap: 0.5em }
+  .prose ul { list-style: disc } .prose ol { list-style: decimal }
+  .prose a { color: var(--accent); border-bottom: 1px solid var(--accent-line) }
+  .prose blockquote { border-inline-start: 2px solid var(--accent); padding-inline-start: 1.2em;
+    color: var(--ink); font-family: var(--serif); font-size: 1.1em }
+  .prose code { font-family: var(--mono); font-size: 0.85em; background: var(--surface); padding: 0.15em 0.4em }
+  .prose pre { background: var(--surface); border: 1px solid var(--line); padding: 1.1em; overflow-x: auto }
+  .prose pre code { background: none; padding: 0 }
+  .prose figure img { border: 1px solid var(--line) }
+  .prose figcaption { font-size: 0.82rem; color: var(--ink-3); margin-block-start: 0.6em }
+  .prose hr { border: 0; border-top: 1px solid var(--line); margin-block: 2.4em }
+  .prose .callout { display: flex; gap: 0.8em; background: var(--surface); border: 1px solid var(--line-strong);
+    border-inline-start: 2px solid var(--accent); padding: 1.1em }
+}
+
+/* ══ RESPONSIVE ════════════════════════════════════════════════════════
+   Breakpoints are grouped here rather than scattered, so a layout change
+   at one size is a single place to look.                                */
+@media (max-width: 1080px) {
+  .reg-head { display: none }
+  .reg-grid { grid-template-columns: 96px 1fr auto; row-gap: 4px }
+  .reg-year { display: none }
+  .reg-capacity, .reg-stage { grid-row: span 2; align-self: center }
+}
+@media (max-width: 1080px) {
+  .pf-head, .pf-row { grid-template-columns: minmax(0, 1fr) 82px 92px }
+  .pf-track { display: none }
+}
+@media (max-width: 960px) {
+  .intro-split { grid-template-columns: 1fr }
+  .intro-split .figure-plate { max-width: 320px }
+  .nav-links { display: none }
+  .hero-grid { display: none }
+  .hero-body { grid-template-columns: 1fr }
+  .hero-aside { order: -1; flex-direction: row; flex-wrap: wrap; align-items: flex-start; gap: 24px }
+  .portrait { max-width: min(260px, 46vw) }
+  .hero-facts { flex: 1 1 240px; max-width: none }
+  .sec-head { grid-template-columns: 1fr; gap: 16px }
+  .plates { grid-template-columns: 1fr }
+  .cta-body { grid-template-columns: 1fr }
+  .footer-grid { grid-template-columns: 1fr 1fr }
+  .tl-row { grid-template-columns: 1fr; gap: 10px }
+}
+@media (max-width: 720px) {
+  .figures-row { grid-template-columns: 1fr 1fr }
+  .figure { padding-inline-start: 0; border-inline-start: 0 }
+  .figure:nth-child(2n) { padding-inline-start: clamp(16px, 4vw, 28px); border-inline-start: 1px solid var(--line) }
+  .figure:nth-child(-n + 2) { border-bottom: 1px solid var(--line) }
+  .post-row { grid-template-columns: 1fr 32px; row-gap: 8px }
+  .post-row .badge { grid-column: 1 / -1 }
+  .post-meta { display: none }
+  .pf-head { display: none }
+  .pf-row { grid-template-columns: minmax(0, 1fr) auto; row-gap: 2px }
+  .pf-count { grid-column: 1; font-size: 0.62rem }
+  .pf-mw { grid-column: 2; grid-row: 1 / span 2; align-self: center }
+}
+@media (max-width: 680px) {
+  /* Collapse the language button to its globe icon — the header has to fit
+     a 360px Galaxy without the brand truncating. */
+  .pill-btn span { display: none }
+  .pill-btn { padding-inline: 11px }
+}
+@media (max-width: 520px) {
+  .footer-grid { grid-template-columns: 1fr }
+  .brand-role { display: none }
+  .brand-name { font-size: 0.95rem }
+  .reg-grid { grid-template-columns: 88px 1fr }
+  .reg-stage { grid-column: 2; grid-row: auto; justify-self: start; margin-block-start: 4px }
+}
+/* Touch devices: no hover-only affordances. */
+@media (hover: none) {
+  .plate:hover, .reg-row:hover, .post-row:hover { background: var(--canvas) }
+  .plate:hover::before, .reg-row:hover::before { opacity: 0; transform: scaleY(0) }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1 !important; transform: none !important }
+  *, *::before, *::after { animation: none !important; transition-duration: 0.01ms !important }
+}

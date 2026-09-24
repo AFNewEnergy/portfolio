@@ -1,0 +1,275 @@
+{
+  "nav": {
+    "home": "首页",
+    "about": "关于",
+    "services": "服务",
+    "projects": "项目",
+    "insights": "洞察",
+    "contact": "联系"
+  },
+  "ui": {
+    "tagline": "电力开发 · 亚太",
+    "getInTouch": "联系我",
+    "toggleTheme": "切换深浅色主题",
+    "openMenu": "打开菜单",
+    "closeMenu": "关闭菜单",
+    "language": "语言",
+    "mainNav": "主导航"
+  },
+  "meta": {
+    "skipToContent": "跳至主要内容",
+    "keywords": "孟加拉国电力项目开发|孟加拉国IPP顾问|孟加拉国太阳能项目开发|BPDB购电协议顾问|孟加拉国LNG FSRU|孟加拉国储能|孟加拉国能源本地合作伙伴|亚太公用事业级太阳能",
+    "home": {
+      "title": "Abdullah Bin Hossain (Faisal) — 孟加拉国公用事业级电力项目开发",
+      "description": "13年以上经验，在孟加拉国开发公用事业级太阳能、储能、LNG 与燃气项目——可行性研究、购电协议谈判、审批许可与融资关闭。"
+    },
+    "about": {
+      "title": "关于",
+      "description": "十三年，站在外国资本与孟加拉国电力之间：职业经历、资历与行业经验。"
+    },
+    "services": {
+      "title": "服务",
+      "description": "开发与可行性研究、监管与政府联络、商务与购电协议咨询、本地代表与业主工程师服务。"
+    },
+    "projects": {
+      "title": "项目",
+      "description": "30 多个公用事业级电力项目清单，涵盖太阳能、储能、LNG、燃气、煤电与输电——每个均标注真实开发阶段。"
+    },
+    "insights": {
+      "title": "洞察",
+      "description": "孟加拉国电力行业的实际运作方式，写给在这里投资与建设的人。"
+    },
+    "contact": {
+      "title": "联系",
+      "description": "洽谈孟加拉国的电力项目。一个工作日内回复。"
+    },
+    "og": {
+      "headline": "真正能走到融资关闭的电力项目。",
+      "role": "电力业务专家",
+      "years": "年经验",
+      "projects": "个项目"
+    }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "01 — 公用事业级电力开发",
+      "title": "真正能走到<em>融资关闭的电力项目。</em>",
+      "lede": "13年以上经验，在孟加拉国开发公用事业级太阳能、储能、LNG 与燃气项目——从可行性研究和土地，到购电协议谈判、审批许可与融资关闭。资金和技术是容易的部分，落地执行由我负责。",
+      "ctaPrimary": "预约咨询",
+      "ctaSecondary": "查看项目清单",
+      "availability": "可承接新项目委托 — 达卡，GMT+6"
+    },
+    "stats": {
+      "years": {
+        "label": "从业年限",
+        "note": "自2013年持续从业"
+      },
+      "projects": {
+        "label": "项目数量",
+        "note": "太阳能 · 储能 · LNG · 燃气 · 煤电"
+      },
+      "partners": {
+        "label": "合作方",
+        "note": "日本 · 中国 · 韩国 · 海湾 · 美国"
+      },
+      "proposals": {
+        "label": "中标提案",
+        "note": "所撰写的太阳能投标文件"
+      }
+    },
+    "sections": {
+      "capability": "02 / 能力",
+      "register": "03 / 项目清单",
+      "insights": "06 / 洞察",
+      "partners": "04 / 合作方",
+      "portfolio": "05 / 项目构成"
+    }
+  },
+  "capabilities": {
+    "title": "外国投资方在这里<em>买不到的四件事。</em>",
+    "lede": "国际开发商带着资金、技术和进度表而来。让他们停滞的是落地执行——土地、并网、部委，以及一份贷款方愿意接受的购电协议。",
+    "items": {
+      "development": {
+        "title": "开发与可行性研究",
+        "body": "场址与资源评估、从预可研到可融资可研、IEE 与 EIA、技术与财务模型。",
+        "tags": "资源评估|预可研|环境评估|财务建模"
+      },
+      "regulatory": {
+        "title": "监管与政府联络",
+        "body": "自主提案与 PPP 路径、BPDB 与部委对接、许可证、土地征用与审批。",
+        "tags": "BPDB|NWPGCL|BEZA|PPP 管理局|SREDA"
+      },
+      "commercial": {
+        "title": "商务与购电协议",
+        "body": "电价结构设计、PPA 与实施协议谈判支持、投标准备、融资关闭路径。",
+        "tags": "电价|PPA / IA|投标|融资关闭"
+      },
+      "representation": {
+        "title": "本地代表与业主工程师",
+        "body": "为外国投资方提供在地代表、EPC 监督、文件管理，以及董事会看得懂的进度报告。",
+        "tags": "业主工程师|EPC 监督|进度报告"
+      }
+    }
+  },
+  "register": {
+    "title": "每个项目，都标注<em>真实所处阶段。</em>",
+    "lede": "不夸大。每一条均注明技术路线、合作方和真实阶段——可研、投标、开发、已批准或已运营。",
+    "showing": "显示 {total} 个中的 {shown} 个",
+    "openFull": "查看完整清单",
+    "confidential": "保密投资方",
+    "projectCount": "{count, plural, =0 {暂无项目} other {# 个项目}}",
+    "col": {
+      "no": "序号",
+      "capacity": "装机容量",
+      "project": "项目",
+      "counterparty": "合作方",
+      "stage": "阶段",
+      "year": "年份"
+    },
+    "stage": {
+      "Feasibility": "可行性研究",
+      "Bidding": "投标",
+      "Development": "开发中",
+      "Approved": "已批准",
+      "Construction": "建设中",
+      "Operational": "已运营"
+    }
+  },
+  "tech": {
+    "Solar PV": "太阳能",
+    "BESS": "储能",
+    "LNG & FSRU": "LNG 与 FSRU",
+    "Gas / CCPP": "燃气 / 联合循环",
+    "Coal": "煤电",
+    "Transmission": "输电",
+    "Waste-to-Energy": "垃圾发电"
+  },
+  "insights": {
+    "title": "用外来者能读懂的方式，<em>解读孟加拉国电力行业。</em>",
+    "lede": "用英文搜索\"在达卡如何真正签下购电协议\"，几乎找不到有用内容。这个空白就是机会。",
+    "pageTitle": "<em>洞察。</em>",
+    "pageLede": "关于孟加拉国电力行业实际运作方式的笔记，写给在这里投资与建设的人。",
+    "empty": "首批文章正在撰写中，敬请期待。",
+    "backToIndex": "全部洞察",
+    "playVideo": "播放视频",
+    "read": "阅读 {minutes} 分钟",
+    "watch": "观看 {minutes} 分钟",
+    "type": {
+      "Article": "文章",
+      "Video": "视频"
+    }
+  },
+  "about": {
+    "title": "十三年，站在外国资本与<em>孟加拉国电力之间。</em>",
+    "lede": "我在孟加拉国开发公用事业级电力项目——太阳能、储能、LNG 与燃气。外国投资方带来资金与技术；我负责让项目在本地成为现实：土地、并网、部委审批，以及一份贷款方真正愿意融资的购电协议。",
+    "careerTitle": "职业经历",
+    "credentialsTitle": "教育背景与语言",
+    "sections": {
+      "career": "01 / 职业经历",
+      "credentials": "02 / 资历"
+    },
+    "roles": {
+      "mz_director": "可再生能源事业部总监",
+      "mz_consultant": "电力与能源独立顾问",
+      "rangunia": "项目经理兼本地代表",
+      "xsergy": "运营经理",
+      "reliance": "LNG 与 FSRU 助理经理",
+      "om": "电气工程师",
+      "metito": "独立顾问",
+      "symbior": "可再生能源顾问",
+      "eclectic": "执行顾问",
+      "aloron": "首席执行官"
+    },
+    "education": {
+      "title": "教育背景",
+      "items": "电子电气工程学士 — 孟加拉国美国国际大学（AIUB），2013|主修：可再生能源技术 · 蜂窝移动通信|毕业设计：重力水涡流发电站"
+    },
+    "languages": {
+      "title": "语言能力",
+      "items": "孟加拉语 — 母语|英语 — 专业工作水平"
+    },
+    "introBody": "十三年，十家机构——从业主工程研究的文件管理，到主管可再生能源开发。主线始终未变：让项目越过在这里通常会卡住的那一关。"
+  },
+  "services": {
+    "title": "四种<em>合作方式。</em>",
+    "lede": "每项合作均以明确交付成果界定范围，采用固定费用或聘用制。不做开放式咨询。",
+    "photoAlt": "Abdullah Bin Hossain 在达卡的项目会议中"
+  },
+  "projects": {
+    "title": "<em>项目清单。</em>",
+    "lede": "30 多个项目，涵盖太阳能、储能、LNG、燃气、煤电与输电——每个都标注真实达到的阶段。",
+    "disclaimer": "所列阶段为本人参与期间各项目达到的节点，不代表其当前状态。部分投资方因保密协议或谈判进行中而以\"保密\"标注。",
+    "photoAlt": "Abdullah Bin Hossain 在达卡审阅项目文件"
+  },
+  "project": {
+    "technology": "技术路线",
+    "location": "所在地",
+    "role": "担任角色",
+    "backToRegister": "全部项目",
+    "detailPending": "该项目的完整案例研究正在准备中。",
+    "previous": "上一个",
+    "next": "下一个",
+    "moreProjects": "更多项目"
+  },
+  "contact": {
+    "title": "开始<em>沟通。</em>",
+    "lede": "告诉我技术路线、装机容量和当前所处阶段。我会在一个工作日内回复。",
+    "emailLabel": "邮箱",
+    "phoneLabel": "电话 / WhatsApp",
+    "locationLabel": "所在地",
+    "locationValue": "孟加拉国达卡 · GMT+6",
+    "responseLabel": "回复时间",
+    "responseValue": "一个工作日内",
+    "form": {
+      "name": "姓名",
+      "namePlaceholder": "您的姓名",
+      "email": "邮箱",
+      "emailPlaceholder": "you@company.com",
+      "company": "公司",
+      "companyPlaceholder": "公司名称",
+      "country": "国家",
+      "countryPlaceholder": "国家",
+      "projectType": "项目类型",
+      "message": "留言",
+      "messagePlaceholder": "请介绍项目——技术路线、装机容量、当前阶段",
+      "submit": "发送",
+      "sending": "发送中…",
+      "successTitle": "已发送。",
+      "successBody": "感谢您的来信，我会在一个工作日内回复。",
+      "errorGeneric": "发送失败，请直接发送邮件给我。",
+      "errorRateLimited": "发送次数过多，请稍后再试。",
+      "privacy": "您提供的信息仅用于回复本次咨询。"
+    },
+    "hoursLabel": "咨询时间"
+  },
+  "cta": {
+    "eyebrow": "07 / 联系",
+    "title": "告诉我技术路线、装机容量，以及<em>你卡在哪里。</em>",
+    "body": "我会坦诚说明从这里出发的实际路径——包括当答案是\"行不通\"的时候。",
+    "primary": "预约咨询",
+    "secondary": "WhatsApp"
+  },
+  "footer": {
+    "blurb": "覆盖亚太地区的公用事业级电力项目开发。",
+    "pages": "页面",
+    "technologies": "技术领域",
+    "contact": "联系方式"
+  },
+  "notFound": {
+    "title": "页面不存在。",
+    "body": "链接可能已失效。项目清单与洞察文章都只需一次点击。",
+    "cta": "返回首页"
+  },
+  "portfolio": {
+    "title": "项目组合的<em>真实构成。</em>",
+    "lede": "数据取自本站项目清单，未作任何夸大。装机容量为各技术领域所参与项目的合计。",
+    "col": {
+      "technology": "技术领域",
+      "projects": "项目",
+      "capacity": "装机容量"
+    },
+    "projectCount": "{count, plural, =0 {暂无} other {# 个项目}}",
+    "notMeasuredInMW": "不以兆瓦计量",
+    "footnote": "涉及两种技术的项目在两行中均计入，因此各行不构成组合总量。输电项目以千伏而非兆瓦招标。"
+  }
+}

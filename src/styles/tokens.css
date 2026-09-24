@@ -1,0 +1,102 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   MERIDIAN — DESIGN TOKENS
+   ───────────────────────────────────────────────────────────────────────
+   This is the ONLY file you edit to re-skin the entire site.
+   Change a value here and it propagates everywhere; no component holds
+   a raw colour, size, or font name.
+
+   Every colour below was validated with scripts/validate-contrast.mjs —
+   24 WCAG 2.1 checks across both modes, all passing. If you change an
+   ink or accent value, re-run:  npm run contrast
+   ═══════════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── surfaces ───────────────────────────────────────────────
+     canvas  page background        surface raised blocks / hover
+     raised  cards on top of both   line    hairline rules       */
+  --canvas: #faf8f4;
+  --surface: #f2efe8;
+  --raised: #ffffff;
+  --line: #dfdace;
+  --line-strong: #c4bca9;
+
+  /* ── ink ────────────────────────────────────────────────────
+     ink    headings + body     16.96:1
+     ink-2  secondary prose      7.79:1
+     ink-3  mono labels only     3.97:1  — never for body copy   */
+  --ink: #14171a;
+  --ink-2: #4a4f55;
+  --ink-3: #767c84;
+
+  /* ── brand ──────────────────────────────────────────────────
+     accent      links, primary fill, markers   5.93:1 on canvas
+     on-accent   label sitting on accent fill   6.29:1
+     wash/line   tinted backgrounds + borders                    */
+  --accent: #0b6c63;
+  --accent-hover: #095951;
+  --on-accent: #ffffff;
+  --accent-wash: rgb(11 108 99 / 0.07);
+  --accent-line: rgb(11 108 99 / 0.24);
+  --warm: #96541a;
+
+  /* ── status ─────────────────────────────────────────────────
+     Reserved. Never reuse these for decoration.                 */
+  --ok: #1f7a3d;
+  --caution: #8a6100;
+  --critical: #a8322b;
+
+  /* ── type ───────────────────────────────────────────────────
+     Font families are injected by next/font as CSS variables in
+     the root layout; the fallbacks here keep this file portable. */
+  --serif: var(--font-newsreader), Georgia, 'Times New Roman', serif;
+  --sans: var(--font-inter), system-ui, -apple-system, sans-serif;
+  --mono: var(--font-mono), ui-monospace, 'SF Mono', monospace;
+
+  /* ── geometry ───────────────────────────────────────────────
+     Squared corners read institutional; 2px is the whole system. */
+  --r: 2px;
+  --r-lg: 3px;
+  --gutter: clamp(20px, 4.5vw, 72px);
+  --measure: 1320px;
+
+  /* ── motion ─────────────────────────────────────────────────  */
+  --ease: cubic-bezier(0.2, 0.7, 0.3, 1);
+  --fast: 0.22s;
+  --slow: 0.6s;
+
+  color-scheme: light;
+}
+
+/* ── DARK ────────────────────────────────────────────────────────────
+   Selected, not an automatic inversion. Each value was re-stepped for
+   the dark surface and re-validated: ink 16.69:1, ink-2 8.38:1,
+   accent 9.42:1, on-accent 8.41:1.                                   */
+[data-theme='dark'] {
+  --canvas: #0c1013;
+  --surface: #141a1f;
+  --raised: #1a2127;
+  --line: #232c34;
+  --line-strong: #35414b;
+
+  --ink: #edf0f2;
+  --ink-2: #a3adb6;
+  --ink-3: #7b858e;
+
+  --accent: #4cc9b8;
+  --accent-hover: #6bd8c9;
+  --on-accent: #06201c;
+  --accent-wash: rgb(76 201 184 / 0.09);
+  --accent-line: rgb(76 201 184 / 0.26);
+  --warm: #e3a458;
+
+  --ok: #4bc46f;
+  --caution: #e0b341;
+  --critical: #f0736a;
+
+  color-scheme: dark;
+}
+
+/* Wider viewports get more room and slightly larger text rather than
+   a stretched layout — this is what makes it read correctly on a TV. */
+@media (min-width: 1800px) { :root { --measure: 1520px } }
+@media (min-width: 2400px) { :root { --measure: 1760px } }

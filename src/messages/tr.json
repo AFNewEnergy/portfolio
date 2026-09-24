@@ -1,0 +1,275 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "about": "Hakkında",
+    "services": "Hizmetler",
+    "projects": "Projeler",
+    "insights": "İçgörüler",
+    "contact": "İletişim"
+  },
+  "ui": {
+    "tagline": "Enerji Geliştirme · APAC",
+    "getInTouch": "İletişime geçin",
+    "toggleTheme": "Açık ve koyu temayı değiştir",
+    "openMenu": "Menüyü aç",
+    "closeMenu": "Menüyü kapat",
+    "language": "Dil",
+    "mainNav": "Ana gezinme"
+  },
+  "meta": {
+    "skipToContent": "İçeriğe geç",
+    "keywords": "Bangladeş enerji projesi geliştirici|Bangladeş IPP danışmanı|Bangladeş güneş enerjisi proje geliştirme|BPDB PPA danışmanı|Bangladeş LNG FSRU|Bangladeş BESS|Bangladeş enerji yerel ortak",
+    "home": {
+      "title": "Abdullah Bin Hossain (Faisal) — Bangladeş’te Şebeke Ölçekli Enerji Projesi Geliştirme",
+      "description": "13+ yıldır Bangladeş’te şebeke ölçekli güneş, BESS, LNG ve doğalgaz projeleri geliştiriyorum — fizibilite, PPA müzakeresi, izinler ve finansal kapanış."
+    },
+    "about": {
+      "title": "Hakkında",
+      "description": "Yabancı sermaye ile Bangladeş enerjisi arasında on üç yıl: kariyer geçmişi, yetkinlikler ve sektör deneyimi."
+    },
+    "services": {
+      "title": "Hizmetler",
+      "description": "Geliştirme ve fizibilite, mevzuat ve kamu ilişkileri, ticari ve PPA danışmanlığı, yerel temsil ve işveren mühendisliği."
+    },
+    "projects": {
+      "title": "Projeler",
+      "description": "Güneş, BESS, LNG, gaz, kömür ve iletimde 30+ şebeke ölçekli enerji projesi kaydı — her biri gerçek geliştirme aşamasıyla."
+    },
+    "insights": {
+      "title": "İçgörüler",
+      "description": "Bangladeş enerji sektörünün gerçekte nasıl işlediği; burada finanse eden ve inşa edenler için."
+    },
+    "contact": {
+      "title": "İletişim",
+      "description": "Bangladeş’te bir enerji projesini görüşün. Bir iş günü içinde yanıt."
+    },
+    "og": {
+      "headline": "Gerçekten finansal kapanışa ulaşan projeler.",
+      "role": "Enerji İş Geliştirme Uzmanı",
+      "years": "yıl",
+      "projects": "proje"
+    }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "01 — Şebeke ölçekli enerji geliştirme",
+      "title": "Gerçekten <em>finansal kapanışa ulaşan projeler.</em>",
+      "lede": "13+ yıldır Bangladeş’te şebeke ölçekli güneş, depolama, LNG ve doğalgaz projeleri geliştiriyorum — fizibilite ve araziden PPA müzakeresi, izinler ve kapanışa kadar. Sermaye ve teknoloji kolay kısmı; sahayı ben yürütüyorum.",
+      "ctaPrimary": "Danışmanlık görüşmesi ayarla",
+      "ctaSecondary": "Proje kaydını görüntüle",
+      "availability": "Yeni proje görevlerine açık — Dakka, GMT+6"
+    },
+    "stats": {
+      "years": {
+        "label": "Deneyim",
+        "note": "2013’ten bu yana kesintisiz"
+      },
+      "projects": {
+        "label": "Projeler",
+        "note": "Güneş · BESS · LNG · Gaz · Kömür"
+      },
+      "partners": {
+        "label": "Karşı taraflar",
+        "note": "Japonya · Çin · Kore · Körfez · ABD"
+      },
+      "proposals": {
+        "label": "Kazanan teklifler",
+        "note": "Hazırladığı güneş ihale dosyaları"
+      }
+    },
+    "sections": {
+      "capability": "02 / Yetkinlik",
+      "register": "03 / Kayıt",
+      "insights": "06 / İçgörüler",
+      "partners": "04 / Karşı taraflar",
+      "portfolio": "05 / Portföy"
+    }
+  },
+  "capabilities": {
+    "title": "Yabancı yatırımcının burada <em>hazır satın alamayacağı dört şey.</em>",
+    "lede": "Uluslararası geliştiriciler sermaye, teknoloji ve bir takvimle gelir. Onları durduran saha yürütmesidir — arazi, şebeke, bakanlıklar ve finansörün kabul edeceği bir PPA.",
+    "items": {
+      "development": {
+        "title": "Geliştirme ve Fizibilite",
+        "body": "Saha ve kaynak değerlendirmesi, ön fizibiliteden finanse edilebilir fizibiliteye, ÇED, teknik ve finansal modelleme.",
+        "tags": "Kaynak|Ön fizibilite|ÇED|Modelleme"
+      },
+      "regulatory": {
+        "title": "Mevzuat ve Kamu İlişkileri",
+        "body": "Davetsiz teklif ve KÖİ süreçleri, BPDB ve bakanlık ilişkileri, lisanslar, arazi edinimi ve onaylar.",
+        "tags": "BPDB|NWPGCL|BEZA|KÖİ Kurumu|SREDA"
+      },
+      "commercial": {
+        "title": "Ticari ve PPA",
+        "body": "Tarife yapılandırma, PPA ve uygulama sözleşmesi müzakere desteği, ihale hazırlığı, finansal kapanış yolu.",
+        "tags": "Tarife|PPA / IA|İhale|Finansal kapanış"
+      },
+      "representation": {
+        "title": "Yerel Temsil ve İşveren Mühendisliği",
+        "body": "Yabancı yatırımcı için ülke içi varlık, EPC denetimi, doküman kontrolü ve yönetim kurulunuzun okuyabileceği ilerleme raporları.",
+        "tags": "İşveren mühendisi|EPC denetimi|Raporlama"
+      }
+    }
+  },
+  "register": {
+    "title": "Her proje, <em>gerçekte bulunduğu aşamayla.</em>",
+    "lede": "Abartı yok. Her kayıt teknolojiyi, karşı tarafı ve gerçek aşamayı belirtir — fizibilite, ihale, geliştirme, onaylı veya işletmede.",
+    "showing": "{total} projeden {shown} tanesi gösteriliyor",
+    "openFull": "Tam kaydı aç",
+    "confidential": "Gizli yatırımcı",
+    "projectCount": "{count, plural, =0 {Proje yok} other {# proje}}",
+    "col": {
+      "no": "No.",
+      "capacity": "Kapasite",
+      "project": "Proje",
+      "counterparty": "Karşı taraf",
+      "stage": "Aşama",
+      "year": "Yıl"
+    },
+    "stage": {
+      "Feasibility": "Fizibilite",
+      "Bidding": "İhale",
+      "Development": "Geliştirme",
+      "Approved": "Onaylı",
+      "Construction": "İnşaat",
+      "Operational": "İşletmede"
+    }
+  },
+  "tech": {
+    "Solar PV": "Güneş PV",
+    "BESS": "BESS",
+    "LNG & FSRU": "LNG ve FSRU",
+    "Gas / CCPP": "Gaz / CCPP",
+    "Coal": "Kömür",
+    "Transmission": "İletim",
+    "Waste-to-Energy": "Atıktan Enerji"
+  },
+  "insights": {
+    "title": "Bangladeş enerji sektörü, <em>burada yaşamayanlar için yazıldı.</em>",
+    "lede": "Dakka’da bir PPA’nın gerçekte nasıl imzalandığını İngilizce arayın; neredeyse hiçbir işe yarar şey bulamazsınız. Bu boşluk fırsatın kendisidir.",
+    "pageTitle": "<em>İçgörüler.</em>",
+    "pageLede": "Bangladeş enerji sektörünün gerçekte nasıl işlediğine dair notlar; burada finanse eden ve inşa edenler için.",
+    "empty": "İlk yazılar hazırlanıyor. Kısa süre sonra tekrar bakın.",
+    "backToIndex": "Tüm içgörüler",
+    "playVideo": "Videoyu oynat",
+    "read": "{minutes} dk okuma",
+    "watch": "{minutes} dk izleme",
+    "type": {
+      "Article": "Makale",
+      "Video": "Video"
+    }
+  },
+  "about": {
+    "title": "Yabancı sermaye ile <em>Bangladeş enerjisi arasında on üç yıl.</em>",
+    "lede": "Bangladeş’te şebeke ölçekli enerji projeleri geliştiriyorum — güneş, depolama, LNG ve gaz. Yabancı yatırımcı parayı ve teknolojiyi getirir; ben projeyi ülke içinde gerçek kılarım: arazi, şebeke bağlantısı, bakanlık onayları ve bir finansörün gerçekten finanse edeceği bir PPA.",
+    "careerTitle": "Kariyer",
+    "credentialsTitle": "Eğitim ve diller",
+    "sections": {
+      "career": "01 / Kariyer",
+      "credentials": "02 / Yetkinlikler"
+    },
+    "roles": {
+      "mz_director": "Direktör, Yenilenebilir Enerji",
+      "mz_consultant": "Bağımsız Danışman, Enerji",
+      "rangunia": "Proje Müdürü ve Yerel Temsilci",
+      "xsergy": "Müdür, Operasyonlar",
+      "reliance": "Müdür Yardımcısı, LNG ve FSRU",
+      "om": "Elektrik Mühendisi",
+      "metito": "Bağımsız Danışman",
+      "symbior": "Yenilenebilir Enerji Danışmanı",
+      "eclectic": "Yönetici Danışman",
+      "aloron": "Genel Müdür"
+    },
+    "education": {
+      "title": "Eğitim",
+      "items": "Elektrik-Elektronik Mühendisliği Lisans — American International University-Bangladesh (AIUB), 2013|Ana dal: Yenilenebilir Enerji Teknolojisi · Hücresel Mobil Haberleşme|Bitirme projesi: Yerçekimsel Su Girdabı Santrali"
+    },
+    "languages": {
+      "title": "Diller",
+      "items": "Bengalce — ana dil|İngilizce — tam profesyonel yeterlilik"
+    },
+    "introBody": "On üç yılda on kurum — işveren mühendisliği çalışmalarında doküman kontrolünden yenilenebilir enerji geliştirmeyi yönetmeye. Değişmeyen tek şey şu: bir projeyi, burada projelerin genellikle tıkandığı noktanın ötesine taşımak."
+  },
+  "services": {
+    "title": "Dört <em>çalışma biçimi.</em>",
+    "lede": "Her görev tanımlı bir çıktıyla kapsamlandırılır; sabit ücret veya danışmanlık bedeliyle. Ucu açık danışmanlık yok.",
+    "photoAlt": "Abdullah Bin Hossain bir proje toplantısında, Dakka"
+  },
+  "projects": {
+    "title": "<em>Proje kaydı.</em>",
+    "lede": "Güneş, depolama, LNG, gaz, kömür ve iletimde otuzdan fazla proje — her biri gerçekte ulaştığı aşamayla.",
+    "disclaimer": "Aşamalar, her projenin benim katılımım sırasında ulaştığı noktayı yansıtır; bugünkü durumunu değil. Gizlilik sözleşmesi veya devam eden müzakere bulunan bazı yatırımcılar gizli olarak gösterilmiştir.",
+    "photoAlt": "Abdullah Bin Hossain proje dokümantasyonunu incelerken, Dakka"
+  },
+  "project": {
+    "technology": "Teknoloji",
+    "location": "Konum",
+    "role": "Rol",
+    "backToRegister": "Tüm projeler",
+    "detailPending": "Bu proje için kapsamlı vaka çalışması hazırlanıyor.",
+    "previous": "Önceki",
+    "next": "Sonraki",
+    "moreProjects": "Diğer projeler"
+  },
+  "contact": {
+    "title": "<em>Görüşmeye</em> başlayın.",
+    "lede": "Bana teknolojiyi, kapasiteyi ve bulunduğunuz aşamayı söyleyin. Bir iş günü içinde yanıtlarım.",
+    "emailLabel": "E-posta",
+    "phoneLabel": "Telefon / WhatsApp",
+    "locationLabel": "Konum",
+    "locationValue": "Dakka, Bangladeş · GMT+6",
+    "responseLabel": "Yanıt süresi",
+    "responseValue": "1 iş günü içinde",
+    "form": {
+      "name": "Ad",
+      "namePlaceholder": "Adınız",
+      "email": "E-posta",
+      "emailPlaceholder": "siz@sirket.com",
+      "company": "Şirket",
+      "companyPlaceholder": "Şirket adı",
+      "country": "Ülke",
+      "countryPlaceholder": "Ülke",
+      "projectType": "Proje türü",
+      "message": "Mesaj",
+      "messagePlaceholder": "Projeden bahsedin — teknoloji, kapasite, mevcut aşama",
+      "submit": "Mesaj gönder",
+      "sending": "Gönderiliyor…",
+      "successTitle": "Mesaj gönderildi.",
+      "successBody": "Teşekkürler. Bir iş günü içinde yanıtlarım.",
+      "errorGeneric": "Bir sorun oluştu. Lütfen doğrudan e-posta gönderin.",
+      "errorRateLimited": "Çok fazla mesaj gönderildi. Lütfen daha sonra deneyin.",
+      "privacy": "Bilgileriniz yalnızca bu talebi yanıtlamak için kullanılır."
+    },
+    "hoursLabel": "Danışmanlık saatleri"
+  },
+  "cta": {
+    "eyebrow": "07 / İletişim",
+    "title": "Bana teknolojiyi, kapasiteyi ve <em>nerede takıldığınızı söyleyin.</em>",
+    "body": "Buradan itibaren yolun gerçekte nasıl göründüğünü dürüstçe söylerim — cevabın “olmaz” olduğu durumlar dahil.",
+    "primary": "Danışmanlık görüşmesi ayarla",
+    "secondary": "WhatsApp"
+  },
+  "footer": {
+    "blurb": "APAC bölgesinde şebeke ölçekli enerji projesi geliştirme.",
+    "pages": "Sayfalar",
+    "technologies": "Teknolojiler",
+    "contact": "İletişim"
+  },
+  "notFound": {
+    "title": "Bu sayfa mevcut değil.",
+    "body": "Bağlantı güncel olmayabilir. Proje kaydı ve içgörüler bir tık uzağınızda.",
+    "cta": "Ana sayfaya dön"
+  },
+  "portfolio": {
+    "title": "Portföyün <em>gerçekte neyden oluştuğu.</em>",
+    "lede": "Bu sitedeki proje kaydından sayıldı, etki için yuvarlanmadı. Kapasite, her teknolojide çalışılan projelerin toplamıdır.",
+    "col": {
+      "technology": "Teknoloji",
+      "projects": "Projeler",
+      "capacity": "Kapasite"
+    },
+    "projectCount": "{count, plural, =0 {yok} =1 {1 proje} other {# proje}}",
+    "notMeasuredInMW": "megavat ile ölçülmez",
+    "footnote": "İki teknoloji kullanan bir proje her iki satırda da sayılır; bu nedenle satırlar bir portföy toplamı vermez. İletim işleri megavat değil kilovolt üzerinden ihale edilir."
+  }
+}

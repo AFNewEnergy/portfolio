@@ -1,0 +1,275 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "services": "Services",
+    "projects": "Projets",
+    "insights": "Analyses",
+    "contact": "Contact"
+  },
+  "ui": {
+    "tagline": "Développement · APAC",
+    "getInTouch": "Me contacter",
+    "toggleTheme": "Basculer le thème clair et sombre",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "language": "Langue",
+    "mainNav": "Navigation principale"
+  },
+  "meta": {
+    "skipToContent": "Aller au contenu",
+    "keywords": "développeur de projets électriques Bangladesh|consultant IPP Bangladesh|développement solaire Bangladesh|consultant PPA BPDB|GNL FSRU Bangladesh|stockage Bangladesh|partenaire local énergie Bangladesh",
+    "home": {
+      "title": "Abdullah Bin Hossain (Faisal) — Développement de projets électriques à grande échelle au Bangladesh",
+      "description": "Plus de 13 ans à développer des projets solaires, de stockage, GNL et gaz à grande échelle au Bangladesh — faisabilité, négociation du contrat d’achat, permis et bouclage financier."
+    },
+    "about": {
+      "title": "À propos",
+      "description": "Treize ans entre capitaux étrangers et électricité bangladaise : parcours, qualifications et expérience sectorielle."
+    },
+    "services": {
+      "title": "Services",
+      "description": "Développement et faisabilité, réglementaire et relations institutionnelles, conseil commercial et contrat d’achat, représentation locale et ingénierie du maître d’ouvrage."
+    },
+    "projects": {
+      "title": "Projets",
+      "description": "Un registre de plus de 30 projets électriques en solaire, stockage, GNL, gaz, charbon et transport — chacun avec son stade réel de développement."
+    },
+    "insights": {
+      "title": "Analyses",
+      "description": "Le fonctionnement réel du secteur électrique bangladais, pour ceux qui y financent et y construisent."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Discutez d’un projet électrique au Bangladesh. Réponse sous un jour ouvré."
+    },
+    "og": {
+      "headline": "Des projets qui atteignent vraiment le bouclage financier.",
+      "role": "Professionnel du secteur électrique",
+      "years": "ans",
+      "projects": "projets"
+    }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "01 — Développement électrique à grande échelle",
+      "title": "Des projets qui atteignent <em>vraiment le bouclage.</em>",
+      "lede": "Plus de 13 ans à développer des projets solaires, de stockage, GNL et gaz à grande échelle au Bangladesh — de la faisabilité et du foncier jusqu’à la négociation du contrat d’achat, les permis et le bouclage financier. Le capital et la technologie sont la partie facile. Le terrain, c’est moi.",
+      "ctaPrimary": "Réserver une consultation",
+      "ctaSecondary": "Voir le registre des projets",
+      "availability": "Disponible pour de nouveaux mandats — Dacca, GMT+6"
+    },
+    "stats": {
+      "years": {
+        "label": "Expérience",
+        "note": "Sans interruption depuis 2013"
+      },
+      "projects": {
+        "label": "Projets",
+        "note": "Solaire · Stockage · GNL · Gaz · Charbon"
+      },
+      "partners": {
+        "label": "Contreparties",
+        "note": "Japon · Chine · Corée · Golfe · USA"
+      },
+      "proposals": {
+        "label": "Offres remportées",
+        "note": "Dossiers d'appel d'offres solaires rédigés"
+      }
+    },
+    "sections": {
+      "capability": "02 / Compétences",
+      "register": "03 / Registre",
+      "insights": "06 / Analyses",
+      "partners": "04 / Contreparties",
+      "portfolio": "05 / Portefeuille"
+    }
+  },
+  "capabilities": {
+    "title": "Quatre choses qu'un investisseur étranger <em>ne peut pas acheter ici.</em>",
+    "lede": "Les développeurs internationaux arrivent avec le capital, la technologie et un calendrier. Ce qui les bloque, c’est l’exécution locale — le foncier, le raccordement, les ministères, et un contrat d’achat qu’un prêteur acceptera.",
+    "items": {
+      "development": {
+        "title": "Développement & faisabilité",
+        "body": "Évaluation du site et de la ressource, de la pré-faisabilité à l’étude bancable, EIE, modélisation technique et financière.",
+        "tags": "Ressource|Pré-faisabilité|IEE / EIE|Modélisation"
+      },
+      "regulatory": {
+        "title": "Réglementaire & relations institutionnelles",
+        "body": "Propositions spontanées et voie PPP, relations BPDB et ministères, licences, acquisition foncière et autorisations.",
+        "tags": "BPDB|NWPGCL|BEZA|Autorité PPP|SREDA"
+      },
+      "commercial": {
+        "title": "Commercial & contrat d’achat",
+        "body": "Structuration tarifaire, appui à la négociation du PPA et de la convention de mise en œuvre, préparation des offres, chemin vers le bouclage.",
+        "tags": "Tarif|PPA / IA|Offre|Bouclage"
+      },
+      "representation": {
+        "title": "Représentation locale & ingénierie du maître d’ouvrage",
+        "body": "Présence dans le pays pour les sponsors étrangers, supervision EPC, contrôle documentaire et reporting lisible par votre conseil.",
+        "tags": "Ingénieur du maître d’ouvrage|Supervision EPC|Reporting"
+      }
+    }
+  },
+  "register": {
+    "title": "Chaque projet, avec le stade <em>où il en est réellement.</em>",
+    "lede": "Sans exagération. Chaque ligne indique la technologie, la contrepartie et le stade réel — faisabilité, appel d’offres, développement, approuvé ou en exploitation.",
+    "showing": "{shown} projets sur {total}",
+    "openFull": "Ouvrir le registre complet",
+    "confidential": "Sponsor confidentiel",
+    "projectCount": "{count, plural, =0 {Aucun projet} other {# projets}}",
+    "col": {
+      "no": "N°",
+      "capacity": "Capacité",
+      "project": "Projet",
+      "counterparty": "Contrepartie",
+      "stage": "Stade",
+      "year": "Année"
+    },
+    "stage": {
+      "Feasibility": "Faisabilité",
+      "Bidding": "Appel d’offres",
+      "Development": "Développement",
+      "Approved": "Approuvé",
+      "Construction": "Construction",
+      "Operational": "En exploitation"
+    }
+  },
+  "tech": {
+    "Solar PV": "Solaire PV",
+    "BESS": "Stockage",
+    "LNG & FSRU": "GNL & FSRU",
+    "Gas / CCPP": "Gaz / CCG",
+    "Coal": "Charbon",
+    "Transmission": "Transport",
+    "Waste-to-Energy": "Déchets-énergie"
+  },
+  "insights": {
+    "title": "Le secteur électrique bangladais, <em>écrit pour ceux qui n'y vivent pas.</em>",
+    "lede": "Cherchez en anglais comment un contrat d’achat se signe réellement à Dacca : vous ne trouverez presque rien d’utile. Cet écart est l’opportunité.",
+    "pageTitle": "<em>Analyses.</em>",
+    "pageLede": "Des notes sur le fonctionnement réel du secteur électrique bangladais, pour ceux qui y financent et y construisent.",
+    "empty": "Les premiers articles sont en cours de rédaction. Revenez bientôt.",
+    "backToIndex": "Toutes les analyses",
+    "playVideo": "Lire la vidéo",
+    "read": "{minutes} min de lecture",
+    "watch": "{minutes} min de vidéo",
+    "type": {
+      "Article": "Article",
+      "Video": "Vidéo"
+    }
+  },
+  "about": {
+    "title": "Treize ans entre capitaux étrangers <em>et électricité bangladaise.</em>",
+    "lede": "Je développe des projets électriques à grande échelle au Bangladesh — solaire, stockage, GNL et gaz. Les sponsors étrangers apportent l’argent et la technologie ; je rends le projet réel sur place : le foncier, le raccordement, les autorisations ministérielles, et un contrat d’achat qu’un prêteur financera vraiment.",
+    "careerTitle": "Parcours",
+    "credentialsTitle": "Formation et langues",
+    "sections": {
+      "career": "01 / Parcours",
+      "credentials": "02 / Qualifications"
+    },
+    "roles": {
+      "mz_director": "Directeur, énergies renouvelables",
+      "mz_consultant": "Consultant indépendant, énergie",
+      "rangunia": "Chef de projet et représentant local",
+      "xsergy": "Responsable des opérations",
+      "reliance": "Responsable adjoint, GNL et FSRU",
+      "om": "Ingénieur électricien",
+      "metito": "Consultant indépendant",
+      "symbior": "Consultant en énergies renouvelables",
+      "eclectic": "Consultant exécutif",
+      "aloron": "Directeur général"
+    },
+    "education": {
+      "title": "Formation",
+      "items": "Licence en génie électrique et électronique — American International University-Bangladesh (AIUB), 2013|Spécialité : technologies des énergies renouvelables · communication mobile cellulaire|Mémoire : centrale à vortex gravitationnel"
+    },
+    "languages": {
+      "title": "Langues",
+      "items": "Bengali — langue maternelle|Anglais — maîtrise professionnelle complète"
+    },
+    "introBody": "Dix organisations en treize ans, du contrôle documentaire sur des études d’ingénieur du maître d’ouvrage à la direction du développement renouvelable. Le fil ne change pas : faire passer un projet au-delà du point où, ici, les projets s’arrêtent d’ordinaire."
+  },
+  "services": {
+    "title": "Quatre façons de <em>collaborer.</em>",
+    "lede": "Chaque mission est cadrée autour d’un livrable défini, au forfait ou en régie mensuelle. Pas de conseil à durée indéterminée.",
+    "photoAlt": "Abdullah Bin Hossain lors d’une réunion de projet, Dacca"
+  },
+  "projects": {
+    "title": "<em>Registre des projets.</em>",
+    "lede": "Plus de trente projets en solaire, stockage, GNL, gaz, charbon et transport — chacun avec le stade réellement atteint.",
+    "disclaimer": "Les stades reflètent le point atteint par chaque projet pendant ma participation, et pas nécessairement son statut actuel. Certains sponsors apparaissent comme confidentiels lorsqu’un accord de confidentialité ou une négociation en cours s’applique.",
+    "photoAlt": "Abdullah Bin Hossain examinant la documentation du projet, Dacca"
+  },
+  "project": {
+    "technology": "Technologie",
+    "location": "Localisation",
+    "role": "Rôle",
+    "backToRegister": "Tous les projets",
+    "detailPending": "Une étude de cas complète pour ce projet est en préparation.",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "moreProjects": "Autres projets"
+  },
+  "contact": {
+    "title": "Démarrer la <em>conversation.</em>",
+    "lede": "Dites-moi la technologie, la capacité et le stade où vous en êtes. Je réponds sous un jour ouvré.",
+    "emailLabel": "E-mail",
+    "phoneLabel": "Téléphone / WhatsApp",
+    "locationLabel": "Localisation",
+    "locationValue": "Dacca, Bangladesh · GMT+6",
+    "responseLabel": "Délai de réponse",
+    "responseValue": "Sous 1 jour ouvré",
+    "form": {
+      "name": "Nom",
+      "namePlaceholder": "Votre nom",
+      "email": "E-mail",
+      "emailPlaceholder": "vous@societe.com",
+      "company": "Société",
+      "companyPlaceholder": "Nom de la société",
+      "country": "Pays",
+      "countryPlaceholder": "Pays",
+      "projectType": "Type de projet",
+      "message": "Message",
+      "messagePlaceholder": "Parlez-moi du projet — technologie, capacité, stade actuel",
+      "submit": "Envoyer",
+      "sending": "Envoi…",
+      "successTitle": "Message envoyé.",
+      "successBody": "Merci. Je réponds sous un jour ouvré.",
+      "errorGeneric": "Une erreur est survenue. Merci de m’écrire directement.",
+      "errorRateLimited": "Trop de messages envoyés. Merci de réessayer plus tard.",
+      "privacy": "Vos informations servent uniquement à répondre à cette demande."
+    },
+    "hoursLabel": "Heures de consultation"
+  },
+  "cta": {
+    "eyebrow": "07 / Contact",
+    "title": "Dites-moi la technologie, la capacité, et <em>où vous êtes bloqué.</em>",
+    "body": "Je vous dirai honnêtement à quoi ressemble le parcours à partir d’ici — y compris quand la réponse est que cela ne fonctionne pas.",
+    "primary": "Réserver une consultation",
+    "secondary": "WhatsApp"
+  },
+  "footer": {
+    "blurb": "Développement de projets électriques à grande échelle dans la région APAC.",
+    "pages": "Pages",
+    "technologies": "Technologies",
+    "contact": "Contact"
+  },
+  "notFound": {
+    "title": "Cette page n’existe pas.",
+    "body": "Le lien est peut-être obsolète. Le registre des projets et les analyses sont à un clic.",
+    "cta": "Retour à l’accueil"
+  },
+  "portfolio": {
+    "title": "Ce qui compose <em>réellement le portefeuille.</em>",
+    "lede": "Compté depuis le registre de ce site, sans arrondi flatteur. La capacité est la somme des projets menés dans chaque technologie.",
+    "col": {
+      "technology": "Technologie",
+      "projects": "Projets",
+      "capacity": "Capacité"
+    },
+    "projectCount": "{count, plural, =0 {aucun} =1 {1 projet} other {# projets}}",
+    "notMeasuredInMW": "non mesuré en mégawatts",
+    "footnote": "Un projet utilisant deux technologies est compté dans les deux lignes ; les lignes ne totalisent donc pas le portefeuille. Le transport se chiffre en kilovolts et non en mégawatts."
+  }
+}

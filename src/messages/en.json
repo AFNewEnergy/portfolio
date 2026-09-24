@@ -1,0 +1,275 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "projects": "Projects",
+    "insights": "Insights",
+    "contact": "Contact"
+  },
+  "ui": {
+    "tagline": "Power Development · APAC",
+    "getInTouch": "Get in touch",
+    "toggleTheme": "Toggle light and dark theme",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "language": "Language",
+    "mainNav": "Main navigation"
+  },
+  "meta": {
+    "skipToContent": "Skip to content",
+    "keywords": "power project developer Bangladesh|IPP consultant Bangladesh|solar project development Bangladesh|BPDB PPA consultant|LNG FSRU Bangladesh|BESS Bangladesh|local partner Bangladesh energy|utility-scale solar APAC",
+    "home": {
+      "title": "Abdullah Bin Hossain (Faisal) — Utility-Scale Power Project Development in Bangladesh",
+      "description": "13+ years developing utility-scale solar, BESS, LNG and gas projects in Bangladesh — feasibility, PPA negotiation, permitting and financial close."
+    },
+    "about": {
+      "title": "About",
+      "description": "Thirteen years between foreign capital and Bangladeshi power: career history, credentials and sector experience."
+    },
+    "services": {
+      "title": "Services",
+      "description": "Development and feasibility, regulatory and government liaison, commercial and PPA advisory, local representation and owner’s engineering."
+    },
+    "projects": {
+      "title": "Projects",
+      "description": "A register of 30+ utility-scale power projects across solar, BESS, LNG, gas, coal and transmission — each with its real development stage."
+    },
+    "insights": {
+      "title": "Insights",
+      "description": "How Bangladesh’s power sector actually works, written for the people financing and building in it."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Discuss a power project in Bangladesh. Response within one working day."
+    },
+    "og": {
+      "headline": "Power projects that actually reach financial close.",
+      "role": "Power Business Professional",
+      "years": "years",
+      "projects": "projects"
+    }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "01 — Utility-scale power development",
+      "title": "Power projects that reach <em>financial close.</em>",
+      "lede": "13+ years developing utility-scale solar, storage, LNG and gas projects in Bangladesh — from feasibility and land through PPA negotiation, permitting and close. The capital and the technology are the easy part. I handle the ground.",
+      "ctaPrimary": "Book a consultation",
+      "ctaSecondary": "View project register",
+      "availability": "Available for new project mandates — Dhaka, GMT+6"
+    },
+    "stats": {
+      "years": {
+        "label": "Experience",
+        "note": "Continuous, since 2013"
+      },
+      "projects": {
+        "label": "Projects",
+        "note": "Solar · BESS · LNG · Gas · Coal"
+      },
+      "partners": {
+        "label": "Counterparties",
+        "note": "Japan · China · Korea · Gulf · USA"
+      },
+      "proposals": {
+        "label": "Proposals won",
+        "note": "Solar tender documents authored"
+      }
+    },
+    "sections": {
+      "capability": "02 / Capability",
+      "register": "03 / Register",
+      "insights": "06 / Insights",
+      "partners": "04 / Counterparties",
+      "portfolio": "05 / Portfolio"
+    }
+  },
+  "capabilities": {
+    "title": "Four things a foreign sponsor cannot buy <em>off the shelf</em> here.",
+    "lede": "International developers arrive with capital, technology and a schedule. What stalls them is the ground game — land, grid, ministries, and a PPA a lender will accept.",
+    "items": {
+      "development": {
+        "title": "Development & Feasibility",
+        "body": "Site and resource assessment, pre-feasibility through bankable feasibility study, IEE and EIA, technical and financial modelling.",
+        "tags": "Resource|Pre-FS|IEE / EIA|Modelling"
+      },
+      "regulatory": {
+        "title": "Regulatory & Government Liaison",
+        "body": "Unsolicited and PPP proposal routing, BPDB and ministry engagement, licences, land acquisition and approvals.",
+        "tags": "BPDB|NWPGCL|BEZA|PPP Authority|SREDA"
+      },
+      "commercial": {
+        "title": "Commercial & PPA",
+        "body": "Tariff structuring, PPA and implementation agreement negotiation support, bid preparation, route to financial close.",
+        "tags": "Tariff|PPA / IA|Bid|Financial close"
+      },
+      "representation": {
+        "title": "Local Representation & Owner’s Engineering",
+        "body": "In-country presence for foreign sponsors, EPC supervision, document control, and progress reporting your board can read.",
+        "tags": "Owner’s engineer|EPC oversight|Reporting"
+      }
+    }
+  },
+  "register": {
+    "title": "Every project, with the stage it is <em>actually</em> at.",
+    "lede": "No inflated claims. Each entry states the technology, the counterparty and the real stage — feasibility, bidding, development, approved or operational.",
+    "showing": "Showing {shown} of {total}",
+    "openFull": "Open full register",
+    "confidential": "Confidential sponsor",
+    "projectCount": "{count, plural, =0 {No projects} other {# projects}}",
+    "col": {
+      "no": "No.",
+      "capacity": "Capacity",
+      "project": "Project",
+      "counterparty": "Counterparty",
+      "stage": "Stage",
+      "year": "Year"
+    },
+    "stage": {
+      "Feasibility": "Feasibility",
+      "Bidding": "Bidding",
+      "Development": "Development",
+      "Approved": "Approved",
+      "Construction": "Construction",
+      "Operational": "Operational"
+    }
+  },
+  "tech": {
+    "Solar PV": "Solar PV",
+    "BESS": "BESS",
+    "LNG & FSRU": "LNG & FSRU",
+    "Gas / CCPP": "Gas / CCPP",
+    "Coal": "Coal",
+    "Transmission": "Transmission",
+    "Waste-to-Energy": "Waste-to-Energy"
+  },
+  "insights": {
+    "title": "Bangladesh's power sector, written for people who <em>don't live here.</em>",
+    "lede": "Search in English for how a PPA actually gets signed in Dhaka and you find almost nothing useful. That gap is the opportunity.",
+    "pageTitle": "<em>Insights.</em>",
+    "pageLede": "Notes on how Bangladesh’s power sector actually works, for the people financing and building in it.",
+    "empty": "First articles are being written. Check back shortly.",
+    "backToIndex": "All insights",
+    "playVideo": "Play video",
+    "read": "{minutes} min read",
+    "watch": "{minutes} min watch",
+    "type": {
+      "Article": "Article",
+      "Video": "Video"
+    }
+  },
+  "about": {
+    "title": "Thirteen years between foreign capital and <em>Bangladeshi power.</em>",
+    "lede": "I develop utility-scale power projects in Bangladesh — solar, storage, LNG and gas. Foreign sponsors bring the money and the technology; I make the project real in-country: the land, the grid connection, the ministry approvals, and a PPA a lender will actually finance.",
+    "careerTitle": "Career",
+    "credentialsTitle": "Education and languages",
+    "sections": {
+      "career": "01 / Career",
+      "credentials": "02 / Credentials"
+    },
+    "roles": {
+      "mz_director": "Director, Renewable Energy Sector",
+      "mz_consultant": "Independent Consultant, Power & Energy",
+      "rangunia": "Project Manager & Local Representative",
+      "xsergy": "Manager, Operations",
+      "reliance": "Assistant Manager, LNG & FSRU",
+      "om": "Electrical Engineer",
+      "metito": "Independent Consultant",
+      "symbior": "Renewable Energy Consultant",
+      "eclectic": "Executive Consultant",
+      "aloron": "Chief Executive Officer"
+    },
+    "education": {
+      "title": "Education",
+      "items": "B.Sc. Electrical & Electronic Engineering — American International University-Bangladesh (AIUB), 2013|Major: Renewable Energy Technology · Cellular Mobile Communication|Thesis: Gravitational Water Vortex Power Plant"
+    },
+    "languages": {
+      "title": "Languages",
+      "items": "Bengali — mother tongue|English — full professional proficiency"
+    },
+    "introBody": "Ten organisations in thirteen years, from document control on owner’s engineering studies to directing renewable development. The thread does not change: getting a project past the point where projects here usually stall."
+  },
+  "services": {
+    "title": "Four ways to <em>engage.</em>",
+    "lede": "Each engagement is scoped to a defined deliverable, with a fixed fee or a retainer. No open-ended consulting.",
+    "photoAlt": "Abdullah Bin Hossain in a project meeting, Dhaka"
+  },
+  "projects": {
+    "title": "<em>Project register.</em>",
+    "lede": "Thirty-plus projects across solar, storage, LNG, gas, coal and transmission — each shown with the stage it actually reached.",
+    "disclaimer": "Stages reflect the point each project reached during my involvement, not necessarily its status today. Several sponsors are shown as confidential where a non-disclosure agreement or a live negotiation applies.",
+    "photoAlt": "Abdullah Bin Hossain reviewing project documentation, Dhaka"
+  },
+  "project": {
+    "technology": "Technology",
+    "location": "Location",
+    "role": "Role",
+    "backToRegister": "All projects",
+    "detailPending": "A full case study for this project is in preparation.",
+    "previous": "Previous",
+    "next": "Next",
+    "moreProjects": "More projects"
+  },
+  "contact": {
+    "title": "Start a <em>conversation.</em>",
+    "lede": "Tell me the technology, the capacity and the stage you are at. I reply within one working day.",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone / WhatsApp",
+    "locationLabel": "Location",
+    "locationValue": "Dhaka, Bangladesh · GMT+6",
+    "responseLabel": "Response time",
+    "responseValue": "Within 1 working day",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "you@company.com",
+      "company": "Company",
+      "companyPlaceholder": "Company name",
+      "country": "Country",
+      "countryPlaceholder": "Country",
+      "projectType": "Project type",
+      "message": "Message",
+      "messagePlaceholder": "Tell me about the project — technology, capacity, current stage",
+      "submit": "Send message",
+      "sending": "Sending…",
+      "successTitle": "Message sent.",
+      "successBody": "Thank you. I reply within one working day.",
+      "errorGeneric": "Something went wrong. Please email me directly.",
+      "errorRateLimited": "Too many messages sent. Please try again later.",
+      "privacy": "Your details are used only to reply to this enquiry."
+    },
+    "hoursLabel": "Consultation hours"
+  },
+  "cta": {
+    "eyebrow": "07 / Contact",
+    "title": "Tell me the technology, the capacity, and <em>where you're stuck.</em>",
+    "body": "I’ll tell you honestly what the route from here looks like — including when the answer is that it doesn’t work.",
+    "primary": "Book a consultation",
+    "secondary": "WhatsApp"
+  },
+  "footer": {
+    "blurb": "Utility-scale power project development across the APAC region.",
+    "pages": "Pages",
+    "technologies": "Technologies",
+    "contact": "Contact"
+  },
+  "notFound": {
+    "title": "This page does not exist.",
+    "body": "The link may be out of date. The project register and insights are both a click away.",
+    "cta": "Back to home"
+  },
+  "portfolio": {
+    "title": "What the portfolio is actually <em>made of.</em>",
+    "lede": "Counted from the register on this site, not rounded up for effect. Capacity is the sum of the projects engaged in each technology.",
+    "col": {
+      "technology": "Technology",
+      "projects": "Projects",
+      "capacity": "Capacity"
+    },
+    "projectCount": "{count, plural, =0 {none} =1 {1 project} other {# projects}}",
+    "notMeasuredInMW": "not measured in megawatts",
+    "footnote": "A project using two technologies is counted under both, so the rows do not sum to a portfolio total. Transmission work is tendered in kilovolts rather than megawatts."
+  }
+}

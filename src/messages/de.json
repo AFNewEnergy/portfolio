@@ -1,0 +1,275 @@
+{
+  "nav": {
+    "home": "Start",
+    "about": "Über mich",
+    "services": "Leistungen",
+    "projects": "Projekte",
+    "insights": "Insights",
+    "contact": "Kontakt"
+  },
+  "ui": {
+    "tagline": "Projektentwicklung · APAC",
+    "getInTouch": "Kontakt aufnehmen",
+    "toggleTheme": "Helles und dunkles Design wechseln",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen",
+    "language": "Sprache",
+    "mainNav": "Hauptnavigation"
+  },
+  "meta": {
+    "skipToContent": "Zum Inhalt springen",
+    "keywords": "Kraftwerksentwickler Bangladesch|IPP Berater Bangladesch|Solarprojektentwicklung Bangladesch|BPDB PPA Berater|LNG FSRU Bangladesch|BESS Bangladesch|lokaler Partner Energie Bangladesch",
+    "home": {
+      "title": "Abdullah Bin Hossain (Faisal) — Kraftwerksentwicklung im Versorgungsmaßstab in Bangladesch",
+      "description": "13+ Jahre Entwicklung von Solar-, BESS-, LNG- und Gasprojekten im Versorgungsmaßstab in Bangladesch — Machbarkeit, PPA-Verhandlung, Genehmigungen und Financial Close."
+    },
+    "about": {
+      "title": "Über mich",
+      "description": "Dreizehn Jahre zwischen ausländischem Kapital und Bangladeschs Stromsektor: Werdegang, Qualifikationen und Branchenerfahrung."
+    },
+    "services": {
+      "title": "Leistungen",
+      "description": "Entwicklung und Machbarkeit, Regulatorik und Behördenkontakt, kaufmännische und PPA-Beratung, lokale Vertretung und Owner’s Engineering."
+    },
+    "projects": {
+      "title": "Projekte",
+      "description": "Ein Register von 30+ Kraftwerksprojekten in Solar, BESS, LNG, Gas, Kohle und Übertragung — jeweils mit dem tatsächlichen Entwicklungsstand."
+    },
+    "insights": {
+      "title": "Insights",
+      "description": "Wie Bangladeschs Energiesektor wirklich funktioniert — für die, die dort finanzieren und bauen."
+    },
+    "contact": {
+      "title": "Kontakt",
+      "description": "Besprechen Sie ein Energieprojekt in Bangladesch. Antwort innerhalb eines Werktags."
+    },
+    "og": {
+      "headline": "Projekte, die den Financial Close tatsächlich erreichen.",
+      "role": "Power Business Professional",
+      "years": "Jahre",
+      "projects": "Projekte"
+    }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "01 — Kraftwerksentwicklung im Versorgungsmaßstab",
+      "title": "Projekte, die den <em>Financial Close tatsächlich erreichen.</em>",
+      "lede": "13+ Jahre Entwicklung von Solar-, Speicher-, LNG- und Gasprojekten im Versorgungsmaßstab in Bangladesch — von Machbarkeitsstudie und Fläche über PPA-Verhandlung und Genehmigungen bis zum Close. Kapital und Technologie sind der einfache Teil. Ich übernehme die Umsetzung vor Ort.",
+      "ctaPrimary": "Beratungstermin buchen",
+      "ctaSecondary": "Projektregister ansehen",
+      "availability": "Verfügbar für neue Projektmandate — Dhaka, GMT+6"
+    },
+    "stats": {
+      "years": {
+        "label": "Erfahrung",
+        "note": "Durchgehend seit 2013"
+      },
+      "projects": {
+        "label": "Projekte",
+        "note": "Solar · BESS · LNG · Gas · Kohle"
+      },
+      "partners": {
+        "label": "Gegenparteien",
+        "note": "Japan · China · Korea · Golf · USA"
+      },
+      "proposals": {
+        "label": "Gewonnene Angebote",
+        "note": "Von ihm erstellte Solar-Ausschreibungsunterlagen"
+      }
+    },
+    "sections": {
+      "capability": "02 / Kompetenz",
+      "register": "03 / Register",
+      "insights": "06 / Insights",
+      "partners": "04 / Gegenparteien",
+      "portfolio": "05 / Portfolio"
+    }
+  },
+  "capabilities": {
+    "title": "Vier Dinge, die ein ausländischer Investor hier <em>nicht einkaufen kann.</em>",
+    "lede": "Internationale Entwickler kommen mit Kapital, Technologie und einem Zeitplan. Was sie aufhält, ist die Umsetzung vor Ort — Fläche, Netzanschluss, Ministerien und ein PPA, das ein Finanzierer akzeptiert.",
+    "items": {
+      "development": {
+        "title": "Entwicklung & Machbarkeit",
+        "body": "Standort- und Ressourcenbewertung, Vorstudie bis bankfähige Machbarkeitsstudie, UVP, technische und finanzielle Modellierung.",
+        "tags": "Ressource|Vorstudie|IEE / UVP|Modellierung"
+      },
+      "regulatory": {
+        "title": "Regulatorik & Behördenkontakt",
+        "body": "Unaufgeforderte Angebote und ÖPP-Verfahren, BPDB- und Ministeriumskontakte, Lizenzen, Flächenerwerb und Genehmigungen.",
+        "tags": "BPDB|NWPGCL|BEZA|ÖPP-Behörde|SREDA"
+      },
+      "commercial": {
+        "title": "Kaufmännisches & PPA",
+        "body": "Tarifstrukturierung, Unterstützung bei PPA- und Umsetzungsvertragsverhandlungen, Angebotserstellung, Weg zum Financial Close.",
+        "tags": "Tarif|PPA / IA|Angebot|Financial Close"
+      },
+      "representation": {
+        "title": "Lokale Vertretung & Owner’s Engineering",
+        "body": "Präsenz im Land für ausländische Sponsoren, EPC-Aufsicht, Dokumentenkontrolle und Fortschrittsberichte, die Ihr Vorstand lesen kann.",
+        "tags": "Owner’s Engineer|EPC-Aufsicht|Reporting"
+      }
+    }
+  },
+  "register": {
+    "title": "Jedes Projekt, mit dem Stand, <em>auf dem es wirklich ist.</em>",
+    "lede": "Keine überhöhten Angaben. Jeder Eintrag nennt Technologie, Gegenpartei und den tatsächlichen Stand — Machbarkeit, Ausschreibung, Entwicklung, genehmigt oder in Betrieb.",
+    "showing": "{shown} von {total} angezeigt",
+    "openFull": "Vollständiges Register öffnen",
+    "confidential": "Vertraulicher Sponsor",
+    "projectCount": "{count, plural, =0 {Keine Projekte} other {# Projekte}}",
+    "col": {
+      "no": "Nr.",
+      "capacity": "Kapazität",
+      "project": "Projekt",
+      "counterparty": "Gegenpartei",
+      "stage": "Stand",
+      "year": "Jahr"
+    },
+    "stage": {
+      "Feasibility": "Machbarkeit",
+      "Bidding": "Ausschreibung",
+      "Development": "Entwicklung",
+      "Approved": "Genehmigt",
+      "Construction": "Bau",
+      "Operational": "In Betrieb"
+    }
+  },
+  "tech": {
+    "Solar PV": "Solar PV",
+    "BESS": "BESS",
+    "LNG & FSRU": "LNG & FSRU",
+    "Gas / CCPP": "Gas / GuD",
+    "Coal": "Kohle",
+    "Transmission": "Übertragung",
+    "Waste-to-Energy": "Abfall zu Energie"
+  },
+  "insights": {
+    "title": "Der Energiesektor Bangladeschs — <em>für Leute, die nicht hier leben.</em>",
+    "lede": "Suchen Sie auf Englisch, wie ein PPA in Dhaka tatsächlich unterzeichnet wird, und Sie finden kaum etwas Brauchbares. Diese Lücke ist die Chance.",
+    "pageTitle": "<em>Insights.</em>",
+    "pageLede": "Notizen dazu, wie Bangladeschs Energiesektor wirklich funktioniert — für die, die dort finanzieren und bauen.",
+    "empty": "Die ersten Beiträge entstehen gerade. Schauen Sie bald wieder vorbei.",
+    "backToIndex": "Alle Insights",
+    "playVideo": "Video abspielen",
+    "read": "{minutes} Min. Lesezeit",
+    "watch": "{minutes} Min. Video",
+    "type": {
+      "Article": "Artikel",
+      "Video": "Video"
+    }
+  },
+  "about": {
+    "title": "Dreizehn Jahre zwischen ausländischem Kapital <em>und Bangladeschs Stromsektor.</em>",
+    "lede": "Ich entwickle Kraftwerksprojekte im Versorgungsmaßstab in Bangladesch — Solar, Speicher, LNG und Gas. Ausländische Sponsoren bringen Geld und Technologie; ich mache das Projekt im Land real: Fläche, Netzanschluss, Ministeriumsgenehmigungen und ein PPA, das ein Kreditgeber tatsächlich finanziert.",
+    "careerTitle": "Werdegang",
+    "credentialsTitle": "Ausbildung und Sprachen",
+    "sections": {
+      "career": "01 / Werdegang",
+      "credentials": "02 / Qualifikationen"
+    },
+    "roles": {
+      "mz_director": "Director, Bereich Erneuerbare Energien",
+      "mz_consultant": "Unabhängiger Berater, Energie",
+      "rangunia": "Projektleiter und lokaler Vertreter",
+      "xsergy": "Manager, Operations",
+      "reliance": "Assistant Manager, LNG & FSRU",
+      "om": "Elektroingenieur",
+      "metito": "Unabhängiger Berater",
+      "symbior": "Berater für erneuerbare Energien",
+      "eclectic": "Executive Consultant",
+      "aloron": "Geschäftsführer"
+    },
+    "education": {
+      "title": "Ausbildung",
+      "items": "B.Sc. Elektro- und Elektroniktechnik — American International University-Bangladesh (AIUB), 2013|Schwerpunkt: Erneuerbare-Energien-Technik · Mobilfunk|Abschlussarbeit: Gravitationswasserwirbel-Kraftwerk"
+    },
+    "languages": {
+      "title": "Sprachen",
+      "items": "Bengalisch — Muttersprache|Englisch — verhandlungssicher"
+    },
+    "introBody": "Zehn Organisationen in dreizehn Jahren, von der Dokumentenkontrolle in Owner’s-Engineering-Studien bis zur Leitung der Projektentwicklung für Erneuerbare. Der rote Faden bleibt derselbe: ein Projekt über den Punkt hinwegbringen, an dem Projekte hier üblicherweise stehen bleiben."
+  },
+  "services": {
+    "title": "Vier Wege der <em>Zusammenarbeit.</em>",
+    "lede": "Jedes Mandat ist auf ein definiertes Ergebnis zugeschnitten, mit Festpreis oder Retainer. Keine offene Beratung.",
+    "photoAlt": "Abdullah Bin Hossain in einer Projektbesprechung, Dhaka"
+  },
+  "projects": {
+    "title": "<em>Projektregister.</em>",
+    "lede": "Über dreißig Projekte in Solar, Speicher, LNG, Gas, Kohle und Übertragung — jeweils mit dem tatsächlich erreichten Stand.",
+    "disclaimer": "Die Stände geben den Punkt wieder, den jedes Projekt während meiner Mitwirkung erreicht hat, nicht zwingend den heutigen Status. Einige Sponsoren erscheinen als vertraulich, wo eine Vertraulichkeitsvereinbarung oder eine laufende Verhandlung gilt.",
+    "photoAlt": "Abdullah Bin Hossain bei der Prüfung von Projektunterlagen, Dhaka"
+  },
+  "project": {
+    "technology": "Technologie",
+    "location": "Standort",
+    "role": "Rolle",
+    "backToRegister": "Alle Projekte",
+    "detailPending": "Eine ausführliche Fallstudie zu diesem Projekt ist in Vorbereitung.",
+    "previous": "Zurück",
+    "next": "Weiter",
+    "moreProjects": "Weitere Projekte"
+  },
+  "contact": {
+    "title": "<em>Gespräch</em> beginnen.",
+    "lede": "Nennen Sie mir Technologie, Kapazität und Projektstand. Ich antworte innerhalb eines Werktags.",
+    "emailLabel": "E-Mail",
+    "phoneLabel": "Telefon / WhatsApp",
+    "locationLabel": "Standort",
+    "locationValue": "Dhaka, Bangladesch · GMT+6",
+    "responseLabel": "Antwortzeit",
+    "responseValue": "Innerhalb 1 Werktags",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Ihr Name",
+      "email": "E-Mail",
+      "emailPlaceholder": "sie@firma.com",
+      "company": "Unternehmen",
+      "companyPlaceholder": "Firmenname",
+      "country": "Land",
+      "countryPlaceholder": "Land",
+      "projectType": "Projekttyp",
+      "message": "Nachricht",
+      "messagePlaceholder": "Erzählen Sie vom Projekt — Technologie, Kapazität, aktueller Stand",
+      "submit": "Nachricht senden",
+      "sending": "Wird gesendet…",
+      "successTitle": "Nachricht gesendet.",
+      "successBody": "Vielen Dank. Ich antworte innerhalb eines Werktags.",
+      "errorGeneric": "Etwas ist schiefgelaufen. Bitte schreiben Sie mir direkt.",
+      "errorRateLimited": "Zu viele Nachrichten gesendet. Bitte später erneut versuchen.",
+      "privacy": "Ihre Angaben werden ausschließlich zur Beantwortung dieser Anfrage verwendet."
+    },
+    "hoursLabel": "Beratungszeiten"
+  },
+  "cta": {
+    "eyebrow": "07 / Kontakt",
+    "title": "Nennen Sie mir Technologie, Kapazität und <em>wo es hakt.</em>",
+    "body": "Ich sage Ihnen ehrlich, wie der Weg von hier aussieht — auch dann, wenn die Antwort lautet, dass es nicht funktioniert.",
+    "primary": "Beratungstermin buchen",
+    "secondary": "WhatsApp"
+  },
+  "footer": {
+    "blurb": "Entwicklung von Kraftwerksprojekten im Versorgungsmaßstab in der APAC-Region.",
+    "pages": "Seiten",
+    "technologies": "Technologien",
+    "contact": "Kontakt"
+  },
+  "notFound": {
+    "title": "Diese Seite existiert nicht.",
+    "body": "Der Link ist möglicherweise veraltet. Projektregister und Insights sind einen Klick entfernt.",
+    "cta": "Zurück zur Startseite"
+  },
+  "portfolio": {
+    "title": "Woraus das Portfolio <em>tatsächlich besteht.</em>",
+    "lede": "Aus dem Projektregister dieser Seite gezählt, nicht zur Wirkung aufgerundet. Die Kapazität ist die Summe der Projekte je Technologie.",
+    "col": {
+      "technology": "Technologie",
+      "projects": "Projekte",
+      "capacity": "Kapazität"
+    },
+    "projectCount": "{count, plural, =0 {keine} =1 {1 Projekt} other {# Projekte}}",
+    "notMeasuredInMW": "nicht in Megawatt gemessen",
+    "footnote": "Ein Projekt mit zwei Technologien wird in beiden Zeilen gezählt, die Zeilen ergeben daher keine Portfoliosumme. Übertragungsprojekte werden in Kilovolt statt Megawatt ausgeschrieben."
+  }
+}
