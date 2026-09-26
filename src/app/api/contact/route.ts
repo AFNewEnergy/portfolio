@@ -25,8 +25,12 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'bad_request' }, { status: 400 })
   }
 
-  // 3 — honeypot: a filled hidden field means a bot. Return 200 so it learns nothing.
-  if (clean(body.website, 100)) return NextResponse.json({ ok: true })
+  // 3 — honeypot: a filled hidden field means a bot. Return 200 so it learns nothing,
+  //     but log it so a real message dropped here is visible in Vercel → Logs.
+  if (clean(body.hp_x9, 100)) {
+    console.warn('[contact] blocked as spam (hidden field was filled)')
+    return NextResponse.json({ ok: true })
+  }
 
   const name = clean(body.name, MAX.name)
   const email = clean(body.email, MAX.email)
@@ -57,7 +61,7 @@ export async function POST(req: NextRequest) {
 
   try {
     const resend = new Resend(key)
-    const { error } = await resend.emails.send({
+    const { data, error } = await resend.emails.send({
       from: `${site.shortName} Website <${from}>`,
       to: [to],
       replyTo: email,                                  // reply goes straight to the enquirer
@@ -74,6 +78,8 @@ export async function POST(req: NextRequest) {
     })
 
     if (error) throw new Error(error.message)
+    // The id matches the email in Resend → Emails, so each send can be traced.
+    console.info('[contact] sent', { id: data?.id, to })
     return NextResponse.json({ ok: true })
   } catch (e) {
     console.error('[contact] send failed', e)

@@ -43,9 +43,12 @@ export function ContactForm() {
 
   return (
     <form onSubmit={onSubmit} className="grid gap-3.5" noValidate>
-      {/* Honeypot: bots fill it, humans never see it. */}
-      <input type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true"
-        className="absolute h-0 w-0 overflow-hidden opacity-0" />
+      {/* Honeypot: bots fill it, humans never see it.
+          display:none keeps browser autofill and password managers out of it, and the
+          field name avoids words autofill looks for (website, url, name, email...). */}
+      <div aria-hidden="true" style={{ display: 'none' }}>
+        <input type="text" name="hp_x9" tabIndex={-1} autoComplete="off" />
+      </div>
 
       <div className="grid gap-3.5 sm:grid-cols-2">
         <div className="field">
