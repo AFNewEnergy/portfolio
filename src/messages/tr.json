@@ -135,6 +135,29 @@
       "Operational": "İşletmede"
     }
   },
+  "organisations": {
+    "title": "<em>Birlikte çalıştığım</em> kurumlar.",
+    "lede": "Bangladeş’teki bakanlıklar ve kamu enerji kuruluşları, uluslararası geliştiriciler ve EPC yüklenicileri ile elektrik güvenliği ve enerji kullanımı açısından denetlediğim fabrikalar.",
+    "groups": {
+      "gov": {
+        "label": "Kamu ve devlet kuruluşları",
+        "unit": "kurum"
+      },
+      "pvt": {
+        "label": "Özel ve uluslararası",
+        "unit": "şirket"
+      },
+      "audit": {
+        "label": "Fabrika denetimleri",
+        "unit": "fabrika · güvenlik ve enerji"
+      }
+    },
+    "hint": "Durdurmak için imleci bir şeridin üzerine getirin",
+    "pause": "Duraklat",
+    "play": "Oynat",
+    "pauseLabel": "Kayan logoları duraklat",
+    "playLabel": "Kayan logoları oynat"
+  },
   "tech": {
     "Solar PV": "Güneş PV",
     "BESS": "BESS",

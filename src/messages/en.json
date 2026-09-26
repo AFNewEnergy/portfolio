@@ -135,6 +135,29 @@
       "Operational": "Operational"
     }
   },
+  "organisations": {
+    "title": "Organisations I have <em>worked with.</em>",
+    "lede": "Ministries and state utilities in Bangladesh, international developers and EPC contractors, and the factories I audited for electrical safety and energy use.",
+    "groups": {
+      "gov": {
+        "label": "Government & state-owned",
+        "unit": "organisations"
+      },
+      "pvt": {
+        "label": "Private & international",
+        "unit": "companies"
+      },
+      "audit": {
+        "label": "Factory audits",
+        "unit": "factories · safety & energy"
+      }
+    },
+    "hint": "Hover a ribbon to pause it",
+    "pause": "Pause",
+    "play": "Play",
+    "pauseLabel": "Pause the moving logos",
+    "playLabel": "Play the moving logos"
+  },
   "tech": {
     "Solar PV": "Solar PV",
     "BESS": "BESS",

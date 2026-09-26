@@ -120,7 +120,7 @@ that makes the page feel like a single document rather than stacked cards.
 | `.figures-row` | Statistics strip; serif numerals with a mono accent unit as `<sup>` |
 | `.plates` | 2×2 capability grid, 1px gaps, accent bar wipes in on hover |
 | `.register` | The project table. Serif capacities, stage markers that fill by maturity |
-| `.partner-grid` | Static bordered grid — a logo wall implies endorsement |
+| `.ribbons` | Three moving logo ribbons; government row in the accent wash. White monochrome logos in dark mode, colour in light. Pauses on hover and with a button; still under reduced motion |
 | `.post-row` | Editorial list; serif title turns accent on hover |
 | `.tl-row` | Career timeline, two columns |
 | `.facts` | Project-detail spec grid |

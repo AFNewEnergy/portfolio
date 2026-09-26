@@ -40,7 +40,7 @@ JavaScript.
 |---|---|---|
 | 1 | **Higher-resolution portrait**, 2000 px+ | replace `public/photos/portrait.jpg`. The current file is 762×1017, extracted from the CV and upscaled. It is capped on screen so it stays sharp, but a real photo would let the frame go larger. |
 | 2 | **Confirm the headline figures** — see *Claims to confirm* below | `src/config/site.ts` → `stats` |
-| 3 | **Which clients may be named publicly** (NDAs) | `src/config/partners.ts`, `src/content/local/projects.ts` |
+| 3 | **Which clients may be named publicly** (NDAs) — the home page now shows their logos | `src/config/organisations.ts`, `src/content/local/projects.ts` |
 | 4 | **Verify every project `stage`** against reality | `src/content/local/projects.ts` |
 
 ### Needed soon after launch
@@ -75,9 +75,10 @@ The site's credibility rests on these being exact. A foreign sponsor or lender
 3. **Project stages.** Each row in `src/content/local/projects.ts` carries a
    `stage`. Anything marked `Approved` or `Operational` that is really at
    feasibility is the fastest way to lose a serious counterparty.
-4. **Named counterparties.** `src/config/partners.ts` lists Sumitomo, Reliance,
-   Power China and others as plain text, deliberately not a logo wall, which
-   would imply endorsement. Remove anything under NDA.
+4. **Named counterparties.** `src/config/organisations.ts` lists the 36
+   organisations shown as moving logo ribbons on the home page (government,
+   private, factory audits). A logo implies a relationship the organisation can
+   see — remove anything under NDA, and delete its two files in `public/logos/`.
 5. **`confidential: true`** on a project hides the client name automatically and
    renders "Confidential sponsor" instead. Use it liberally.
 6. **The portfolio table counts a project under every technology it uses.** A
@@ -95,10 +96,10 @@ src/
 │  └─ tokens.css         ← THE re-skin file: every colour, font, radius, spacing
 ├─ config/
 │  ├─ site.ts            single source of truth — name, URLs, socials, stats, locales
-│  ├─ partners.ts        counterparty list
+│  ├─ organisations.ts   logo ribbons: names, groups, logo proportions
 │  └─ theme.ts           the few token values non-CSS code needs (OG image)
 ├─ i18n/                 next-intl routing, navigation, request config
-├─ messages/             en · zh · ar · tr · de · fr  (183 keys each, verified in parity)
+├─ messages/             en · zh · ar · tr · de · fr  (196 keys each, verified in parity)
 ├─ lib/
 │  ├─ seo.ts             buildMetadata() + hreflang alternates — every page uses it
 │  ├─ jsonld.ts          Person, ProfessionalService, BlogPosting, BreadcrumbList
@@ -114,7 +115,7 @@ src/
 ├─ components/
 │  ├─ primitives/        Icon, Button, Reveal, Rail, Figure
 │  ├─ layout/            Header, Footer, MobileDrawer, LanguageSwitcher, ThemeToggle, ThemeScript
-│  ├─ sections/          Hero, Figures, Plates, Register, PartnerGrid, Portfolio, PostList, Timeline, CtaBand, ContactForm, SectionHead
+│  ├─ sections/          Hero, Figures, Plates, Register, LogoRibbons, Portfolio, PostList, Timeline, CtaBand, ContactForm, SectionHead
 │  ├─ seo/               JsonLd
 │  └─ ui/                ⚠ unused — an older copy of Button, Icon and Reveal. Nothing imports it.
 └─ app/

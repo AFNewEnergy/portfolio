@@ -135,6 +135,29 @@
       "Operational": "En exploitation"
     }
   },
+  "organisations": {
+    "title": "Les organisations avec lesquelles <em>j’ai travaillé.</em>",
+    "lede": "Ministères et services publics de l’énergie au Bangladesh, développeurs internationaux et entreprises EPC, et les usines dont j’ai audité la sécurité électrique et la consommation d’énergie.",
+    "groups": {
+      "gov": {
+        "label": "Secteur public et entreprises d’État",
+        "unit": "organisations"
+      },
+      "pvt": {
+        "label": "Secteur privé et international",
+        "unit": "entreprises"
+      },
+      "audit": {
+        "label": "Audits d’usines",
+        "unit": "usines · sécurité et énergie"
+      }
+    },
+    "hint": "Survolez un bandeau pour le mettre en pause",
+    "pause": "Pause",
+    "play": "Lecture",
+    "pauseLabel": "Mettre les logos en pause",
+    "playLabel": "Relancer le défilement des logos"
+  },
   "tech": {
     "Solar PV": "Solaire PV",
     "BESS": "Stockage",

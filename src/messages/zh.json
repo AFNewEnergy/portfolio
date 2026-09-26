@@ -135,6 +135,29 @@
       "Operational": "已运营"
     }
   },
+  "organisations": {
+    "title": "我<em>合作过</em>的机构。",
+    "lede": "孟加拉国的政府部门与国有电力公司、国际开发商与EPC承包商，以及我为其开展电气安全与能源审计的工厂。",
+    "groups": {
+      "gov": {
+        "label": "政府与国有机构",
+        "unit": "家机构"
+      },
+      "pvt": {
+        "label": "私营与国际企业",
+        "unit": "家公司"
+      },
+      "audit": {
+        "label": "工厂审计",
+        "unit": "家工厂 · 安全与能源"
+      }
+    },
+    "hint": "鼠标悬停即可暂停滚动",
+    "pause": "暂停",
+    "play": "播放",
+    "pauseLabel": "暂停滚动的标志",
+    "playLabel": "继续滚动标志"
+  },
   "tech": {
     "Solar PV": "太阳能",
     "BESS": "储能",

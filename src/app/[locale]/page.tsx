@@ -9,12 +9,11 @@ import { Figures } from '@/components/sections/Figures'
 import { SectionHead } from '@/components/sections/SectionHead'
 import { Plates } from '@/components/sections/Plates'
 import { Register } from '@/components/sections/Register'
-import { PartnerGrid } from '@/components/sections/PartnerGrid'
+import { LogoRibbons } from '@/components/sections/LogoRibbons'
 import { Portfolio } from '@/components/sections/Portfolio'
 import { PostList } from '@/components/sections/PostList'
 import { CtaBand } from '@/components/sections/CtaBand'
 import { Reveal } from '@/components/primitives/Reveal'
-import { Rail } from '@/components/primitives/Rail'
 import { Icon } from '@/components/primitives/Icon'
 
 export const revalidate = 300
@@ -77,8 +76,12 @@ export default async function HomePage({ params }: Props) {
 
       <section className="section-tight">
         <div className="shell">
-          <Reveal className="mb-7"><Rail>{t('home.sections.partners')}</Rail></Reveal>
-          <PartnerGrid />
+          <SectionHead
+            eyebrow={t('home.sections.partners')}
+            title={t.rich('organisations.title', { em: c => <em>{c}</em> })}
+            lede={t('organisations.lede')}
+          />
+          <LogoRibbons locale={locale} />
         </div>
       </section>
 

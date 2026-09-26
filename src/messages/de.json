@@ -135,6 +135,29 @@
       "Operational": "In Betrieb"
     }
   },
+  "organisations": {
+    "title": "Organisationen, mit denen ich <em>gearbeitet habe.</em>",
+    "lede": "Ministerien und staatliche Versorger in Bangladesch, internationale Projektentwickler und EPC-Unternehmen sowie die Fabriken, die ich auf elektrische Sicherheit und Energieverbrauch geprüft habe.",
+    "groups": {
+      "gov": {
+        "label": "Staatlich & öffentlich",
+        "unit": "Organisationen"
+      },
+      "pvt": {
+        "label": "Privat & international",
+        "unit": "Unternehmen"
+      },
+      "audit": {
+        "label": "Fabrik-Audits",
+        "unit": "Fabriken · Sicherheit & Energie"
+      }
+    },
+    "hint": "Zum Anhalten mit der Maus über ein Band fahren",
+    "pause": "Pause",
+    "play": "Abspielen",
+    "pauseLabel": "Laufende Logos anhalten",
+    "playLabel": "Laufende Logos abspielen"
+  },
   "tech": {
     "Solar PV": "Solar PV",
     "BESS": "BESS",
