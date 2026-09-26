@@ -6,7 +6,7 @@
  * truth for everything the browser renders.
  */
 export const themeColors = {
-  light: { canvas: '#FAF8F4', surface: '#F2EFE8', line: '#DFDACE', ink: '#14171A', ink2: '#4A4F55', ink3: '#767C84', accent: '#0B6C63' },
+  light: { canvas: '#FAF8F4', surface: '#F2EFE8', line: '#DFDACE', ink: '#14171A', ink2: '#4A4F55', ink3: '#666C73', accent: '#0B6C63' },
   dark:  { canvas: '#0C1013', surface: '#141A1F', line: '#232C34', ink: '#EDF0F2', ink2: '#A3ADB6', ink3: '#7B858E', accent: '#4CC9B8' },
 } as const
 

@@ -20,28 +20,28 @@
     "skipToContent": "Zum Inhalt springen",
     "keywords": "Kraftwerksentwickler Bangladesch|IPP Berater Bangladesch|Solarprojektentwicklung Bangladesch|BPDB PPA Berater|LNG FSRU Bangladesch|BESS Bangladesch|lokaler Partner Energie Bangladesch",
     "home": {
-      "title": "Abdullah Bin Hossain (Faisal) — Kraftwerksentwicklung im Versorgungsmaßstab in Bangladesch",
-      "description": "13+ Jahre Entwicklung von Solar-, BESS-, LNG- und Gasprojekten im Versorgungsmaßstab in Bangladesch — Machbarkeit, PPA-Verhandlung, Genehmigungen und Financial Close."
+      "title": "Abdullah Bin Hossain (Faisal) | AF New Energy, Kraftwerksprojekte in Bangladesch",
+      "description": "13+ Jahre Entwicklung von Solar-, BESS-, LNG- und Gasprojekten im Versorgungsmaßstab in Bangladesch: Machbarkeit, PPA-Verhandlung, Genehmigungen und Financial Close."
     },
     "about": {
-      "title": "Über mich",
+      "title": "Über Abdullah Bin Hossain, Entwickler von Kraftwerksprojekten",
       "description": "Dreizehn Jahre zwischen ausländischem Kapital und Bangladeschs Stromsektor: Werdegang, Qualifikationen und Branchenerfahrung."
     },
     "services": {
-      "title": "Leistungen",
+      "title": "Leistungen für Kraftwerksprojekte in Bangladesch",
       "description": "Entwicklung und Machbarkeit, Regulatorik und Behördenkontakt, kaufmännische und PPA-Beratung, lokale Vertretung und Owner’s Engineering."
     },
     "projects": {
-      "title": "Projekte",
-      "description": "Ein Register von 30+ Kraftwerksprojekten in Solar, BESS, LNG, Gas, Kohle und Übertragung — jeweils mit dem tatsächlichen Entwicklungsstand."
+      "title": "Projektregister: Solar, BESS, LNG und Gas in Bangladesch",
+      "description": "Ein Register von 30+ Kraftwerksprojekten in Solar, BESS, LNG, Gas, Kohle und Übertragung, jeweils mit dem tatsächlichen Entwicklungsstand."
     },
     "insights": {
-      "title": "Insights",
-      "description": "Wie Bangladeschs Energiesektor wirklich funktioniert — für die, die dort finanzieren und bauen."
+      "title": "Insights zum Energiesektor Bangladeschs",
+      "description": "Wie Bangladeschs Energiesektor wirklich funktioniert: Kapazität, Netz, Politik und die Wege über PPP, IPP und Merchant-Kraftwerke, für alle, die dort Kraftwerke finanzieren und bauen."
     },
     "contact": {
-      "title": "Kontakt",
-      "description": "Besprechen Sie ein Energieprojekt in Bangladesch. Antwort innerhalb eines Werktags."
+      "title": "Kontakt: ein Kraftwerksprojekt in Bangladesch besprechen",
+      "description": "Besprechen Sie ein Solar-, Speicher-, LNG- oder Gasprojekt in Bangladesch mit Abdullah Bin Hossain von AF New Energy. Antwort innerhalb eines Arbeitstags."
     },
     "og": {
       "headline": "Projekte, die den Financial Close tatsächlich erreichen.",
@@ -52,12 +52,13 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "01 — Kraftwerksentwicklung im Versorgungsmaßstab",
+      "eyebrow": "01 / Kraftwerksentwicklung im Versorgungsmaßstab",
       "title": "Projekte, die den <em>Financial Close tatsächlich erreichen.</em>",
-      "lede": "13+ Jahre Entwicklung von Solar-, Speicher-, LNG- und Gasprojekten im Versorgungsmaßstab in Bangladesch — von Machbarkeitsstudie und Fläche über PPA-Verhandlung und Genehmigungen bis zum Close. Kapital und Technologie sind der einfache Teil. Ich übernehme die Umsetzung vor Ort.",
+      "lede": "13+ Jahre Entwicklung von Solar-, Speicher-, LNG- und Gasprojekten im Versorgungsmaßstab in Bangladesch, von Machbarkeitsstudie und Fläche über PPA-Verhandlung und Genehmigungen bis zum Close. Kapital und Technologie sind der einfache Teil. Ich übernehme die Umsetzung vor Ort.",
       "ctaPrimary": "Beratungstermin buchen",
       "ctaSecondary": "Projektregister ansehen",
-      "availability": "Verfügbar für neue Projektmandate — Dhaka, GMT+6"
+      "availability": "Verfügbar für neue Projektmandate · Dhaka, GMT+6",
+      "company": "Unternehmen"
     },
     "stats": {
       "years": {
@@ -87,7 +88,7 @@
   },
   "capabilities": {
     "title": "Vier Dinge, die ein ausländischer Investor hier <em>nicht einkaufen kann.</em>",
-    "lede": "Internationale Entwickler kommen mit Kapital, Technologie und einem Zeitplan. Was sie aufhält, ist die Umsetzung vor Ort — Fläche, Netzanschluss, Ministerien und ein PPA, das ein Finanzierer akzeptiert.",
+    "lede": "Internationale Entwickler kommen mit Kapital, Technologie und einem Zeitplan. Was sie aufhält, ist die Umsetzung vor Ort: Fläche, Netzanschluss, Ministerien und ein PPA, das ein Finanzierer akzeptiert.",
     "items": {
       "development": {
         "title": "Entwicklung & Machbarkeit",
@@ -113,7 +114,7 @@
   },
   "register": {
     "title": "Jedes Projekt, mit dem Stand, <em>auf dem es wirklich ist.</em>",
-    "lede": "Keine überhöhten Angaben. Jeder Eintrag nennt Technologie, Gegenpartei und den tatsächlichen Stand — Machbarkeit, Ausschreibung, Entwicklung, genehmigt oder in Betrieb.",
+    "lede": "Keine überhöhten Angaben. Jeder Eintrag nennt Technologie, Gegenpartei und den tatsächlichen Stand: Machbarkeit, Ausschreibung, Entwicklung, genehmigt oder in Betrieb.",
     "showing": "{shown} von {total} angezeigt",
     "openFull": "Vollständiges Register öffnen",
     "confidential": "Vertraulicher Sponsor",
@@ -168,10 +169,10 @@
     "Waste-to-Energy": "Abfall zu Energie"
   },
   "insights": {
-    "title": "Der Energiesektor Bangladeschs — <em>für Leute, die nicht hier leben.</em>",
+    "title": "Der Energiesektor Bangladeschs, <em>für Leute, die nicht hier leben.</em>",
     "lede": "Suchen Sie auf Englisch, wie ein PPA in Dhaka tatsächlich unterzeichnet wird, und Sie finden kaum etwas Brauchbares. Diese Lücke ist die Chance.",
     "pageTitle": "<em>Insights.</em>",
-    "pageLede": "Notizen dazu, wie Bangladeschs Energiesektor wirklich funktioniert — für die, die dort finanzieren und bauen.",
+    "pageLede": "Notizen dazu, wie Bangladeschs Energiesektor wirklich funktioniert, für die, die dort finanzieren und bauen.",
     "empty": "Die ersten Beiträge entstehen gerade. Schauen Sie bald wieder vorbei.",
     "backToIndex": "Alle Insights",
     "playVideo": "Video abspielen",
@@ -180,11 +181,55 @@
     "type": {
       "Article": "Artikel",
       "Video": "Video"
+    },
+    "view": {
+      "label": "Ansicht",
+      "grid": "Fotoraster",
+      "list": "Liste"
+    },
+    "all": "Alle",
+    "backToPages": "Zurück zu den Seiten",
+    "prev": "Zurück",
+    "next": "Weiter",
+    "pageN": "Seite {n}",
+    "pageOf": "Seite {page} von {count}",
+    "pagesLabel": "Seiten",
+    "showing": "{from}–{to} von {total}",
+    "showingOne": "{n} von {total}",
+    "showingAll": "Alle {total} Beiträge",
+    "allShown": "Alle {total} Beiträge werden angezeigt",
+    "latest": "Neu",
+    "readArticle": "Artikel lesen",
+    "watchVideo": "Video ansehen",
+    "article": {
+      "onThisPage": "Auf dieser Seite",
+      "published": "Veröffentlicht",
+      "updated": "Aktualisiert",
+      "readingTime": "Lesezeit",
+      "readOnNotion": "In Notion lesen",
+      "readOriginal": "Original in Notion lesen",
+      "lastEdited": "Zuletzt in Notion bearbeitet · {date}",
+      "copyLink": "Link kopieren",
+      "linkCopied": "Link kopiert",
+      "shareOn": "Auf {network} teilen",
+      "references": "Quellen",
+      "referencesCount": "Quellen · {count}",
+      "cite": "Artikel zitieren",
+      "copyCitation": "Zitat kopieren",
+      "citationCopied": "Zitat kopiert",
+      "refCount": "{count, plural, one {# Quelle} other {# Quellen}}",
+      "aboutAuthor": "Über den Autor",
+      "authorRole": "Experte für Energiewirtschaft · Dhaka",
+      "authorBio": "Über {years} Jahre Erfahrung in der Entwicklung von Solar-, Speicher-, LNG- und Gasprojekten im Versorgungsmaßstab in Bangladesch. Er begleitet Projektträger von der Vorstudie, Standort und Grundstück über Genehmigungen, Prüfung, Banken und Finanzierung bis zum Financial Close.",
+      "book": "Beratung buchen",
+      "more": "Weitere Beiträge",
+      "continueReading": "Weiterlesen",
+      "tags": "Schlagwörter"
     }
   },
   "about": {
     "title": "Dreizehn Jahre zwischen ausländischem Kapital <em>und Bangladeschs Stromsektor.</em>",
-    "lede": "Ich entwickle Kraftwerksprojekte im Versorgungsmaßstab in Bangladesch — Solar, Speicher, LNG und Gas. Ausländische Sponsoren bringen Geld und Technologie; ich mache das Projekt im Land real: Fläche, Netzanschluss, Ministeriumsgenehmigungen und ein PPA, das ein Kreditgeber tatsächlich finanziert.",
+    "lede": "Ich entwickle Kraftwerksprojekte im Versorgungsmaßstab in Bangladesch: Solar, Speicher, LNG und Gas. Ausländische Sponsoren bringen Geld und Technologie; ich mache das Projekt im Land real: Fläche, Netzanschluss, Ministeriumsgenehmigungen und ein PPA, das ein Kreditgeber tatsächlich finanziert.",
     "careerTitle": "Werdegang",
     "credentialsTitle": "Ausbildung und Sprachen",
     "sections": {
@@ -205,11 +250,11 @@
     },
     "education": {
       "title": "Ausbildung",
-      "items": "B.Sc. Elektro- und Elektroniktechnik — American International University-Bangladesh (AIUB), 2013|Schwerpunkt: Erneuerbare-Energien-Technik · Mobilfunk|Abschlussarbeit: Gravitationswasserwirbel-Kraftwerk"
+      "items": "B.Sc. Elektro- und Elektroniktechnik, American International University-Bangladesh (AIUB), 2013|Schwerpunkt: Erneuerbare-Energien-Technik · Mobilfunk|Abschlussarbeit: Gravitationswasserwirbel-Kraftwerk"
     },
     "languages": {
       "title": "Sprachen",
-      "items": "Bengalisch — Muttersprache|Englisch — verhandlungssicher"
+      "items": "Bengalisch: Muttersprache|Englisch: verhandlungssicher"
     },
     "introBody": "Zehn Organisationen in dreizehn Jahren, von der Dokumentenkontrolle in Owner’s-Engineering-Studien bis zur Leitung der Projektentwicklung für Erneuerbare. Der rote Faden bleibt derselbe: ein Projekt über den Punkt hinwegbringen, an dem Projekte hier üblicherweise stehen bleiben."
   },
@@ -220,7 +265,7 @@
   },
   "projects": {
     "title": "<em>Projektregister.</em>",
-    "lede": "Über dreißig Projekte in Solar, Speicher, LNG, Gas, Kohle und Übertragung — jeweils mit dem tatsächlich erreichten Stand.",
+    "lede": "Über dreißig Projekte in Solar, Speicher, LNG, Gas, Kohle und Übertragung, jeweils mit dem tatsächlich erreichten Stand.",
     "disclaimer": "Die Stände geben den Punkt wieder, den jedes Projekt während meiner Mitwirkung erreicht hat, nicht zwingend den heutigen Status. Einige Sponsoren erscheinen als vertraulich, wo eine Vertraulichkeitsvereinbarung oder eine laufende Verhandlung gilt.",
     "photoAlt": "Abdullah Bin Hossain bei der Prüfung von Projektunterlagen, Dhaka"
   },
@@ -254,7 +299,7 @@
       "countryPlaceholder": "Land",
       "projectType": "Projekttyp",
       "message": "Nachricht",
-      "messagePlaceholder": "Erzählen Sie vom Projekt — Technologie, Kapazität, aktueller Stand",
+      "messagePlaceholder": "Erzählen Sie vom Projekt: Technologie, Kapazität, aktueller Stand",
       "submit": "Nachricht senden",
       "sending": "Wird gesendet…",
       "successTitle": "Nachricht gesendet.",
@@ -268,7 +313,7 @@
   "cta": {
     "eyebrow": "07 / Kontakt",
     "title": "Nennen Sie mir Technologie, Kapazität und <em>wo es hakt.</em>",
-    "body": "Ich sage Ihnen ehrlich, wie der Weg von hier aussieht — auch dann, wenn die Antwort lautet, dass es nicht funktioniert.",
+    "body": "Ich sage Ihnen ehrlich, wie der Weg von hier aussieht, auch dann, wenn die Antwort lautet, dass es nicht funktioniert.",
     "primary": "Beratungstermin buchen",
     "secondary": "WhatsApp"
   },

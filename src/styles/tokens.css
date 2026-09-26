@@ -23,10 +23,10 @@
   /* ── ink ────────────────────────────────────────────────────
      ink    headings + body     16.96:1
      ink-2  secondary prose      7.79:1
-     ink-3  mono labels only     3.97:1  — never for body copy   */
+     ink-3  mono labels only     5.0:1 (4.6:1 on surface), never for body copy   */
   --ink: #14171a;
   --ink-2: #4a4f55;
-  --ink-3: #767c84;
+  --ink-3: #666c73;
 
   /* ── brand ──────────────────────────────────────────────────
      accent      links, primary fill, markers   5.93:1 on canvas

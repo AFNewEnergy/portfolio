@@ -44,16 +44,23 @@ export async function Hero({ locale }: { locale: Locale }) {
         <div className="hero-aside">
           <Figure
             photo={site.photos.hero}
-            alt={`${site.name} — ${site.jobTitle}`}
-            caption={[`ABH — ${site.nickname}`, `${site.location.city} / ${site.location.countryCode}`]}
+            alt={`${site.name}, ${site.jobTitle}`}
+            caption={[`ABH · ${site.nickname}`, `${site.location.city} / ${site.location.countryCode}`]}
             ratio="portrait"
             priority
-            sizes="(max-width: 960px) 45vw, 380px"
+            sizes="(max-width: 600px) 62vw, (max-width: 960px) 46vw, 380px"
             className="portrait"
             delay={100}
           />
 
           <Reveal className="hero-facts" delay={140}>
+            <div className="hero-fact hero-fact--co">
+              <Icon name="institution" className="hero-fact-icon" />
+              <div>
+                <span className="fact-key t-mono">{t('company')}</span>
+                <span className="fact-value"><span className="hero-co">{site.company.name}</span> <span className="hero-domain t-mono">{site.company.domain}</span></span>
+              </div>
+            </div>
             <div className="hero-fact">
               <Icon name="clock" className="hero-fact-icon" />
               <div>

@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 /**
- * Prints the exact Notion database schema this codebase reads.
+ * Prints the Notion database schemas this codebase reads.
+ * (The Insights database is created automatically by /api/notion/setup.)
  *
  *   npm run notion:schema
  *
@@ -36,21 +37,22 @@ const dim = s => `\x1b[2m${s}\x1b[0m`
 const row = (name, type, note = '') => console.log(`  ${name.padEnd(15)} ${type.padEnd(13)} ${dim(note)}`)
 const rule = () => console.log(dim('  ' + '─'.repeat(76)))
 
-console.log(`\n${bold('DATABASE 1 — Insights')}   ${dim('articles and videos')}\n`)
+console.log(`\n${bold('DATABASE 1 — Insights')}   ${dim('created for you by /api/notion/setup — see NOTION-SETUP.md')}\n`)
 row('PROPERTY', 'TYPE', 'NOTES')
 rule()
-row('Title', 'Title', 'the headline')
-row('Slug', 'Text', 'url segment — lowercase-with-hyphens, unique')
-row('Type', 'Select', 'exactly:  Article  |  Video')
+row('Title', 'Title', 'the headline (required)')
+row('Subtitle', 'Text', 'line under the headline; card text; meta description')
+row('Published', 'Checkbox', 'ONLY checked rows appear on the site (required)')
+row('Date', 'Date', 'publish date, newest first; blank = page creation day')
+row('Topic', 'Select', 'the coloured label above the headline')
+row('Tags', 'Multi-select', 'keywords at the end of the article')
+row('Type', 'Select', 'Article | Video — blank = Article')
 row('Video URL', 'URL', 'only when Type = Video')
-row('Language', 'Select', 'exactly:  ' + LOCALES.join('  |  '))
-row('Excerpt', 'Text', '1–2 sentences — used in cards and as the meta description')
-row('Cover URL', 'URL', 'a permanent link, NOT a Notion file upload — see step 6')
-row('Tags', 'Multi-select', 'free text')
-row('Reading Minutes', 'Number', 'FILL THIS IN — index cards cannot read the body, so a')
-row('', '', 'blank here shows "1 min read" on every card')
-row('Published', 'Checkbox', 'ONLY checked rows appear on the site')
-row('Date', 'Date', 'publish date — drives the sort order')
+row('Video minutes', 'Number', 'only when Type = Video')
+row('Cover caption', 'Text', 'caption under the cover; "… | Photo: Name" adds a credit')
+row('Slug', 'Text', 'optional; blank = headline + short id')
+row('Language', 'Select', 'blank = en. For a translated copy: same Slug + ' + LOCALES.join(' | '))
+console.log(dim('\n  The cover is the page cover. Reading time is counted from the text.'))
 
 console.log(`\n${bold('DATABASE 2 — Projects')}   ${dim('the register')}\n`)
 row('PROPERTY', 'TYPE', 'NOTES')

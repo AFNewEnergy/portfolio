@@ -33,12 +33,18 @@ if (!url) {
 }
 
 const source = process.env.CONTENT_SOURCE ?? 'local'
+if (process.env.NOTION_TOKEN && process.env.INSIGHTS_SOURCE !== 'local') {
+  ok('NOTION_TOKEN set — Insights come from Notion (samples until /api/notion/setup has run)')
+  if (!process.env.REVALIDATE_SECRET) warn('REVALIDATE_SECRET unset — the one-time /api/notion/setup link stays locked')
+} else {
+  ok('Insights come from the sample articles in src/content/samples')
+}
 if (source === 'notion') {
-  for (const k of ['NOTION_TOKEN', 'NOTION_INSIGHTS_DS', 'NOTION_PROJECTS_DS']) {
+  for (const k of ['NOTION_TOKEN', 'NOTION_PROJECTS_DS']) {
     process.env[k] ? ok(`${k} set`) : bad(`CONTENT_SOURCE=notion but ${k} is missing`)
   }
 } else {
-  ok(`CONTENT_SOURCE=${source} — content comes from src/content/local`)
+  ok(`CONTENT_SOURCE=${source} — projects come from src/content/local`)
 }
 
 if (process.env.RESEND_API_KEY && !process.env.CONTACT_FROM_EMAIL) {

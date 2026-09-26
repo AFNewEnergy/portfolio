@@ -20,28 +20,28 @@
     "skipToContent": "Skip to content",
     "keywords": "power project developer Bangladesh|IPP consultant Bangladesh|solar project development Bangladesh|BPDB PPA consultant|LNG FSRU Bangladesh|BESS Bangladesh|local partner Bangladesh energy|utility-scale solar APAC",
     "home": {
-      "title": "Abdullah Bin Hossain (Faisal) — Utility-Scale Power Project Development in Bangladesh",
-      "description": "13+ years developing utility-scale solar, BESS, LNG and gas projects in Bangladesh — feasibility, PPA negotiation, permitting and financial close."
+      "title": "Abdullah Bin Hossain (Faisal) | AF New Energy, power projects in Bangladesh",
+      "description": "13+ years developing utility-scale solar, BESS, LNG and gas projects in Bangladesh: feasibility, PPA negotiation, permitting and financial close."
     },
     "about": {
-      "title": "About",
+      "title": "About Abdullah Bin Hossain, power project developer",
       "description": "Thirteen years between foreign capital and Bangladeshi power: career history, credentials and sector experience."
     },
     "services": {
-      "title": "Services",
+      "title": "Power project development services in Bangladesh",
       "description": "Development and feasibility, regulatory and government liaison, commercial and PPA advisory, local representation and owner’s engineering."
     },
     "projects": {
-      "title": "Projects",
-      "description": "A register of 30+ utility-scale power projects across solar, BESS, LNG, gas, coal and transmission — each with its real development stage."
+      "title": "Project register: solar, BESS, LNG and gas in Bangladesh",
+      "description": "A register of 30+ utility-scale power projects across solar, BESS, LNG, gas, coal and transmission, each with its real development stage."
     },
     "insights": {
-      "title": "Insights",
-      "description": "How Bangladesh’s power sector actually works, written for the people financing and building in it."
+      "title": "Insights on Bangladesh’s power sector",
+      "description": "How Bangladesh’s power sector actually works: capacity, the grid, policy, and the PPP, IPP and merchant routes, written for the people who finance and build power plants there."
     },
     "contact": {
-      "title": "Contact",
-      "description": "Discuss a power project in Bangladesh. Response within one working day."
+      "title": "Contact: discuss a power project in Bangladesh",
+      "description": "Discuss a solar, storage, LNG or gas project in Bangladesh with Abdullah Bin Hossain of AF New Energy. A reply within one working day."
     },
     "og": {
       "headline": "Power projects that actually reach financial close.",
@@ -52,12 +52,13 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "01 — Utility-scale power development",
+      "eyebrow": "01 / Utility-scale power development",
       "title": "Power projects that reach <em>financial close.</em>",
-      "lede": "13+ years developing utility-scale solar, storage, LNG and gas projects in Bangladesh — from feasibility and land through PPA negotiation, permitting and close. The capital and the technology are the easy part. I handle the ground.",
+      "lede": "13+ years developing utility-scale solar, storage, LNG and gas projects in Bangladesh, from feasibility and land through PPA negotiation, permitting and close. The capital and the technology are the easy part. I handle the ground.",
       "ctaPrimary": "Book a consultation",
       "ctaSecondary": "View project register",
-      "availability": "Available for new project mandates — Dhaka, GMT+6"
+      "availability": "Available for new project mandates · Dhaka, GMT+6",
+      "company": "Company"
     },
     "stats": {
       "years": {
@@ -87,7 +88,7 @@
   },
   "capabilities": {
     "title": "Four things a foreign sponsor cannot buy <em>off the shelf</em> here.",
-    "lede": "International developers arrive with capital, technology and a schedule. What stalls them is the ground game — land, grid, ministries, and a PPA a lender will accept.",
+    "lede": "International developers arrive with capital, technology and a schedule. What stalls them is the ground game: land, grid, ministries, and a PPA a lender will accept.",
     "items": {
       "development": {
         "title": "Development & Feasibility",
@@ -113,7 +114,7 @@
   },
   "register": {
     "title": "Every project, with the stage it is <em>actually</em> at.",
-    "lede": "No inflated claims. Each entry states the technology, the counterparty and the real stage — feasibility, bidding, development, approved or operational.",
+    "lede": "No inflated claims. Each entry states the technology, the counterparty and the real stage: feasibility, bidding, development, approved or operational.",
     "showing": "Showing {shown} of {total}",
     "openFull": "Open full register",
     "confidential": "Confidential sponsor",
@@ -180,11 +181,55 @@
     "type": {
       "Article": "Article",
       "Video": "Video"
+    },
+    "view": {
+      "label": "View",
+      "grid": "Photo grid",
+      "list": "List"
+    },
+    "all": "All",
+    "backToPages": "Back to pages",
+    "prev": "Previous",
+    "next": "Next",
+    "pageN": "Page {n}",
+    "pageOf": "Page {page} of {count}",
+    "pagesLabel": "Pages",
+    "showing": "Showing {from}–{to} of {total}",
+    "showingOne": "Showing {n} of {total}",
+    "showingAll": "All {total} insights",
+    "allShown": "Showing all {total} insights",
+    "latest": "Latest",
+    "readArticle": "Read article",
+    "watchVideo": "Watch video",
+    "article": {
+      "onThisPage": "On this page",
+      "published": "Published",
+      "updated": "Updated",
+      "readingTime": "Reading time",
+      "readOnNotion": "Read on Notion",
+      "readOriginal": "Read the original on Notion",
+      "lastEdited": "Last edited in Notion · {date}",
+      "copyLink": "Copy link",
+      "linkCopied": "Link copied",
+      "shareOn": "Share on {network}",
+      "references": "References",
+      "referencesCount": "References · {count}",
+      "cite": "Cite this article",
+      "copyCitation": "Copy citation",
+      "citationCopied": "Citation copied",
+      "refCount": "{count, plural, one {# reference} other {# references}}",
+      "aboutAuthor": "About the author",
+      "authorRole": "Power Business Professional · Dhaka",
+      "authorBio": "{years}+ years developing utility-scale solar, storage, LNG and gas projects in Bangladesh. He works with sponsors from pre-feasibility, site and land through approvals, audit, banking and finance to financial close.",
+      "book": "Book a consultation",
+      "more": "More insights",
+      "continueReading": "Continue reading",
+      "tags": "Tags"
     }
   },
   "about": {
     "title": "Thirteen years between foreign capital and <em>Bangladeshi power.</em>",
-    "lede": "I develop utility-scale power projects in Bangladesh — solar, storage, LNG and gas. Foreign sponsors bring the money and the technology; I make the project real in-country: the land, the grid connection, the ministry approvals, and a PPA a lender will actually finance.",
+    "lede": "I develop utility-scale power projects in Bangladesh: solar, storage, LNG and gas. Foreign sponsors bring the money and the technology; I make the project real in-country: the land, the grid connection, the ministry approvals, and a PPA a lender will actually finance.",
     "careerTitle": "Career",
     "credentialsTitle": "Education and languages",
     "sections": {
@@ -205,11 +250,11 @@
     },
     "education": {
       "title": "Education",
-      "items": "B.Sc. Electrical & Electronic Engineering — American International University-Bangladesh (AIUB), 2013|Major: Renewable Energy Technology · Cellular Mobile Communication|Thesis: Gravitational Water Vortex Power Plant"
+      "items": "B.Sc. Electrical & Electronic Engineering, American International University-Bangladesh (AIUB), 2013|Major: Renewable Energy Technology · Cellular Mobile Communication|Thesis: Gravitational Water Vortex Power Plant"
     },
     "languages": {
       "title": "Languages",
-      "items": "Bengali — mother tongue|English — full professional proficiency"
+      "items": "Bengali: mother tongue|English: full professional proficiency"
     },
     "introBody": "Ten organisations in thirteen years, from document control on owner’s engineering studies to directing renewable development. The thread does not change: getting a project past the point where projects here usually stall."
   },
@@ -220,7 +265,7 @@
   },
   "projects": {
     "title": "<em>Project register.</em>",
-    "lede": "Thirty-plus projects across solar, storage, LNG, gas, coal and transmission — each shown with the stage it actually reached.",
+    "lede": "Thirty-plus projects across solar, storage, LNG, gas, coal and transmission, each shown with the stage it actually reached.",
     "disclaimer": "Stages reflect the point each project reached during my involvement, not necessarily its status today. Several sponsors are shown as confidential where a non-disclosure agreement or a live negotiation applies.",
     "photoAlt": "Abdullah Bin Hossain reviewing project documentation, Dhaka"
   },
@@ -254,7 +299,7 @@
       "countryPlaceholder": "Country",
       "projectType": "Project type",
       "message": "Message",
-      "messagePlaceholder": "Tell me about the project — technology, capacity, current stage",
+      "messagePlaceholder": "Tell me about the project: technology, capacity, current stage",
       "submit": "Send message",
       "sending": "Sending…",
       "successTitle": "Message sent.",
@@ -268,7 +313,7 @@
   "cta": {
     "eyebrow": "07 / Contact",
     "title": "Tell me the technology, the capacity, and <em>where you're stuck.</em>",
-    "body": "I’ll tell you honestly what the route from here looks like — including when the answer is that it doesn’t work.",
+    "body": "I’ll tell you honestly what the route from here looks like, including when the answer is that it doesn’t work.",
     "primary": "Book a consultation",
     "secondary": "WhatsApp"
   },

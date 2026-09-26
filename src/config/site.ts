@@ -41,16 +41,20 @@ export const LOCALE_TAGS: Record<Locale, string> = {
  * render" on a random page — one of the least debuggable failures there is.
  * So we repair the three mistakes people actually make instead:
  *
- *   abdullahfaisal.com        → https://abdullahfaisal.com
+ *   afnewenergy.com           → https://afnewenergy.com
  *   https://site.com/         → https://site.com     (trailing slash)
  *   HTTPS://Site.com          → https://site.com     (case)
  *
  * Anything genuinely unparseable throws here, at config load, with a message
  * that names the variable.
  */
+/** The live address. Production falls back to it, so canonical links never point at a one-off deployment URL. */
+export const PRODUCTION_ORIGIN = 'https://afnewenergy.com'
+
 function resolveSiteUrl(): string {
   const raw =
     process.env.NEXT_PUBLIC_SITE_URL?.trim() ||
+    (process.env.VERCEL_ENV === 'production' ? PRODUCTION_ORIGIN : '') ||
     (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : '') ||
     'http://localhost:3000'
 
@@ -61,7 +65,7 @@ function resolveSiteUrl(): string {
   } catch {
     throw new Error(
       `Invalid NEXT_PUBLIC_SITE_URL: "${raw}". ` +
-        'Use a full origin including the scheme, e.g. https://abdullahfaisal.com',
+        'Use a full origin including the scheme, e.g. https://afnewenergy.com',
     )
   }
 }
@@ -71,6 +75,9 @@ export const site = {
   shortName: 'Abdullah Faisal',
   nickname: 'Faisal',
   jobTitle: 'Power Business Professional',
+
+  /** His company. The site lives on its domain; his own name still leads everywhere. */
+  company: { name: 'AF New Energy', domain: 'afnewenergy.com', url: PRODUCTION_ORIGIN },
   region: 'APAC',
 
   url: resolveSiteUrl(),

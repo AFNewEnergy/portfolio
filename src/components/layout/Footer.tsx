@@ -17,7 +17,7 @@ export async function Footer({ locale }: { locale: Locale }) {
               <Sigil />
               <span>
                 <span className="brand-name">{site.name}</span>
-                <span className="brand-role t-mono">{site.nickname}</span>
+                <span className="brand-role t-mono">{site.company.name}</span>
               </span>
             </div>
             <p className="max-w-[30ch]">{t('footer.blurb')}</p>
@@ -32,28 +32,28 @@ export async function Footer({ locale }: { locale: Locale }) {
           </div>
 
           <nav aria-label={t('footer.pages')}>
-            <h4 className="t-mono">{t('footer.pages')}</h4>
+            <h2 className="t-mono footer-h">{t('footer.pages')}</h2>
             {NAV.map(k => <Link key={k} href={NAV_PATH[k]}>{t(`nav.${k}`)}</Link>)}
           </nav>
 
           <nav aria-label={t('footer.technologies')}>
-            <h4 className="t-mono">{t('footer.technologies')}</h4>
+            <h2 className="t-mono footer-h">{t('footer.technologies')}</h2>
             {TECHNOLOGIES.slice(0, 5).map(x => <Link key={x} href="/projects">{t(`tech.${x}`)}</Link>)}
           </nav>
 
           <div>
-            <h4 className="t-mono">{t('footer.contact')}</h4>
+            <h2 className="t-mono footer-h">{t('footer.contact')}</h2>
             <p>{t('contact.locationValue')}</p>
             <a href={`mailto:${site.email}`}>{site.email}</a>
             <a href={`tel:${site.phone}`} className="t-num">{site.phoneDisplay}</a>
-            <p className="t-mono" style={{ color: 'var(--ink-3)' }}>{site.location.timezone}</p>
           </div>
         </div>
 
         <div className="wordmark" aria-hidden="true">{site.nickname.toUpperCase()}</div>
 
         <div className="footer-bottom t-mono">
-          <span>© {new Date().getFullYear()} {site.name}</span>
+          <span>© {new Date().getFullYear()} {site.name} · {site.company.name}</span>
+          <a href={site.company.url} className="footer-domain">{site.company.domain}</a>
           <span>{LOCALES.map(l => LOCALE_NAMES[l]).join(' · ')}</span>
         </div>
       </div>

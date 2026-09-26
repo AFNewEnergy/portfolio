@@ -15,7 +15,8 @@ export const CAPABILITIES = [
   { key: 'representation', icon: 'wrench' },
 ] as const satisfies ReadonlyArray<{ key: string; icon: IconName }>
 
-export async function Plates({ locale, showIcons = false }: { locale: Locale; showIcons?: boolean }) {
+/** `heading` follows the page outline: h2 straight under a page title, h3 under a section heading. */
+export async function Plates({ locale, showIcons = false, heading: H = 'h3' }: { locale: Locale; showIcons?: boolean; heading?: 'h2' | 'h3' }) {
   const t = await getTranslations({ locale, namespace: 'capabilities.items' })
 
   return (
@@ -24,7 +25,7 @@ export async function Plates({ locale, showIcons = false }: { locale: Locale; sh
         <Reveal key={c.key} className="plate" delay={i * 60}>
           <span className="plate-index t-mono">{String(i + 1).padStart(2, '0')}</span>
           {showIcons && <Icon name={c.icon} className="mb-4 h-6 w-6" style={{ color: 'var(--accent)' }} />}
-          <h3 className="t-sub">{t(`${c.key}.title`)}</h3>
+          <H className="t-sub">{t(`${c.key}.title`)}</H>
           <p>{t(`${c.key}.body`)}</p>
           <div className="chips mt-[18px]">
             {t(`${c.key}.tags`).split('|').map(tag => <span key={tag}>{tag}</span>)}

@@ -4,7 +4,7 @@ import type { Project } from '../types'
  * Project register, from the Revised CV (08/08/2026).
  *
  * ⚠ Every `stage` must be verified with Faisal before launch. The stage is the
- * credibility anchor of this site — a project listed as "Approved" that is
+ * credibility anchor of this site: a project listed as "Approved" that is
  * actually at feasibility will be caught by any serious counterparty.
  *
  * Set `confidential: true` where an NDA or a live negotiation prevents naming
@@ -17,11 +17,11 @@ export const projects: Project[] = [
     slug: 'eleris-1gw-solar-bess',
     title: 'Grid-tied solar + 20% BESS',
     summary:
-      'One gigawatt of grid-tied solar with 20 percent battery storage for a US sponsor — technical due diligence, portfolio assessment against Power Development Board qualification policy, and tariff negotiation support.',
+      'One gigawatt of grid-tied solar with 20 percent battery storage for a US sponsor: technical due diligence, portfolio assessment against Power Development Board qualification policy, and tariff negotiation support.',
     capacityMW: 1000,
     technology: ['Solar PV', 'BESS'],
     stage: 'Development',
-    client: 'Eleris Energy Global LLC — a concern of Pacific Group, USA',
+    client: 'Eleris Energy Global LLC, a concern of Pacific Group, USA',
     confidential: false,
     location: 'Bangladesh',
     role: 'Independent Consultant',
@@ -36,7 +36,7 @@ export const projects: Project[] = [
     slug: 'sumitomo-100mw-solar-bess',
     title: 'Grid-tied solar + 20% BESS',
     summary:
-      'Solar with storage for a consortium led by a Japanese trading house — techno-commercial due diligence, client assessment against authority qualification policy, and proposal preparation to Power Division guideline.',
+      'Solar with storage for a consortium led by a Japanese trading house: techno-commercial due diligence, client assessment against authority qualification policy, and proposal preparation to Power Division guideline.',
     capacityMW: 100,
     technology: ['Solar PV', 'BESS'],
     stage: 'Development',
@@ -53,12 +53,12 @@ export const projects: Project[] = [
   },
   {
     slug: 'nepcs-bmstar-100mw-solar',
-    title: 'Solar power plant — government approved',
+    title: 'Government-approved solar power plant',
     summary: 'A 100 MW solar plant carried through to government approval as part of a joint venture.',
     capacityMW: 100,
     technology: ['Solar PV'],
     stage: 'Approved',
-    client: 'JV — NEPCS and BMSTAR',
+    client: 'JV of NEPCS and BMSTAR',
     confidential: false,
     location: 'Bangladesh',
     role: 'Director, Renewable Energy Sector',
@@ -91,7 +91,7 @@ export const projects: Project[] = [
     slug: 'rangunia-55mw-solar',
     title: 'Rangunia solar power plant',
     summary:
-      'Led financial close and EPC supervision for a 55 MWac plant in Chittagong — the operating financial model, land acquisition, transmission line, river protection design, and the SPC board reporting framework.',
+      'Led financial close and EPC supervision for a 55 MWac plant in Chittagong: the operating financial model, land acquisition, transmission line, river protection design, and the SPC board reporting framework.',
     capacityMW: 55,
     technology: ['Solar PV'],
     stage: 'Construction',
@@ -110,14 +110,14 @@ export const projects: Project[] = [
     slug: 'reliance-750mw-rlng-ccpp',
     title: 'RLNG-fired combined cycle, Narayanganj',
     summary:
-      'Local coordination for a 750 MWac regasified-LNG combined cycle plant — liaison with BPDB, PGCB, Petrobangla, Titas, GTCL and the Power and Energy Divisions, plus PPA, IA, GSA and LLA negotiation support.',
+      'Local coordination for a 750 MWac regasified-LNG combined cycle plant: liaison with BPDB, PGCB, Petrobangla, Titas, GTCL and the Power and Energy Divisions, plus PPA, IA, GSA and LLA negotiation support.',
     capacityMW: 750,
     technology: ['Gas / CCPP', 'LNG & FSRU'],
     stage: 'Development',
     client: 'Reliance Bangladesh LNG & Power Limited',
     confidential: false,
     location: 'Narayanganj, Dhaka, Bangladesh',
-    role: 'Assistant Manager — LNG & FSRU',
+    role: 'Assistant Manager, LNG & FSRU',
     year: 2017,
     metrics: ['750 MWac', 'RLNG fired', 'PPA / IA / GSA'],
     cover: null,
@@ -128,14 +128,14 @@ export const projects: Project[] = [
   {
     slug: 'kutubdia-lng-terminal',
     title: 'LNG terminal, Kutubdia Island',
-    summary: 'A 500 mmscfd FSRU-based LNG receiving terminal — local coordination and government liaison.',
+    summary: 'A 500 mmscfd FSRU-based LNG receiving terminal: local coordination and government liaison.',
     capacityMW: null,
     technology: ['LNG & FSRU'],
     stage: 'Development',
     client: 'Reliance Bangladesh LNG & Power Limited',
     confidential: false,
     location: "Kutubdia Island, Cox's Bazar, Bangladesh",
-    role: 'Assistant Manager — LNG & FSRU',
+    role: 'Assistant Manager, LNG & FSRU',
     year: 2017,
     metrics: ['500 mmscfd', 'FSRU based'],
     cover: null,
@@ -222,7 +222,7 @@ export const projects: Project[] = [
     capacityMW: 50,
     technology: ['Solar PV', 'BESS'],
     stage: 'Development',
-    client: 'JV — Vapus and Novelty',
+    client: 'JV of Vapus and Novelty',
     confidential: false,
     location: 'Bangladesh',
     role: 'Independent Consultant',
@@ -258,7 +258,7 @@ export const projects: Project[] = [
     capacityMW: 1320,
     technology: ['Coal'],
     stage: 'Feasibility',
-    client: 'IPP — POSCO E&C, Korea',
+    client: 'IPP led by POSCO E&C, Korea',
     confidential: false,
     location: 'Chittagong, Bangladesh',
     role: 'Electrical Engineer',
@@ -289,7 +289,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'ghorashal-365mw-ccpp-oe',
-    title: "Owner's engineer — Ghorashal CCPP",
+    title: "Owner's engineer, Ghorashal CCPP",
     summary: "Document control on owner's engineering services for a 365 MW combined cycle project.",
     capacityMW: 365,
     technology: ['Gas / CCPP'],
@@ -307,7 +307,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'bibiyana-south-400mw-ccpp-oe',
-    title: "Owner's engineer — Bibiyana South CCPP",
+    title: "Owner's engineer, Bibiyana South CCPP",
     summary: "Document control on owner's engineering services for a 400 MW combined cycle project.",
     capacityMW: 400,
     technology: ['Gas / CCPP'],
@@ -327,7 +327,7 @@ export const projects: Project[] = [
     slug: 'tetulia-96mw-solar',
     title: 'Grid-tied solar plant, Tetulia',
     summary:
-      'Early-stage development and construction supervision for a 9.6 MWac plant — investor due diligence, RFPs, EPC offer evaluation, and ESG and EHS compliance reporting.',
+      'Early-stage development and construction supervision for a 9.6 MWac plant: investor due diligence, RFPs, EPC offer evaluation, and ESG and EHS compliance reporting.',
     capacityMW: 9.6,
     technology: ['Solar PV'],
     stage: 'Operational',

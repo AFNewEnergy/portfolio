@@ -8,7 +8,7 @@ import { routing } from '@/i18n/routing'
 import { site, isRtl, LOCALE_TAGS, type Locale } from '@/config/site'
 import { themeColors } from '@/config/theme'
 import { buildMetadata } from '@/lib/seo'
-import { personSchema } from '@/lib/jsonld'
+import { organizationSchema, personSchema, websiteSchema } from '@/lib/jsonld'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import { ThemeScript } from '@/components/layout/ThemeScript'
@@ -50,8 +50,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
   return {
     ...buildMetadata({ locale, path: '/', title: t('home.title'), description: t('home.description') }),
     metadataBase: new URL(site.url),
-    title: { default: t('home.title'), template: `%s — ${site.shortName}` },
-    applicationName: site.shortName,
+    title: { default: t('home.title'), template: `%s | ${site.company.name}` },
+    applicationName: site.company.name,
     authors: [{ name: site.name, url: site.socials.linkedin || site.url }],
     creator: site.name,
     keywords: t('keywords').split('|'),
@@ -86,7 +86,7 @@ export default async function LocaleLayout({
           <main id="main">{children}</main>
           <Footer locale={locale} />
         </NextIntlClientProvider>
-        <JsonLd data={personSchema(locale, t('home.description'))} />
+        <JsonLd data={[websiteSchema(locale), personSchema(locale, t('home.description')), organizationSchema(locale)]} />
       </body>
     </html>
   )

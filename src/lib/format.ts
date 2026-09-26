@@ -31,6 +31,15 @@ export function formatDate(iso: string | null | undefined, locale: Locale): stri
   return new Intl.DateTimeFormat(INTL[locale], { year: 'numeric', month: 'short' }).format(d)
 }
 
+/** 12 Sep 2026 — the full date, for article bylines and cards. */
+export function formatDay(iso: string | null | undefined, locale: Locale): string {
+  if (!iso) return ''
+  const d = new Date(iso.length === 10 ? `${iso}T12:00:00Z` : iso)
+  if (Number.isNaN(d.getTime())) return ''
+  const out = new Intl.DateTimeFormat(INTL[locale], { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'Asia/Dhaka' }).format(d)
+  return locale === 'en' ? out.replace('Sept', 'Sep') : out
+}
+
 /** ~200 wpm, floored at 1. */
 export function readingTime(text: string): number {
   return Math.max(1, Math.round(text.trim().split(/\s+/).length / 200))

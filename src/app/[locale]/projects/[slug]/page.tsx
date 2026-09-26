@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const cap = capacityLabel(p.capacityMW)
   return buildMetadata({
     locale, path: `/projects/${slug}`,
-    title: cap ? `${cap} — ${p.title}` : p.title,
+    title: cap ? `${p.title}, ${cap}` : p.title,
     description: p.summary, type: 'article',
     ...(p.cover ? { image: p.cover } : {}),
   })
@@ -59,9 +59,9 @@ export default async function ProjectPage({ params }: Props) {
     { k: t('project.technology'), v: project.technology.map(x => t(`tech.${x}`)).join(' · ') },
     { k: t('register.col.stage'), v: t(`register.stage.${project.stage}`) },
     { k: t('register.col.counterparty'), v: project.client ?? t('register.confidential') },
-    { k: t('project.location'), v: project.location ?? '—' },
-    { k: t('project.role'), v: project.role ?? '—' },
-    { k: t('register.col.year'), v: project.year ? String(project.year) : '—' },
+    { k: t('project.location'), v: project.location ?? '' },
+    { k: t('project.role'), v: project.role ?? '' },
+    { k: t('register.col.year'), v: project.year ? String(project.year) : '' },
   ].filter(f => f.v)
 
   return (

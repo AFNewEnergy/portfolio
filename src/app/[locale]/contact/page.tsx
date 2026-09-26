@@ -42,7 +42,7 @@ export default async function ContactPage({ params }: Props) {
           <div>
             <Figure
               photo={site.photos.contact}
-              alt={`${site.name} — ${site.jobTitle}`}
+              alt={`${site.name}, ${site.jobTitle}`}
               caption={[site.location.city, site.location.timezone]}
               className="mb-8"
               sizes="(max-width: 960px) 92vw, 420px"

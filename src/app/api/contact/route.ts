@@ -55,8 +55,8 @@ export async function POST(req: NextRequest) {
   }
 
   const rows = [
-    ['Name', name], ['Email', email], ['Company', company || '—'],
-    ['Country', country || '—'], ['Project type', projectType || '—'],
+    ['Name', name], ['Email', email], ['Company', company || 'Not given'],
+    ['Country', country || 'Not given'], ['Project type', projectType || 'Not given'],
   ]
 
   try {
@@ -65,7 +65,7 @@ export async function POST(req: NextRequest) {
       from: `${site.shortName} Website <${from}>`,
       to: [to],
       replyTo: email,                                  // reply goes straight to the enquirer
-      subject: `Enquiry — ${name}${company ? ` (${company})` : ''}`,
+      subject: `Enquiry: ${name}${company ? ` (${company})` : ''}`,
       text: [...rows.map(([k, v]) => `${k}: ${v}`), '', message].join('\n'),
       html: `
         <div style="font-family:system-ui,sans-serif;font-size:15px;line-height:1.6;color:#111">

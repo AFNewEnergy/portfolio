@@ -32,6 +32,12 @@ export const ICONS = {
   check: 'M4.5 12.5 9.5 17.5 19.5 7',
   register: 'M4 5.5h16M4 12h16M4 18.5h16M7.5 3v19',
   clock2: 'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18ZM8.5 12.5l2.4 2.4 4.6-5',
+  grid: 'M4 4h6.5v6.5H4zM13.5 4H20v6.5h-6.5zM4 13.5h6.5V20H4zM13.5 13.5H20V20h-6.5z',
+  list: 'M9 6h11M9 12h11M9 18h11M4 5.2h1.6v1.6H4zM4 11.2h1.6v1.6H4zM4 17.2h1.6v1.6H4z',
+  external: 'M14 4h6v6M20 4l-9 9M18 13.5V20H4V6h6.5',
+  link: 'M9.5 14.5l5-5M11 6.5l1.7-1.7a4 4 0 0 1 5.6 5.6L16.6 12M13 17.5l-1.7 1.7a4 4 0 0 1-5.6-5.6L7.4 12',
+  copy: 'M8.5 8.5h11v11h-11zM15.5 8.5v-4h-11v11h4',
+  play: 'M7 4.5v15l12.5-7.5z',
 } as const
 
 export type IconName = keyof typeof ICONS

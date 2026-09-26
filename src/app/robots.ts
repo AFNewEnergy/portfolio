@@ -8,7 +8,8 @@ export default function robots(): MetadataRoute.Robots {
   return {
     rules: isPreview
       ? { userAgent: '*', disallow: '/' }
-      : { userAgent: '*', allow: '/', disallow: ['/api/'] },
+      // Article photos and their link-preview JPEGs are served from /api/notion/img, so that path stays open.
+      : { userAgent: '*', allow: ['/', '/api/notion/img/'], disallow: ['/api/'] },
     sitemap: `${site.url}/sitemap.xml`,
     host: site.url,
   }

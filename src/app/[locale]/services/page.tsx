@@ -32,7 +32,7 @@ export default async function ServicesPage({ params }: Props) {
       <PageTop title={t.rich('services.title', { em: c => <em>{c}</em> })} lede={t('services.lede')} />
 
       <section className="section">
-        <div className="shell"><Plates locale={locale} showIcons /></div>
+        <div className="shell"><Plates locale={locale} showIcons heading="h2" /></div>
       </section>
 
       <div className="band">

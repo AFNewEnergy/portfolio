@@ -1,10 +1,10 @@
 import { DEFAULT_LOCALE, type Locale } from '@/config/site'
-import type { ContentSource, Project, Insight } from '../types'
+import type { ContentSource, Project } from '../types'
 import { coerceTechnology, coerceStage } from '../types'
-import { notion, INSIGHTS_DS, PROJECTS_DS } from './client'
-import { pTitle, pText, pSelect, pMulti, pNumber, pCheck, pUrl, pDate } from './props'
+import { notion, PROJECTS_DS } from './client'
+import { notionInsights, notionInsight } from './insights'
+import { pTitle, pText, pSelect, pMulti, pNumber, pCheck, pUrl } from './props'
 import { renderBlocks, plain } from './render'
-import { readingTime } from '@/lib/format'
 
 /* ── block fetching ───────────────────────────────────────── */
 
@@ -75,28 +75,6 @@ function toProject(page: any, body: string): Project {
     cover: pUrl(p, 'Cover URL'),
     featured: pCheck(p, 'Featured'),
     order: pNumber(p, 'Order') ?? 999,
-    body,
-  }
-}
-
-function toInsight(page: any, body: string): Insight {
-  const p = page.properties
-  return {
-    slug: pText(p, 'Slug'),
-    title: pTitle(p, 'Title'),
-    excerpt: pText(p, 'Excerpt'),
-    type: pSelect(p, 'Type') === 'Video' ? 'Video' : 'Article',
-    videoUrl: pUrl(p, 'Video URL'),
-    cover: pUrl(p, 'Cover URL'),
-    tags: pMulti(p, 'Tags'),
-    date: pDate(p, 'Date'),
-    /**
-     * Index queries carry no body, and readingTime('') is 1 — so without the
-     * `Reading Minutes` property every card on the homepage and the insights
-     * index reads "1 min read" regardless of length. Fill the number in Notion;
-     * the computed value is only a fallback for the detail page.
-     */
-    readingMinutes: pNumber(p, 'Reading Minutes') ?? readingTime(plain(body)),
     body,
   }
 }
@@ -184,22 +162,6 @@ export const notionSource: ContentSource = {
     return page ? toProject(page, await bodyOf(page.id)) : null
   },
 
-  async getInsights(locale, opts) {
-    const rows = await localised(
-      INSIGHTS_DS,
-      locale,
-      [],
-      [{ property: 'Date', direction: 'descending' }],
-      opts?.limit,
-    )
-    return rows.map(r => toInsight(r, ''))
-  },
-
-  async getInsight(locale, slug) {
-    const rows = await localised(
-      INSIGHTS_DS, locale, [{ property: 'Slug', rich_text: { equals: slug } }], [], 1,
-    )
-    const page = rows[0]
-    return page ? toInsight(page, await bodyOf(page.id)) : null
-  },
+  getInsights: (locale, opts) => notionInsights(locale, opts?.limit),
+  getInsight: (locale, slug) => notionInsight(locale, slug),
 }

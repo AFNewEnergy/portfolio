@@ -4,8 +4,8 @@ Next.js 15 · TypeScript · Tailwind v4 · next-intl · Vercel
 Design system: **Meridian** — see [DESIGN.md](./DESIGN.md)
 
 Six locales (en · zh · ar · tr · de · fr) with full RTL for Arabic.
-Content runs from typed local files today and switches to Notion with one
-environment variable — no code change. See [NOTION-SETUP.md](./NOTION-SETUP.md).
+Insights are written in Notion and appear on the site automatically; projects
+run from typed local files. See [NOTION-SETUP.md](./NOTION-SETUP.md).
 
 ---
 
@@ -49,7 +49,7 @@ JavaScript.
 |---|---|
 | Domain name | Vercel → Domains, and `NEXT_PUBLIC_SITE_URL` |
 | Resend API key + verified sending domain | `RESEND_API_KEY`, `CONTACT_FROM_EMAIL` |
-| Real article copy | `src/content/local/insights.ts` |
+| Articles | written in Notion — see [NOTION-SETUP.md](./NOTION-SETUP.md). The three samples live in `src/content/samples/articles.ts` |
 | Project case-study bodies (`body` field) | `src/content/local/projects.ts` |
 | A wider boardroom photo | `public/photos/boardroom.jpg` is 1111px wide and the services band stretches past that on a large monitor |
 | Site and project photographs | `public/covers/`, then `cover:` on each project |
@@ -109,19 +109,22 @@ src/
 │  └─ cn.ts
 ├─ content/
 │  ├─ types.ts           Project, Insight, ContentSource interface
-│  ├─ index.ts           adapter selector (local ⇄ notion)
-│  ├─ local/             typed data files — the default backend
-│  └─ notion/            Notion adapter: client, props, block renderer
+│  ├─ index.ts           adapter selector — Insights from Notion when NOTION_TOKEN is set
+│  ├─ local/             typed data files (projects; Insights before Notion is set up)
+│  ├─ samples/           sample articles + writing guide, written as Notion blocks
+│  └─ notion/            Notion adapter: client, schema, insights reader, block renderer, photo paths
 ├─ components/
 │  ├─ primitives/        Icon, Button, Reveal, Rail, Figure
 │  ├─ layout/            Header, Footer, MobileDrawer, LanguageSwitcher, ThemeToggle, ThemeScript
 │  ├─ sections/          Hero, Figures, Plates, Register, LogoRibbons, Portfolio, PostList, Timeline, CtaBand, ContactForm, SectionHead
+│  ├─ insights/          InsightsIndex (grid/list, pages, All) · ArticleParts (contents, share, references, video)
 │  ├─ seo/               JsonLd
 │  └─ ui/                ⚠ unused — an older copy of Button, Icon and Reveal. Nothing imports it.
 └─ app/
    ├─ [locale]/          layout · home · about · services · projects[/slug] · insights[/slug] · contact · 404 · opengraph-image
    ├─ api/contact/       Resend + honeypot + rate limit
    ├─ api/revalidate/    on-demand ISR refresh
+   ├─ api/notion/        setup (one-time) · img (photo relay) · file (file links)
    ├─ sitemap.ts         every page × every locale, with hreflang
    ├─ robots.ts          blocks indexing on preview deployments
    └─ globals.css        the component layer — every named visual class
@@ -190,42 +193,28 @@ Bing Webmaster Tools, and set the six locales as alternate versions.
 
 ---
 
-## Switching to Notion
+## Insights from Notion
 
-The Notion adapter is written, type-checked and tested. When Faisal's workspace
-is ready:
+Faisal writes in a Notion database called **Insights**; ticking *Published*
+puts an article on the site within about five minutes. Setting it up is two
+Vercel variables (`NOTION_TOKEN`, `REVALIDATE_SECRET`) and one visit to
+`/api/notion/setup?secret=…`, which creates the database, three sample
+articles and a writing guide. [NOTION-SETUP.md](./NOTION-SETUP.md) has the
+steps, the writing guide and how each Notion block is rendered.
 
-```bash
-CONTENT_SOURCE=notion
-NOTION_TOKEN=ntn_xxx
-NOTION_INSIGHTS_DS=...
-NOTION_PROJECTS_DS=...
-```
+- **Photos can be uploaded into Notion.** Notion's file links expire after an
+  hour, so `/api/notion/img` fetches a fresh one, resizes it and caches it.
+- **Nothing breaks before setup.** With no Insights database yet, the site shows
+  the samples; if Notion is unreachable during a build it does the same, and at
+  run time the last good page keeps being served.
+- **Written once, in English.** Every locale shows the English article; a row
+  with the same Slug and a Language takes over for that language only.
 
-```bash
-npm run notion:schema   # prints the exact database schema to build
-npm run notion:ids      # prints the data source IDs the integration can see
-```
-
-[NOTION-SETUP.md](./NOTION-SETUP.md) is the full walkthrough. Three things worth
-knowing before you start:
-
-- **Content is authored once, in English.** Rows carry `Language = en`. A visitor
-  on a locale with no translated row falls back to the English row, so nothing
-  404s. Add a translated row with the same slug later and it takes precedence
-  automatically — no code change, no redeploy.
-- **`Summary` and `Reading Minutes` must be filled in.** Listing pages do not
-  download each row's page body — that would be one API call per row per
-  rebuild — so they cannot derive either value.
-- **Never upload images into Notion.** Those file URLs expire after about an
-  hour and the page silently breaks the next day. Use the `Cover URL` property
-  with a permanent link.
+Projects can move to Notion later with `CONTENT_SOURCE=notion` and a Projects
+database (`npm run notion:schema`).
 
 This uses `dataSources.query` on API version `2026-03-11` — `databases.query`
 no longer exists, so older tutorials will not work.
-
-If `CONTENT_SOURCE=notion` but the token is missing, the site logs a warning and
-falls back to local content rather than failing the build.
 
 ---
 
@@ -265,5 +254,5 @@ npm run notion:ids    # list Notion data source IDs
 | `/`, `/about`, `/projects` with no locale | 307 → `/en/...` |
 | `/[locale]/opengraph-image` × 6 | 200 · `image/png` · 1200×630 |
 | Mobile drawer | fills the viewport at 360px and 390px, LTR and RTL |
-| Notion adapter | 10/10 — locale fallback, translation precedence, pagination past 100 rows, reading time |
+| Insights (Notion) | 115/115 end-to-end checks against a strict Notion stand-in — setup route, pagination, grid/list/All, every article element, photo relay, slugs and redirects, translations, video, 3 sizes × 2 themes, Arabic |
 | Horizontal overflow | 0px at 360 / 375 / 390 / 430 / 768 / 1024 / 1440 / 2560px |

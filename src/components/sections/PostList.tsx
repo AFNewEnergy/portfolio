@@ -17,10 +17,12 @@ export async function PostList({ locale, posts }: { locale: Locale; posts: Insig
             <span className="badge" data-kind={p.type}>{t(`insights.type.${p.type}`)}</span>
             <h3 className="t-sub">{p.title}</h3>
             <span className="post-meta t-mono">
-              {p.type === 'Video'
-                ? t('insights.watch', { minutes: p.readingMinutes })
-                : t('insights.read', { minutes: p.readingMinutes })}
-              {p.date && ` · ${formatDate(p.date, locale)}`}
+              {[
+                !p.readingMinutes ? '' : p.type === 'Video'
+                  ? t('insights.watch', { minutes: p.readingMinutes })
+                  : t('insights.read', { minutes: p.readingMinutes }),
+                formatDate(p.date, locale),
+              ].filter(Boolean).join(' · ')}
             </span>
             <span className="post-go"><Icon name="arrow" strokeWidth={1.8} /></span>
           </Link>

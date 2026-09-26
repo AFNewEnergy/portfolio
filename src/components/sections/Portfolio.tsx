@@ -83,7 +83,7 @@ export async function Portfolio({ locale, projects }: { locale: Locale; projects
                     <sub>{cap.unit}</sub>
                   </>
                 ) : (
-                  <span className="pf-dash" aria-label={t('portfolio.notMeasuredInMW')}>—</span>
+                  <span className="pf-dash" aria-label={t('portfolio.notMeasuredInMW')}>n/a</span>
                 )}
               </span>
 

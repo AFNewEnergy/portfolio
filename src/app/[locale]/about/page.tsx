@@ -48,7 +48,7 @@ export default async function AboutPage({ params }: Props) {
             </div>
             <Figure
               photo={site.photos.about}
-              alt={`${site.name} — ${site.jobTitle}`}
+              alt={`${site.name}, ${site.jobTitle}`}
               caption={[site.location.city, 'Bangladesh']}
               sizes="(max-width: 960px) 80vw, 420px"
               delay={80}

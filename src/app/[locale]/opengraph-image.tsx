@@ -3,7 +3,7 @@ import { getTranslations } from 'next-intl/server'
 import { site, type Locale } from '@/config/site'
 import { og } from '@/config/theme'
 
-export const alt = `${site.name} — ${site.jobTitle}`
+export const alt = `${site.name}, ${site.jobTitle}`
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
@@ -41,7 +41,7 @@ export default async function OgImage({ params }: { params: Promise<{ locale: Lo
             {t('headline')}
           </div>
           <div style={{ display: 'flex', color: og.ink2, fontSize: 27, fontFamily: 'sans-serif' }}>
-            {`${site.name} — ${t('role')}`}
+            {`${site.name} · ${t('role')}`}
           </div>
         </div>
 

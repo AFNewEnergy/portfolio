@@ -151,16 +151,15 @@ links still work.
 Then `https://your-site.com/api/revalidate?secret=THAT_STRING` forces a rebuild
 of all pages on demand.
 
-### Only when moving to Notion
+### Insights from Notion
 
 | Variable | Value |
 |---|---|
-| `CONTENT_SOURCE` | `notion` |
-| `NOTION_TOKEN` | `ntn_...` |
-| `NOTION_INSIGHTS_DS` | data source ID |
-| `NOTION_PROJECTS_DS` | data source ID |
+| `NOTION_TOKEN` | the connection's Installation access token |
+| `REVALIDATE_SECRET` | any long random string (also unlocks the setup link) |
 
-See `NOTION-SETUP.md`. Leave `CONTENT_SOURCE` unset (or `local`) for now.
+Then open `/api/notion/setup?secret=…` once. See `NOTION-SETUP.md`. Leave
+`CONTENT_SOURCE` unset (or `local`) — that one only moves projects to Notion.
 
 **After changing any variable you must redeploy** — Vercel → Deployments → ⋯ on
 the latest → **Redeploy**. Env vars are read at build time, not on the fly.
@@ -302,5 +301,5 @@ the same thing. In order of likelihood:
 | Contact form returns an error | `RESEND_API_KEY` or `CONTACT_FROM_EMAIL` unset, or the sender domain is unverified in Resend |
 | Sitemap shows `localhost` | `NEXT_PUBLIC_SITE_URL` not set in Production, or set but not redeployed |
 | `Error occurred prerendering page` + `Server Components render` + a `digest` | Almost always a malformed `NEXT_PUBLIC_SITE_URL`. Now auto-repaired; if it persists, open the failing deployment → **Building** log and look for the line above the digest. |
-| Images broken after a day | Notion-hosted file URLs expired — use the `Cover URL` property instead (`NOTION-SETUP.md`, step 6) |
+| Insights photos missing | check `/api/notion/img/…` in Vercel → Logs; the token or the page's connection access has changed |
 | Preview URL appearing in Google | It shouldn't — `robots.ts` blocks previews. Check `VERCEL_ENV` is `preview` on that deployment. |

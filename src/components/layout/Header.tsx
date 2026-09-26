@@ -24,7 +24,7 @@ export function Header() {
           <Sigil />
           <span>
             <span className="brand-name">{site.shortName}</span>
-            <span className="brand-role t-mono">{t('ui.tagline')}</span>
+            <span className="brand-role t-mono">{site.company.name}</span>
           </span>
         </Link>
 

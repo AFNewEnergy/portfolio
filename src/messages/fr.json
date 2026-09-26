@@ -20,28 +20,28 @@
     "skipToContent": "Aller au contenu",
     "keywords": "développeur de projets électriques Bangladesh|consultant IPP Bangladesh|développement solaire Bangladesh|consultant PPA BPDB|GNL FSRU Bangladesh|stockage Bangladesh|partenaire local énergie Bangladesh",
     "home": {
-      "title": "Abdullah Bin Hossain (Faisal) — Développement de projets électriques à grande échelle au Bangladesh",
-      "description": "Plus de 13 ans à développer des projets solaires, de stockage, GNL et gaz à grande échelle au Bangladesh — faisabilité, négociation du contrat d’achat, permis et bouclage financier."
+      "title": "Abdullah Bin Hossain (Faisal) | AF New Energy, projets électriques au Bangladesh",
+      "description": "Plus de 13 ans à développer des projets solaires, de stockage, GNL et gaz à grande échelle au Bangladesh : faisabilité, négociation du contrat d’achat, permis et bouclage financier."
     },
     "about": {
-      "title": "À propos",
+      "title": "À propos d’Abdullah Bin Hossain, développeur de projets électriques",
       "description": "Treize ans entre capitaux étrangers et électricité bangladaise : parcours, qualifications et expérience sectorielle."
     },
     "services": {
-      "title": "Services",
+      "title": "Services de développement de projets électriques au Bangladesh",
       "description": "Développement et faisabilité, réglementaire et relations institutionnelles, conseil commercial et contrat d’achat, représentation locale et ingénierie du maître d’ouvrage."
     },
     "projects": {
-      "title": "Projets",
-      "description": "Un registre de plus de 30 projets électriques en solaire, stockage, GNL, gaz, charbon et transport — chacun avec son stade réel de développement."
+      "title": "Registre de projets : solaire, stockage, GNL et gaz au Bangladesh",
+      "description": "Un registre de plus de 30 projets électriques en solaire, stockage, GNL, gaz, charbon et transport, chacun avec son stade réel de développement."
     },
     "insights": {
-      "title": "Analyses",
-      "description": "Le fonctionnement réel du secteur électrique bangladais, pour ceux qui y financent et y construisent."
+      "title": "Analyses du secteur électrique au Bangladesh",
+      "description": "Comment fonctionne vraiment le secteur électrique au Bangladesh : capacité, réseau, politique et voies PPP, IPP ou centrale marchande, pour ceux qui y financent et construisent des centrales."
     },
     "contact": {
-      "title": "Contact",
-      "description": "Discutez d’un projet électrique au Bangladesh. Réponse sous un jour ouvré."
+      "title": "Contact : parler d’un projet électrique au Bangladesh",
+      "description": "Parlez d’un projet solaire, de stockage, GNL ou gaz au Bangladesh avec Abdullah Bin Hossain d’AF New Energy. Réponse sous un jour ouvré."
     },
     "og": {
       "headline": "Des projets qui atteignent vraiment le bouclage financier.",
@@ -52,12 +52,13 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "01 — Développement électrique à grande échelle",
+      "eyebrow": "01 / Développement électrique à grande échelle",
       "title": "Des projets qui atteignent <em>vraiment le bouclage.</em>",
-      "lede": "Plus de 13 ans à développer des projets solaires, de stockage, GNL et gaz à grande échelle au Bangladesh — de la faisabilité et du foncier jusqu’à la négociation du contrat d’achat, les permis et le bouclage financier. Le capital et la technologie sont la partie facile. Le terrain, c’est moi.",
+      "lede": "Plus de 13 ans à développer des projets solaires, de stockage, GNL et gaz à grande échelle au Bangladesh, de la faisabilité et du foncier jusqu’à la négociation du contrat d’achat, les permis et le bouclage financier. Le capital et la technologie sont la partie facile. Le terrain, c’est moi.",
       "ctaPrimary": "Réserver une consultation",
       "ctaSecondary": "Voir le registre des projets",
-      "availability": "Disponible pour de nouveaux mandats — Dacca, GMT+6"
+      "availability": "Disponible pour de nouveaux mandats · Dacca, GMT+6",
+      "company": "Société"
     },
     "stats": {
       "years": {
@@ -87,7 +88,7 @@
   },
   "capabilities": {
     "title": "Quatre choses qu'un investisseur étranger <em>ne peut pas acheter ici.</em>",
-    "lede": "Les développeurs internationaux arrivent avec le capital, la technologie et un calendrier. Ce qui les bloque, c’est l’exécution locale — le foncier, le raccordement, les ministères, et un contrat d’achat qu’un prêteur acceptera.",
+    "lede": "Les développeurs internationaux arrivent avec le capital, la technologie et un calendrier. Ce qui les bloque, c’est l’exécution locale : le foncier, le raccordement, les ministères, et un contrat d’achat qu’un prêteur acceptera.",
     "items": {
       "development": {
         "title": "Développement & faisabilité",
@@ -113,7 +114,7 @@
   },
   "register": {
     "title": "Chaque projet, avec le stade <em>où il en est réellement.</em>",
-    "lede": "Sans exagération. Chaque ligne indique la technologie, la contrepartie et le stade réel — faisabilité, appel d’offres, développement, approuvé ou en exploitation.",
+    "lede": "Sans exagération. Chaque ligne indique la technologie, la contrepartie et le stade réel : faisabilité, appel d’offres, développement, approuvé ou en exploitation.",
     "showing": "{shown} projets sur {total}",
     "openFull": "Ouvrir le registre complet",
     "confidential": "Sponsor confidentiel",
@@ -180,11 +181,55 @@
     "type": {
       "Article": "Article",
       "Video": "Vidéo"
+    },
+    "view": {
+      "label": "Affichage",
+      "grid": "Grille photo",
+      "list": "Liste"
+    },
+    "all": "Tout",
+    "backToPages": "Retour aux pages",
+    "prev": "Précédent",
+    "next": "Suivant",
+    "pageN": "Page {n}",
+    "pageOf": "Page {page} sur {count}",
+    "pagesLabel": "Pages",
+    "showing": "{from}–{to} sur {total}",
+    "showingOne": "{n} sur {total}",
+    "showingAll": "Les {total} analyses",
+    "allShown": "Toutes les analyses affichées ({total})",
+    "latest": "Dernière",
+    "readArticle": "Lire l’article",
+    "watchVideo": "Voir la vidéo",
+    "article": {
+      "onThisPage": "Sur cette page",
+      "published": "Publié",
+      "updated": "Mis à jour",
+      "readingTime": "Temps de lecture",
+      "readOnNotion": "Lire sur Notion",
+      "readOriginal": "Lire l’original sur Notion",
+      "lastEdited": "Dernière modification dans Notion · {date}",
+      "copyLink": "Copier le lien",
+      "linkCopied": "Lien copié",
+      "shareOn": "Partager sur {network}",
+      "references": "Références",
+      "referencesCount": "Références · {count}",
+      "cite": "Citer cet article",
+      "copyCitation": "Copier la citation",
+      "citationCopied": "Citation copiée",
+      "refCount": "{count, plural, one {# référence} other {# références}}",
+      "aboutAuthor": "À propos de l’auteur",
+      "authorRole": "Spécialiste du secteur électrique · Dacca",
+      "authorBio": "Plus de {years} ans à développer des projets solaires à grande échelle, de stockage, de GNL et de gaz au Bangladesh. Il accompagne les promoteurs de la préfaisabilité, du site et du foncier jusqu’aux autorisations, à l’audit, à la banque et au financement, jusqu’au bouclage financier.",
+      "book": "Réserver une consultation",
+      "more": "Plus d’analyses",
+      "continueReading": "À lire aussi",
+      "tags": "Mots-clés"
     }
   },
   "about": {
     "title": "Treize ans entre capitaux étrangers <em>et électricité bangladaise.</em>",
-    "lede": "Je développe des projets électriques à grande échelle au Bangladesh — solaire, stockage, GNL et gaz. Les sponsors étrangers apportent l’argent et la technologie ; je rends le projet réel sur place : le foncier, le raccordement, les autorisations ministérielles, et un contrat d’achat qu’un prêteur financera vraiment.",
+    "lede": "Je développe des projets électriques à grande échelle au Bangladesh : solaire, stockage, GNL et gaz. Les sponsors étrangers apportent l’argent et la technologie ; je rends le projet réel sur place : le foncier, le raccordement, les autorisations ministérielles, et un contrat d’achat qu’un prêteur financera vraiment.",
     "careerTitle": "Parcours",
     "credentialsTitle": "Formation et langues",
     "sections": {
@@ -205,11 +250,11 @@
     },
     "education": {
       "title": "Formation",
-      "items": "Licence en génie électrique et électronique — American International University-Bangladesh (AIUB), 2013|Spécialité : technologies des énergies renouvelables · communication mobile cellulaire|Mémoire : centrale à vortex gravitationnel"
+      "items": "Licence en génie électrique et électronique, American International University-Bangladesh (AIUB), 2013|Spécialité : technologies des énergies renouvelables · communication mobile cellulaire|Mémoire : centrale à vortex gravitationnel"
     },
     "languages": {
       "title": "Langues",
-      "items": "Bengali — langue maternelle|Anglais — maîtrise professionnelle complète"
+      "items": "Bengali : langue maternelle|Anglais : maîtrise professionnelle complète"
     },
     "introBody": "Dix organisations en treize ans, du contrôle documentaire sur des études d’ingénieur du maître d’ouvrage à la direction du développement renouvelable. Le fil ne change pas : faire passer un projet au-delà du point où, ici, les projets s’arrêtent d’ordinaire."
   },
@@ -220,7 +265,7 @@
   },
   "projects": {
     "title": "<em>Registre des projets.</em>",
-    "lede": "Plus de trente projets en solaire, stockage, GNL, gaz, charbon et transport — chacun avec le stade réellement atteint.",
+    "lede": "Plus de trente projets en solaire, stockage, GNL, gaz, charbon et transport, chacun avec le stade réellement atteint.",
     "disclaimer": "Les stades reflètent le point atteint par chaque projet pendant ma participation, et pas nécessairement son statut actuel. Certains sponsors apparaissent comme confidentiels lorsqu’un accord de confidentialité ou une négociation en cours s’applique.",
     "photoAlt": "Abdullah Bin Hossain examinant la documentation du projet, Dacca"
   },
@@ -254,7 +299,7 @@
       "countryPlaceholder": "Pays",
       "projectType": "Type de projet",
       "message": "Message",
-      "messagePlaceholder": "Parlez-moi du projet — technologie, capacité, stade actuel",
+      "messagePlaceholder": "Parlez-moi du projet : technologie, capacité, stade actuel",
       "submit": "Envoyer",
       "sending": "Envoi…",
       "successTitle": "Message envoyé.",
@@ -268,7 +313,7 @@
   "cta": {
     "eyebrow": "07 / Contact",
     "title": "Dites-moi la technologie, la capacité, et <em>où vous êtes bloqué.</em>",
-    "body": "Je vous dirai honnêtement à quoi ressemble le parcours à partir d’ici — y compris quand la réponse est que cela ne fonctionne pas.",
+    "body": "Je vous dirai honnêtement à quoi ressemble le parcours à partir d’ici, y compris quand la réponse est que cela ne fonctionne pas.",
     "primary": "Réserver une consultation",
     "secondary": "WhatsApp"
   },

@@ -20,28 +20,28 @@
     "skipToContent": "İçeriğe geç",
     "keywords": "Bangladeş enerji projesi geliştirici|Bangladeş IPP danışmanı|Bangladeş güneş enerjisi proje geliştirme|BPDB PPA danışmanı|Bangladeş LNG FSRU|Bangladeş BESS|Bangladeş enerji yerel ortak",
     "home": {
-      "title": "Abdullah Bin Hossain (Faisal) — Bangladeş’te Şebeke Ölçekli Enerji Projesi Geliştirme",
-      "description": "13+ yıldır Bangladeş’te şebeke ölçekli güneş, BESS, LNG ve doğalgaz projeleri geliştiriyorum — fizibilite, PPA müzakeresi, izinler ve finansal kapanış."
+      "title": "Abdullah Bin Hossain (Faisal) | AF New Energy, Bangladeş’te enerji projeleri",
+      "description": "13+ yıldır Bangladeş’te şebeke ölçekli güneş, BESS, LNG ve doğalgaz projeleri geliştiriyorum: fizibilite, PPA müzakeresi, izinler ve finansal kapanış."
     },
     "about": {
-      "title": "Hakkında",
+      "title": "Abdullah Bin Hossain hakkında: enerji projesi geliştirici",
       "description": "Yabancı sermaye ile Bangladeş enerjisi arasında on üç yıl: kariyer geçmişi, yetkinlikler ve sektör deneyimi."
     },
     "services": {
-      "title": "Hizmetler",
+      "title": "Bangladeş’te enerji projesi geliştirme hizmetleri",
       "description": "Geliştirme ve fizibilite, mevzuat ve kamu ilişkileri, ticari ve PPA danışmanlığı, yerel temsil ve işveren mühendisliği."
     },
     "projects": {
-      "title": "Projeler",
-      "description": "Güneş, BESS, LNG, gaz, kömür ve iletimde 30+ şebeke ölçekli enerji projesi kaydı — her biri gerçek geliştirme aşamasıyla."
+      "title": "Proje kaydı: Bangladeş’te güneş, BESS, LNG ve gaz",
+      "description": "Güneş, BESS, LNG, gaz, kömür ve iletimde 30+ şebeke ölçekli enerji projesi kaydı, her biri gerçek geliştirme aşamasıyla."
     },
     "insights": {
-      "title": "İçgörüler",
-      "description": "Bangladeş enerji sektörünün gerçekte nasıl işlediği; burada finanse eden ve inşa edenler için."
+      "title": "Bangladeş enerji sektörü üzerine içgörüler",
+      "description": "Bangladeş enerji sektörünün gerçekte nasıl işlediği: kapasite, şebeke, politika ve PPP, IPP ve ticari santral yolları; orada santral finanse eden ve kuranlar için."
     },
     "contact": {
-      "title": "İletişim",
-      "description": "Bangladeş’te bir enerji projesini görüşün. Bir iş günü içinde yanıt."
+      "title": "İletişim: Bangladeş’te bir enerji projesini konuşalım",
+      "description": "Bangladeş’teki güneş, depolama, LNG veya gaz projenizi AF New Energy’den Abdullah Bin Hossain ile konuşun. Bir iş günü içinde yanıt."
     },
     "og": {
       "headline": "Gerçekten finansal kapanışa ulaşan projeler.",
@@ -52,12 +52,13 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "01 — Şebeke ölçekli enerji geliştirme",
+      "eyebrow": "01 / Şebeke ölçekli enerji geliştirme",
       "title": "Gerçekten <em>finansal kapanışa ulaşan projeler.</em>",
-      "lede": "13+ yıldır Bangladeş’te şebeke ölçekli güneş, depolama, LNG ve doğalgaz projeleri geliştiriyorum — fizibilite ve araziden PPA müzakeresi, izinler ve kapanışa kadar. Sermaye ve teknoloji kolay kısmı; sahayı ben yürütüyorum.",
+      "lede": "13+ yıldır Bangladeş’te şebeke ölçekli güneş, depolama, LNG ve doğalgaz projeleri geliştiriyorum, fizibilite ve araziden PPA müzakeresi, izinler ve kapanışa kadar. Sermaye ve teknoloji kolay kısmı; sahayı ben yürütüyorum.",
       "ctaPrimary": "Danışmanlık görüşmesi ayarla",
       "ctaSecondary": "Proje kaydını görüntüle",
-      "availability": "Yeni proje görevlerine açık — Dakka, GMT+6"
+      "availability": "Yeni proje görevlerine açık · Dakka, GMT+6",
+      "company": "Şirket"
     },
     "stats": {
       "years": {
@@ -87,7 +88,7 @@
   },
   "capabilities": {
     "title": "Yabancı yatırımcının burada <em>hazır satın alamayacağı dört şey.</em>",
-    "lede": "Uluslararası geliştiriciler sermaye, teknoloji ve bir takvimle gelir. Onları durduran saha yürütmesidir — arazi, şebeke, bakanlıklar ve finansörün kabul edeceği bir PPA.",
+    "lede": "Uluslararası geliştiriciler sermaye, teknoloji ve bir takvimle gelir. Onları durduran saha yürütmesidir: arazi, şebeke, bakanlıklar ve finansörün kabul edeceği bir PPA.",
     "items": {
       "development": {
         "title": "Geliştirme ve Fizibilite",
@@ -113,7 +114,7 @@
   },
   "register": {
     "title": "Her proje, <em>gerçekte bulunduğu aşamayla.</em>",
-    "lede": "Abartı yok. Her kayıt teknolojiyi, karşı tarafı ve gerçek aşamayı belirtir — fizibilite, ihale, geliştirme, onaylı veya işletmede.",
+    "lede": "Abartı yok. Her kayıt teknolojiyi, karşı tarafı ve gerçek aşamayı belirtir: fizibilite, ihale, geliştirme, onaylı veya işletmede.",
     "showing": "{total} projeden {shown} tanesi gösteriliyor",
     "openFull": "Tam kaydı aç",
     "confidential": "Gizli yatırımcı",
@@ -180,11 +181,55 @@
     "type": {
       "Article": "Makale",
       "Video": "Video"
+    },
+    "view": {
+      "label": "Görünüm",
+      "grid": "Fotoğraf ızgarası",
+      "list": "Liste"
+    },
+    "all": "Tümü",
+    "backToPages": "Sayfalara dön",
+    "prev": "Önceki",
+    "next": "Sonraki",
+    "pageN": "Sayfa {n}",
+    "pageOf": "Sayfa {page} / {count}",
+    "pagesLabel": "Sayfalar",
+    "showing": "{total} yazıdan {from}–{to}",
+    "showingOne": "{total} yazıdan {n}.",
+    "showingAll": "Tüm {total} yazı",
+    "allShown": "Tüm {total} yazı gösteriliyor",
+    "latest": "En yeni",
+    "readArticle": "Makaleyi oku",
+    "watchVideo": "Videoyu izle",
+    "article": {
+      "onThisPage": "Bu sayfada",
+      "published": "Yayımlanma",
+      "updated": "Güncellenme",
+      "readingTime": "Okuma süresi",
+      "readOnNotion": "Notion’da oku",
+      "readOriginal": "Orijinalini Notion’da oku",
+      "lastEdited": "Notion’da son düzenleme · {date}",
+      "copyLink": "Bağlantıyı kopyala",
+      "linkCopied": "Bağlantı kopyalandı",
+      "shareOn": "{network} üzerinde paylaş",
+      "references": "Kaynaklar",
+      "referencesCount": "Kaynaklar · {count}",
+      "cite": "Bu makaleye atıf yap",
+      "copyCitation": "Atfı kopyala",
+      "citationCopied": "Atıf kopyalandı",
+      "refCount": "{count} kaynak",
+      "aboutAuthor": "Yazar hakkında",
+      "authorRole": "Enerji sektörü uzmanı · Dakka",
+      "authorBio": "Bangladeş’te şebeke ölçekli güneş, depolama, LNG ve gaz projeleri geliştirmede {years} yılı aşkın deneyim. Yatırımcılarla ön fizibilite, saha ve araziden izinlere, denetime, bankacılığa ve finansmana, finansal kapanışa kadar çalışıyor.",
+      "book": "Görüşme ayarla",
+      "more": "Diğer yazılar",
+      "continueReading": "Okumaya devam et",
+      "tags": "Etiketler"
     }
   },
   "about": {
     "title": "Yabancı sermaye ile <em>Bangladeş enerjisi arasında on üç yıl.</em>",
-    "lede": "Bangladeş’te şebeke ölçekli enerji projeleri geliştiriyorum — güneş, depolama, LNG ve gaz. Yabancı yatırımcı parayı ve teknolojiyi getirir; ben projeyi ülke içinde gerçek kılarım: arazi, şebeke bağlantısı, bakanlık onayları ve bir finansörün gerçekten finanse edeceği bir PPA.",
+    "lede": "Bangladeş’te şebeke ölçekli enerji projeleri geliştiriyorum: güneş, depolama, LNG ve gaz. Yabancı yatırımcı parayı ve teknolojiyi getirir; ben projeyi ülke içinde gerçek kılarım: arazi, şebeke bağlantısı, bakanlık onayları ve bir finansörün gerçekten finanse edeceği bir PPA.",
     "careerTitle": "Kariyer",
     "credentialsTitle": "Eğitim ve diller",
     "sections": {
@@ -205,13 +250,13 @@
     },
     "education": {
       "title": "Eğitim",
-      "items": "Elektrik-Elektronik Mühendisliği Lisans — American International University-Bangladesh (AIUB), 2013|Ana dal: Yenilenebilir Enerji Teknolojisi · Hücresel Mobil Haberleşme|Bitirme projesi: Yerçekimsel Su Girdabı Santrali"
+      "items": "Elektrik-Elektronik Mühendisliği Lisans, American International University-Bangladesh (AIUB), 2013|Ana dal: Yenilenebilir Enerji Teknolojisi · Hücresel Mobil Haberleşme|Bitirme projesi: Yerçekimsel Su Girdabı Santrali"
     },
     "languages": {
       "title": "Diller",
-      "items": "Bengalce — ana dil|İngilizce — tam profesyonel yeterlilik"
+      "items": "Bengalce: ana dil|İngilizce: tam profesyonel yeterlilik"
     },
-    "introBody": "On üç yılda on kurum — işveren mühendisliği çalışmalarında doküman kontrolünden yenilenebilir enerji geliştirmeyi yönetmeye. Değişmeyen tek şey şu: bir projeyi, burada projelerin genellikle tıkandığı noktanın ötesine taşımak."
+    "introBody": "On üç yılda on kurum: işveren mühendisliği çalışmalarında doküman kontrolünden yenilenebilir enerji geliştirmeyi yönetmeye. Değişmeyen tek şey şu: bir projeyi, burada projelerin genellikle tıkandığı noktanın ötesine taşımak."
   },
   "services": {
     "title": "Dört <em>çalışma biçimi.</em>",
@@ -220,7 +265,7 @@
   },
   "projects": {
     "title": "<em>Proje kaydı.</em>",
-    "lede": "Güneş, depolama, LNG, gaz, kömür ve iletimde otuzdan fazla proje — her biri gerçekte ulaştığı aşamayla.",
+    "lede": "Güneş, depolama, LNG, gaz, kömür ve iletimde otuzdan fazla proje, her biri gerçekte ulaştığı aşamayla.",
     "disclaimer": "Aşamalar, her projenin benim katılımım sırasında ulaştığı noktayı yansıtır; bugünkü durumunu değil. Gizlilik sözleşmesi veya devam eden müzakere bulunan bazı yatırımcılar gizli olarak gösterilmiştir.",
     "photoAlt": "Abdullah Bin Hossain proje dokümantasyonunu incelerken, Dakka"
   },
@@ -254,7 +299,7 @@
       "countryPlaceholder": "Ülke",
       "projectType": "Proje türü",
       "message": "Mesaj",
-      "messagePlaceholder": "Projeden bahsedin — teknoloji, kapasite, mevcut aşama",
+      "messagePlaceholder": "Projeden bahsedin: teknoloji, kapasite, mevcut aşama",
       "submit": "Mesaj gönder",
       "sending": "Gönderiliyor…",
       "successTitle": "Mesaj gönderildi.",
@@ -268,7 +313,7 @@
   "cta": {
     "eyebrow": "07 / İletişim",
     "title": "Bana teknolojiyi, kapasiteyi ve <em>nerede takıldığınızı söyleyin.</em>",
-    "body": "Buradan itibaren yolun gerçekte nasıl göründüğünü dürüstçe söylerim — cevabın “olmaz” olduğu durumlar dahil.",
+    "body": "Buradan itibaren yolun gerçekte nasıl göründüğünü dürüstçe söylerim, cevabın “olmaz” olduğu durumlar dahil.",
     "primary": "Danışmanlık görüşmesi ayarla",
     "secondary": "WhatsApp"
   },

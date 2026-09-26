@@ -57,17 +57,41 @@ export type Project = {
   body: string
 }
 
+/** One entry in an article's "On this page" list. `n` is "01", "02"… */
+export type TocItem = { id: string; n: string; label: string }
+
+/** One source in an article's References tab. `n` matches the [n] markers in the text. */
+export type Reference = { n: number; title: string; url: string | null; source: string | null }
+
 export type Insight = {
+  /** Notion page id, or a stable local id. */
+  id: string
   slug: string
+  /** Language the article is written in — "en" unless it is a translated copy. */
+  lang: string
   title: string
+  /** The standfirst under the headline. Also the card text and meta description. */
   excerpt: string
+  /** The accent label on cards and above the headline, e.g. "PPP". */
+  topic: string | null
   type: 'Article' | 'Video'
   videoUrl: string | null
+  /** Any src next/image accepts: a /photos path or the Notion image relay. */
   cover: string | null
+  coverCaption: string | null
+  coverCredit: string | null
   tags: string[]
+  /** Publish date, ISO. */
   date: string | null
+  /** Last edit, ISO. Shown as "Updated" when it is a day or more after `date`. */
+  updated: string | null
   readingMinutes: number
+  /** The page's public Notion link, when the page is published to the web. */
+  notionUrl: string | null
+  /** Article HTML. Empty on index queries. */
   body: string
+  toc: TocItem[]
+  references: Reference[]
 }
 
 /**
