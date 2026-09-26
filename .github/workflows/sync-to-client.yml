@@ -1,0 +1,42 @@
+# Copies every push to main in t0kai/faisal over to AFNewEnergy/portfolio,
+# the repo Vercel deploys the live site from.
+#
+# Needs one secret in t0kai/faisal → Settings → Secrets and variables → Actions:
+#   CLIENT_REPO_TOKEN = a fine-grained token from the AFNewEnergy account with
+#                       access to "portfolio" only, Contents + Workflows: Read and write.
+#
+# Rule: make all changes in t0kai/faisal. If someone commits straight to the
+# client repo, this push is rejected (it never overwrites) and the run fails.
+
+name: Sync to client repo
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: # lets you re-run it by hand from the Actions tab
+
+concurrency:
+  group: sync-to-client
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    # This file gets copied into the client repo too; only run it from here.
+    if: github.repository == 't0kai/faisal'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out full history
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Push to AFNewEnergy/portfolio
+        env:
+          TOKEN: ${{ secrets.CLIENT_REPO_TOKEN }}
+        run: |
+          if [ -z "$TOKEN" ]; then
+            echo "::error::The CLIENT_REPO_TOKEN secret is missing. Add it under Settings → Secrets and variables → Actions."
+            exit 1
+          fi
+          git push "https://AFNewEnergy:${TOKEN}@github.com/AFNewEnergy/portfolio.git" HEAD:refs/heads/main
