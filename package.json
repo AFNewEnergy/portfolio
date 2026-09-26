@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@notionhq/client": "^5.24.0",
-    "next": "^15.5.0",
+    "next": "^15.5.26",
     "next-intl": "^4.3.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
@@ -32,7 +32,7 @@
   },
   "overrides": {
     "postcss": "^8.5.26",
-    "sharp": "^0.35.3"
+    "sharp": "$sharp"
   },
-  "//overrides": "Next 15.5.x pins older postcss and sharp that carry HIGH advisories; the upstream fix only lands in Next 16 (semver-major). These overrides pull the patched releases instead. Verified: npm audit → 0 vulnerabilities, build passes. Remove them when moving to Next 16."
+  "//overrides": "Next 15.5.x pins older postcss and sharp that carry HIGH advisories; the upstream fix only lands in Next 16 (semver-major). These overrides pull the patched releases instead. sharp is also a direct dependency (the Notion photo relay), so its override refers to that entry ($sharp) rather than repeating a version. Verified: npm audit → 0 vulnerabilities, build passes. Remove them when moving to Next 16."
 }
