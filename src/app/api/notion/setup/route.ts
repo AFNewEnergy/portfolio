@@ -4,7 +4,8 @@ import { clientIp, secretFailed, secretLocked } from '@/lib/rate-limit'
 import type { NextRequest } from 'next/server'
 import { site } from '@/config/site'
 import { INSIGHTS_DB_TITLE, P, insightsProperties } from '@/content/notion/schema'
-import { SAMPLE_ARTICLES, WRITING_GUIDE, type SampleArticle } from '@/content/samples/articles'
+import { PERSONAL_PHOTOS, SAMPLE_ARTICLES, WRITING_GUIDE, type SampleArticle } from '@/content/samples/articles'
+import { image } from '@/content/samples/dsl'
 import type { NBlock } from '@/content/samples/dsl'
 
 /**
@@ -18,7 +19,8 @@ import type { NBlock } from '@/content/samples/dsl'
  * connection was given (the "Website" page), with every column the site
  * reads, the sample articles and an unpublished writing guide. Once the
  * database exists, the same page offers to put back any sample that was
- * deleted, and nothing else.
+ * deleted, and to swap photos of Faisal that older copies of the sample
+ * articles used for the power-sector photos (see replacePhotos).
  *
  * It runs on the live site because that is where the Notion token lives.
  */
@@ -100,7 +102,7 @@ const titleOf = (p: any) =>
 function explain(e: any): string {
   const code = e?.code ?? ''
   if (code === 'unauthorized') return 'Notion did not accept the token. Copy the Installation access token again and update NOTION_TOKEN in Vercel, then redeploy.'
-  if (code === 'restricted_resource') return 'The connection is not allowed to add content. In Notion’s Developer portal, open the connection → Configuration → Capabilities and tick Read, Insert and Update content.'
+  if (code === 'restricted_resource') return 'The connection is not allowed to make this change. In Notion’s Developer portal, open the connection, then Configuration, then Capabilities, and tick Update content (and Insert content for new articles). Press the button again, then untick them afterwards.'
   if (code === 'object_not_found') return 'The connection cannot see the Website page. Open the page in Notion → ••• → Connections → add the connection.'
   if (code === 'rate_limited') return 'Notion asked us to slow down. Wait a minute and try again.'
   return `Notion said: ${e?.message ?? String(e)}`
@@ -121,7 +123,7 @@ function guard(secret: string | null, ip: string): Response | null {
   return null
 }
 
-const button = (secret: string, action: 'create' | 'samples', label: string) =>
+const button = (secret: string, action: 'create' | 'samples' | 'photos', label: string) =>
   `<form method="post"><input type="hidden" name="secret" value="${esc(secret)}"><input type="hidden" name="action" value="${action}">
    <button type="submit" style="font:500 15px system-ui;padding:12px 20px;background:#0b6c63;color:#fff;border:0;border-radius:2px;cursor:pointer">${esc(label)}</button></form>`
 
@@ -143,6 +145,78 @@ async function allRows(notion: any, dataSourceId: string) {
 
 const slugOfRow = (r: any) => (r.properties?.[P.slug]?.rich_text ?? []).map((t: any) => t.plain_text).join('').trim()
 
+/* ── photos of Faisal in older copies of the samples ─────────────────────
+   The first sample articles used portraits of Faisal. The samples now use
+   power-sector photos, and this finds any sample page in Notion that still
+   shows a portrait and swaps it for the photo in the same place in the
+   current sample. Only images that still point at a portrait are touched,
+   so anything Faisal has changed himself is left alone. */
+
+const personal = new Set<string>(PERSONAL_PHOTOS)
+const isPersonal = (url?: string | null) => {
+  if (!url) return false
+  try { return personal.has(new URL(url, 'https://site.invalid').pathname) } catch { return false }
+}
+
+/** Image blocks in reading order, including the ones inside column layouts. */
+async function notionImages(notion: any, blockId: string, depth = 0): Promise<any[]> {
+  const out: any[] = []
+  let cursor: string | undefined
+  do {
+    const res: any = await notion.blocks.children.list({ block_id: blockId, start_cursor: cursor, page_size: 100 })
+    for (const b of res.results) {
+      if (b.type === 'image') out.push(b)
+      else if ((b.type === 'column_list' || b.type === 'column') && b.has_children && depth < 3) out.push(...await notionImages(notion, b.id, depth + 1))
+    }
+    cursor = res.has_more ? res.next_cursor : undefined
+  } while (cursor)
+  return out
+}
+
+function sampleImages(blocks: NBlock[]): NBlock[] {
+  return blocks.flatMap(b => (b.type === 'image' ? [b] : b.type === 'column_list' || b.type === 'column' ? sampleImages(b[b.type].children ?? []) : []))
+}
+
+type PhotoFix = { row: any; sample: SampleArticle; cover: boolean; blocks: Array<{ id: string; to: NBlock }> }
+
+async function photoFixes(notion: any, rows: any[]): Promise<PhotoFix[]> {
+  const fixes: PhotoFix[] = []
+  for (const row of rows) {
+    const sample = SAMPLE_ARTICLES.find(a => a.slug === slugOfRow(row)) ?? (titleOf(row) === WRITING_GUIDE.title ? WRITING_GUIDE : undefined)
+    if (!sample) continue
+    const cover = isPersonal(row.cover?.external?.url) && !isPersonal(sample.cover)
+    const want = sampleImages(sample.blocks)
+    const blocks: PhotoFix['blocks'] = []
+    ;(await notionImages(notion, row.id)).forEach((b, i) => {
+      if (b.image?.type !== 'external' || !isPersonal(b.image.external?.url)) return
+      const same = want[i]
+      // Same place in the current sample; if the page was rearranged, fall back to the article's cover photo.
+      blocks.push({ id: b.id, to: same && !isPersonal(same.image.external.url) ? same : image(sample.cover) })
+    })
+    if (cover || blocks.length) fixes.push({ row, sample, cover, blocks })
+  }
+  return fixes
+}
+
+const photoCount = (fixes: PhotoFix[]) => fixes.reduce((n, f) => n + f.blocks.length + (f.cover ? 1 : 0), 0)
+
+async function replacePhotos(notion: any, fixes: PhotoFix[], origin: string) {
+  const abs = (u: string) => (u.startsWith('/') ? origin + u : u)
+  for (const f of fixes) {
+    if (f.cover) {
+      await notion.pages.update({
+        page_id: f.row.id,
+        cover: { type: 'external', external: { url: abs(f.sample.cover) } },
+        properties: { [P.coverCaption]: { rich_text: text(f.sample.coverCaption) } },
+      })
+    }
+    for (const b of f.blocks) {
+      const v = b.to.image
+      await notion.blocks.update({ block_id: b.id, image: { external: { url: abs(v.external.url) }, caption: v.caption ?? [] } })
+    }
+  }
+}
+
 /** GET: look, don't touch. */
 export async function GET(req: NextRequest) {
   const secret = req.nextUrl.searchParams.get('secret')
@@ -161,11 +235,15 @@ export async function GET(req: NextRequest) {
     const missing = SAMPLE_ARTICLES.filter(a => !slugs.has(a.slug))
     const published = rows.filter(r => r.properties?.[P.published]?.checkbox).length
     const ds: any = await notion.dataSources.retrieve({ data_source_id: existing })
+    const fixes = await photoFixes(notion, rows)
     return page('Insights is set up', `
       <div class="box"><p>The Insights database has <strong>${rows.length}</strong> page(s), ${published} of them published.</p></div>
       <p><a href="${esc(ds.url ?? 'https://www.notion.so')}">Open it in Notion</a> · <a href="/en/insights">See the Insights page</a></p>
       <p>New articles appear on the site within about five minutes of ticking Published. Nothing else to do here.</p>
       <p style="color:#555">Optional, for extra reliability: add <code>NOTION_INSIGHTS_DS</code> = <code>${esc(existing)}</code> in Vercel (Settings, Environment Variables) and redeploy. The site then goes straight to this database instead of searching Notion for it.</p>
+      ${fixes.length ? `<div class="box"><p><strong>${fixes.length} sample article(s) still show photos of Faisal</strong> (${photoCount(fixes)} photo(s)): ${fixes.map(f => esc(titleOf(f.row))).join(', ')}.</p>
+        <p>This swaps them for the power-sector photos, with new captions. Photos you added or changed yourself are left alone. It needs the connection’s <strong>Update content</strong> capability: tick it in Notion’s Developer portal first, and untick it afterwards.</p></div>
+        ${button(secret!, 'photos', `Replace ${photoCount(fixes)} photo(s)`)}` : ''}
       ${missing.length ? `<p>${missing.length} sample article(s) are no longer in the database. You only need this if you deleted them by mistake:</p>${button(secret!, 'samples', `Put back ${missing.length} sample article(s)`)}` : ''}`)
   } catch (e: any) {
     console.error('[notion-setup] status failed', e?.code, e?.message)
@@ -192,6 +270,16 @@ export async function POST(req: NextRequest) {
 
   try {
     const existing = await findExisting()
+
+    if (existing && action === 'photos') {
+      const fixes = await photoFixes(notion, await allRows(notion, existing))
+      if (!fixes.length) return page('Nothing to replace', '<p>No sample article shows a photo of Faisal any more. <a href="/en/insights">See the Insights page</a>.</p>')
+      await replacePhotos(notion, fixes, origin)
+      done()
+      return page('Photos replaced', `<div class="box"><p>Replaced ${photoCount(fixes)} photo(s) in: ${fixes.map(f => esc(titleOf(f.row))).join(', ')}.</p></div>
+        <p>The site shows the new photos within a few minutes. You can now untick <strong>Update content</strong> in Notion’s Developer portal again.</p>
+        <p><a href="/en/insights">See the Insights page</a></p>`)
+    }
 
     if (existing) {
       if (action !== 'samples') return page('Insights is already set up', '<p>The database already exists, so nothing was created. <a href="/en/insights">See the Insights page</a>.</p>')

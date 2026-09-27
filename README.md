@@ -294,7 +294,14 @@ https://afnewenergy.com/api/revalidate?secret=YOUR_SECRET&path=/en/insights   (o
 
 **Photos uploaded into Notion.** Notion's file links expire after about an hour, so the site serves them through its own relay (`/api/notion/img/...`). The relay asks Notion for a fresh link, resizes the photo to the width the browser needs (480 to 2400 px), converts it to WebP (JPEG for share previews) and caches it for a year. Replacing a photo in Notion gives it a new address automatically.
 
-**Setup link.** `https://afnewenergy.com/api/notion/setup?secret=YOUR_SECRET` shows the status. It only changes something when a button on that page is pressed: **Create the Insights database** (first time) or **Put back sample articles**. Both need the connection's **Insert content** capability, which is switched off after setup; tick it again first if needed.
+**Setup link.** `https://afnewenergy.com/api/notion/setup?secret=YOUR_SECRET` shows the status. It only changes something when a button on that page is pressed:
+
+- **Create the Insights database** (first time) and **Put back sample articles** need the connection's **Insert content** capability.
+- **Replace photos** appears when a sample article in Notion still shows a photo of Faisal (the first copies of the samples did). It swaps each one for the power-sector photo in the same place in the current sample, with a new caption, and leaves photos Faisal added himself alone. It needs **Update content**.
+
+Both capabilities are switched off after setup; tick the one needed, press the button, then untick it.
+
+**Photos inside articles** are power-sector and solar photos only (`public/photos/insights/`). Photos of Faisal are kept for the site's own pages and the author card; `PERSONAL_PHOTOS` in `src/content/samples/articles.ts` lists them.
 
 **The connection has read-only access** ("Read content" only, no user information). Faisal edits in Notion as normal; the limit applies only to the website.
 

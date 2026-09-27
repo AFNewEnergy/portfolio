@@ -62,14 +62,21 @@ It creates, inside the Website page:
 
 - an **Insights** database with every column the site reads (each column has a
   description: hover its name in Notion)
-- the three sample articles, published
+- the ten sample articles, published
 - **✍️ Writing guide**: an unpublished page that shows every element and how
   to make it. Duplicate it to start a new article.
 
 The Insights page switches to Notion straight away. The link is safe to open
-again: once the database exists it only reports what is there. If a run was
-interrupted, opening it again finishes the job. Adding `&samples=1` puts back
-any sample article that was deleted.
+again: opening it only reports what is there, and nothing changes until a
+button is pressed. Once the database exists, the page can also:
+
+- **Put back sample articles** that were deleted (needs Insert content).
+- **Replace photos**: if a sample article still shows a photo of Faisal, as the
+  first copies did, swap it for the power-sector photo in the same place, with
+  a new caption. Photos added or changed by hand are left alone (needs Update
+  content).
+
+Tick the capability the button needs, press it, then untick it again.
 
 ### 5. Tidy up (optional)
 

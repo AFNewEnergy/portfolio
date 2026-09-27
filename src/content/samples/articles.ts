@@ -183,6 +183,13 @@ const refs = (...list: Src[]) => [h1('References'), ...list.map(ref)]
 const say = (line: string) => quote(`${line}\n- Abdullah Bin Hossain`)
 const P = '/photos/insights/'
 
+/**
+ * Photos of Faisal. They belong on the site's own pages (home, about, author card) and are never
+ * used inside articles. The setup page uses this list to find and replace them in Notion.
+ */
+export const PERSONAL_PHOTOS = ['/photos/portrait.jpg', '/photos/standing.jpg', '/photos/boardroom.jpg',
+  '/photos/desk-wide.jpg', '/photos/desk-portrait.jpg', '/photos/window.jpg'] as const
+
 /* ── 1 ─────────────────────────────────────────────────────── */
 
 const proposals: SampleArticle = {
@@ -192,8 +199,8 @@ const proposals: SampleArticle = {
   topic: 'Project development',
   tags: ['Solar PV', 'PPP', 'IPP', 'Land'],
   date: '2026-09-12',
-  cover: '/photos/boardroom.jpg',
-  coverCaption: 'Most of a power project is decided around a table, long before the site is cleared',
+  cover: `${P}solar-hillside.jpg`,
+  coverCaption: 'A plant that reached construction: most proposals stall long before this point | Photo: Unsplash',
   published: true,
   blocks: [
     callout('Key takeaways', [
@@ -208,7 +215,7 @@ const proposals: SampleArticle = {
 
     h1('Land and site: where projects stall first'),
     h2('Pre-feasibility and site selection'),
-    image('/photos/standing.jpg', 'Small: Site screening starts before any money is committed'),
+    image(`${P}solar-aerial.jpg`, 'Small: A utility-scale plant needs a large, contiguous site, and land is where most proposals stall first | Photo: Unsplash'),
     para('A utility-scale solar plant needs a large, contiguous site close to a substation with spare capacity. Land is one of the main constraints on utility-scale solar in Bangladesh, and assembling a site from many small holdings is where cost and time run away first.[5]'),
     para('That is why the work starts with pre-feasibility: screening candidate sites for grid access, flood risk, land classification and ownership before anyone commits money to a proposal.'),
     h2('Digital survey and land records'),
@@ -216,7 +223,7 @@ const proposals: SampleArticle = {
 
     h1('Grid, tariff and bankability'),
     para('A site without a realistic grid connection is not a project. Evacuation capacity, bay extensions and transmission timelines need to be settled with the grid company early, not studied after the proposal is accepted.'),
-    image('/photos/desk-wide.jpg', 'Wide: Grid, tariff and contract terms are settled on paper long before construction starts'),
+    image(`${P}power-station-pylon.jpg`, 'Wide: A site without a realistic grid connection is not a project | Photo: Unsplash'),
     para('Tariffs have fallen sharply since the market moved to open, competitive bidding. In BPDB’s recent solar tenders, bids averaged 8.27 US cents per kWh, against 13.29 cents under the earlier negotiated deals.[2] That is good for the buyer, but it leaves less margin for delay, which makes preparation more valuable, not less.'),
     para('Bankability now rests on the contract terms themselves: payment security, termination rights and compensation. Investors have raised concerns about those terms in recent tenders, and lenders read them closely.[1][5]'),
     para('Table 1 · Where proposals stall, and what moves them'),
@@ -235,8 +242,8 @@ const proposals: SampleArticle = {
     say('The capital and the technology are the easy part.'),
     para('For a sponsor, the practical question is which route fits the project (a BPDB tender, a PPP on public land, or a private site) and what each one requires on the ground.'),
     columns(
-      [image('/photos/desk-portrait.jpg', 'Most of the work happens in meetings and on paper, well before anything is built')],
-      [image('/photos/window.jpg')],
+      [image(`${P}solar-rows.jpg`, 'A tendered IPP plant and a PPP plant on public land look alike; the contracts behind them do not | Photo: Unsplash')],
+      [image(`${P}solar-field.jpg`)],
     ),
 
     h1('Where a local partner fits'),
@@ -262,8 +269,8 @@ const pppLand: SampleArticle = {
   topic: 'PPP',
   tags: ['Solar PV', 'Land', 'BPDB', 'SREDA'],
   date: '2026-08-28',
-  cover: '/photos/desk-wide.jpg',
-  coverCaption: 'The PPP route starts with public land, and with a lot of paperwork',
+  cover: `${P}solar-panels.jpg`,
+  coverCaption: 'Public land can now host utility-scale solar under the PPP model | Photo: Unsplash',
   published: true,
   blocks: [
     callout('Key takeaways', [
@@ -295,7 +302,7 @@ const pppLand: SampleArticle = {
 
     h1('What changes for a sponsor'),
     h2('Land'),
-    image('/photos/window.jpg', 'Small: Early screening of public land saves months later'),
+    image(`${P}solar-meadow.jpg`, 'Small: Public land often comes in long strips beside roads, railways and embankments | Photo: Unsplash'),
     para('Land is one of the main constraints on utility-scale solar in Bangladesh.[2] Under a normal BPDB tender, the developer has to find and secure it. Under the PPP route, a public agency identifies the land and makes it available through the MoU, which is the single largest change.'),
     h2('A return for the land-owning agency'),
     para('The agency is paid through lease payments, a minority equity stake, or a mix of the two, depending on the project.[1] A sponsor needs to price that into the model from the first pre-feasibility study, not after the bid.'),
@@ -330,8 +337,8 @@ const routes: SampleArticle = {
   topic: 'Regulatory',
   tags: ['Solar PV', 'PPP', 'IPP', 'MPP'],
   date: '2026-08-10',
-  cover: '/photos/window.jpg',
-  coverCaption: 'Choosing the route is the first real decision in a solar project',
+  cover: `${P}pylons-dusk.jpg`,
+  coverCaption: 'The route decides who buys the power and how it reaches them | Photo: Unsplash',
   published: true,
   blocks: [
     callout('Key takeaways', [
@@ -353,7 +360,7 @@ const routes: SampleArticle = {
     para('A policy gazetted in October 2025 lets private investors build renewable merchant power plants (MPPs) and sell the output directly to large and bulk consumers under negotiated contracts, wheeling it over the national grid on open access.[6][4]'),
     para('The rules are specific. Buyers qualify by connection voltage, from under 5 MW at 11 kV to more than 140 MW at 230 kV. A distribution utility may buy up to 20 percent of the plant’s output but is not obliged to, there is no government guarantee, and the system operator can limit output for system security without compensation. Each project needs Power Division approval and a BERC licence, and SREDA can issue renewable energy certificates that pass to the buyers.[6]'),
     para('This is the closest Bangladesh has to a corporate PPA. Export manufacturers, especially garment and textile factories whose buyers ask for green power, are the natural customers. The buyer’s credit matters as much as the plant’s, and the open-access charges set by BERC decide how much of the saving reaches the buyer. Rooftop systems are a separate case, covered by the Net Metering Guideline 2025.[4]'),
-    image('/photos/boardroom.jpg', 'Wide: The route is decided in meetings like this one, not on site'),
+    image(`${P}power-station-substation.jpg`, 'Wide: A merchant plant’s power reaches its buyers over the national grid, on open access | Photo: Unsplash'),
 
     h1('The three routes side by side'),
     para('Table 1 · Three routes to utility-scale solar'),
@@ -688,7 +695,7 @@ const implement: SampleArticle = {
     h2('Environmental clearance'),
     para('The Environment Conservation Rules 2023 classify projects by risk. Large power plants are in the Red category, which needs a site clearance, an environmental impact assessment and then an Environmental Clearance Certificate from the Department of Environment.[3]'),
     h2('Foreign investment and borrowing'),
-    image('/photos/standing.jpg', 'Small: Most of the approval work is meetings, files and follow-up'),
+    image(`${P}coal-stacks.jpg`, 'Small: Thermal or solar, every plant needs the same licence, clearance and financing approvals | Photo: Unsplash'),
     para('Foreign investors register with the Bangladesh Investment Development Authority (BIDA). Foreign loans have gone through a BIDA scrutiny committee chaired by the Bangladesh Bank governor.[4] Since September 2026, BIDA-registered companies no longer need a separate Bangladesh Bank approval for medium and long-term foreign borrowing.[5]'),
     h2('Tax incentives'),
     para('Renewable projects that reach commercial operation between July 2025 and June 2030 can claim a full income tax exemption for ten years, then 50 percent for three years and 25 percent for two, with a no-objection certificate from the Power Division.[6]'),
@@ -775,7 +782,7 @@ export const WRITING_GUIDE: SampleArticle = {
   topic: 'Services',
   tags: [],
   date: '2026-09-26',
-  cover: '/photos/desk-portrait.jpg',
+  cover: `${P}solar-field.jpg`,
   coverCaption: 'The cover photo | Photo: add a credit after a bar like this',
   published: false,
   blocks: [
@@ -800,9 +807,9 @@ export const WRITING_GUIDE: SampleArticle = {
     bullet(bold('Wide:'), ' the photo runs past the text into the margin.'),
     bullet(bold('Small:'), ' a small photo, with the text wrapping round it.'),
     bullet('Add a credit after a bar, for example ', ital('Wide: The substation at night | Photo: AF New Energy'), '.'),
-    image('/photos/desk-wide.jpg', 'Wide: A wide photo. This caption starts with “Wide:” | Photo: credit goes here'),
+    image(`${P}pylons-sunset.jpg`, 'Wide: A wide photo. This caption starts with “Wide:” | Photo: credit goes here'),
     para('To put photos side by side, drag one image next to another until Notion shows a blue line down the side. The site shows them as a gallery.'),
-    columns([image('/photos/standing.jpg', 'Two photos side by side become a gallery')], [image('/photos/portrait.jpg')]),
+    columns([image(`${P}solar-rows.jpg`, 'Two photos side by side become a gallery')], [image(`${P}solar-panels.jpg`)]),
 
     h1('Key takeaways'),
     para('A callout with a list inside becomes a boxed summary. The callout’s own text is the label.'),
