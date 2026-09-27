@@ -183,9 +183,12 @@ src/components/insights/        list page (grid/list/pages/All) and the article'
 - **Refreshing.** Pages rebuild at most every five minutes when visited (ISR).
   Each article's blocks are cached by its last-edited time, so the list shows a
   real reading time without re-reading every article.
-- **If Notion is down during a build,** the build uses the sample articles
-  rather than failing. If Notion is down while the live site refreshes, visitors
-  keep seeing the last good version.
+- **If Notion is down during a build,** the build stops on purpose and the
+  current live version stays up. Only before the Insights database exists does
+  a build use the sample articles. If Notion is down while the live site
+  refreshes, visitors keep seeing the last good version.
+- **Handover guide:** `docs/AF-New-Energy-Notion-Articles-Guide.pdf` explains
+  adding, editing, hiding and deleting articles for non-technical editors.
 - **Six languages.** Articles are written in English and shown on all six
   locales; the page chrome is translated. A translated row (above) replaces the
   English one for its language only. On the Arabic site an English article is
