@@ -8,6 +8,7 @@ import { P, INSIGHTS_DB_TITLE } from './schema'
 import { pText, pSelect, pMulti, pNumber, pUrl, pDate } from './props'
 import { renderArticle, plainOf, type Rendered } from './render'
 import { mediaSrc } from './media'
+import { guardBlocks, guardCover } from '../photo-guard'
 
 /* ── finding the database ─────────────────────────────────────────────
    Nobody has to copy an id anywhere: the site looks for a data source called
@@ -197,16 +198,18 @@ async function getBlocks(blockId: string, depth = 0): Promise<any[]> {
  * few minutes is read fresh (a second edit in the same minute would otherwise
  * keep the old key), and cached copies expire after six hours regardless.
  */
+const readBody = async (pageId: string, slug: string): Promise<Rendered> => renderArticle(guardBlocks(slug, await getBlocks(pageId)))
+
 const cachedBody = unstable_cache(
-  async (pageId: string, _edited: string): Promise<Rendered> => renderArticle(await getBlocks(pageId)),
-  ['notion-body-v2'],
+  async (pageId: string, _edited: string, slug: string): Promise<Rendered> => readBody(pageId, slug),
+  ['notion-body-v3'],
   { revalidate: 60 * 60 * 6, tags: ['notion-body'] },
 )
 
-async function bodyOf(page: any): Promise<Rendered> {
+async function bodyOf(page: any, slug: string): Promise<Rendered> {
   const edited = String(page.last_edited_time ?? '')
   const recent = Date.now() - Date.parse(edited) < 3 * 60_000
-  return recent ? renderArticle(await getBlocks(page.id)) : cachedBody(page.id, edited)
+  return recent ? readBody(page.id, slug) : cachedBody(page.id, edited, slug)
 }
 
 const EMPTY: Rendered = { html: '', toc: [], references: [], words: 0 }
@@ -226,7 +229,9 @@ function toInsight(row: Row, r: Rendered, withBody: boolean): Insight {
   const { page } = row
   const p = page.properties
   const type = pSelect(p, P.type) === 'Video' ? 'Video' : 'Article'
-  const [coverCaption, coverCredit] = splitCredit(pText(p, P.coverCaption))
+  // A portrait of Faisal as the cover is swapped for a power-sector photo (photo-guard.ts).
+  const guarded = guardCover(row.slug, mediaSrc(page.cover, { kind: 'cover', id: page.id, edited: page.last_edited_time }), pText(p, P.coverCaption))
+  const [coverCaption, coverCredit] = splitCredit(guarded.caption)
   return {
     id: page.id,
     slug: row.slug,
@@ -236,7 +241,7 @@ function toInsight(row: Row, r: Rendered, withBody: boolean): Insight {
     topic: pSelect(p, P.topic) || null,
     type,
     videoUrl: pUrl(p, P.videoUrl),
-    cover: mediaSrc(page.cover, { kind: 'cover', id: page.id, edited: page.last_edited_time }),
+    cover: guarded.cover,
     coverCaption,
     coverCredit,
     tags: pMulti(p, P.tags),
@@ -259,7 +264,7 @@ export async function notionInsights(locale: Locale, limit?: number): Promise<In
   const pick = limit ? rows.slice(0, limit) : rows
   return mapLimit(pick, 3, async row => {
     let r = EMPTY
-    try { r = await bodyOf(row.page) } catch (e: any) {
+    try { r = await bodyOf(row.page, row.slug) } catch (e: any) {
       console.warn(`[notion] "${pageTitle(row.page)}": body could not be read for the list —`, e?.code ?? e?.message)
     }
     return toInsight(row, r, false)
@@ -276,5 +281,5 @@ export async function notionInsight(locale: Locale, slug: string): Promise<Insig
     if (m) row = rows.find(r => !explicitSlug(r.page) && idTail(r.page.id) === m[2])
   }
   if (!row) return null
-  return toInsight(row, await bodyOf(row.page), true)
+  return toInsight(row, await bodyOf(row.page, row.slug), true)
 }

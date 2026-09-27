@@ -42,7 +42,7 @@ export default async function InsightsPage({ params }: Props) {
       <section className="ins-section">
         <div className="shell">
           {cards.length
-            ? <InsightsIndex cards={cards} author={{ name: site.name, photo: site.photos.hero.src }} />
+            ? <InsightsIndex cards={cards} author={{ name: site.name }} />
             : <p className="notice mt-12">{t('insights.empty')}</p>}
         </div>
       </section>

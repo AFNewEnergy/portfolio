@@ -47,7 +47,8 @@ function Media({ card, ratio, sizes, eager }: { card: Card; ratio: string; sizes
   )
 }
 
-export function InsightsIndex({ cards, author }: { cards: Card[]; author: { name: string; photo: string } }) {
+/** The byline shows the company mark, not a portrait: photos of Faisal are kept off the article pages. */
+export function InsightsIndex({ cards, author }: { cards: Card[]; author: { name: string } }) {
   const t = useTranslations('insights')
   const [view, setView] = useState<View>('grid')
   const [page, setPage] = useState(1)
@@ -156,7 +157,7 @@ export function InsightsIndex({ cards, author }: { cards: Card[]; author: { name
                   <h2 className="ins-feature-title" dir="auto">{featured.title}</h2>
                   {featured.excerpt && <p className="ins-excerpt" dir="auto">{featured.excerpt}</p>}
                   <div className="ins-byline">
-                    <img {...imgAttrs(author.photo, '48px')} alt="" className="ins-avatar" loading="lazy" />
+                    <span className="ins-avatar ins-mark" aria-hidden="true"><i /></span>
                     <span className="ins-byline-who">
                       <span>{author.name}</span>
                       <span className="t-mono">{[featured.date, featured.len].filter(Boolean).join(' · ')}</span>

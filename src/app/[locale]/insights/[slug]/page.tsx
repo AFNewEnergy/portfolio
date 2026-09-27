@@ -123,7 +123,7 @@ export default async function InsightPage({ params }: Props) {
           <div className="art-byline">
             <div className="art-by">
               <div className="art-author">
-                <img {...imgAttrs(site.photos.hero.src, '48px')} alt="" className="ins-avatar" />
+                <span className="ins-avatar ins-mark" aria-hidden="true"><i /></span>
                 <span>
                   <span className="art-name">{site.name}</span>
                   <span className="art-role">{ta('authorRole')}</span>
@@ -197,7 +197,8 @@ export default async function InsightPage({ params }: Props) {
             </div>
 
             <section className="author-card" aria-label={ta('aboutAuthor')}>
-              <img {...imgAttrs(site.photos.hero.src, '120px')} alt={site.name} loading="lazy" />
+              {/* The company mark, not a portrait: photos of Faisal stay off the article pages. */}
+              <span className="author-mark" aria-hidden="true"><i /></span>
               <div>
                 <span className="t-mono author-eyebrow">{ta('aboutAuthor')}</span>
                 <p className="author-name">{site.name}</p>

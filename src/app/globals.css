@@ -576,7 +576,12 @@
   .art-by { display: flex; align-items: center; flex-wrap: wrap; gap: 20px 28px }
   .art-author { display: flex; align-items: center; gap: 14px }
   .art-author .ins-avatar { width: 48px; height: 48px }
-  .art-author > span { display: flex; flex-direction: column; gap: 3px }
+  /* The AF New Energy mark stands in for a portrait in bylines and the author box. */
+  .ins-mark, .author-card > .author-mark { display: grid; place-items: center; background: var(--surface); border: 1px solid var(--line-strong) }
+  .ins-mark i, .author-mark i { display: block; width: 28%; height: 28%; border-top: 1.5px solid var(--accent); border-right: 1.5px solid var(--accent);
+    transform: translateX(-14%) rotate(45deg) }
+  .author-card > .author-mark { width: 120px; height: 120px }
+  .art-author > span:not(.ins-mark) { display: flex; flex-direction: column; gap: 3px }
   .art-name { font-size: 0.95rem }
   .art-role { font-size: 0.82rem; color: var(--ink-3) }
   .art-facts { display: flex; gap: 24px; margin: 0; padding-inline-start: 28px; border-inline-start: 1px solid var(--line) }
@@ -929,6 +934,7 @@
   .article-body .callout { padding: 20px }
   .author-card { grid-template-columns: minmax(0, 1fr); gap: 20px }
   .author-card > img { width: 96px; height: 120px }
+  .author-card > .author-mark { width: 88px; height: 88px }
   .fig-cap { flex-direction: column; gap: 4px }
 
   /* Tables with a header row become one card per row, each cell labelled. */
