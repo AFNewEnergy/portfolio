@@ -144,7 +144,7 @@ Then:
 
 ### Article changes
 
-No push is needed. Edit in Notion and the site follows within about 5 minutes (section 7).
+No push is needed. Edit in Notion and the site follows within about a minute (section 7).
 
 ---
 
@@ -272,7 +272,7 @@ Vercel may mark values as **Sensitive**, which hides them after saving. A hidden
 
 Full guide: [NOTION-SETUP.md](./NOTION-SETUP.md). In short:
 
-**Publishing.** In Notion, open **Website → Insights**, click **New** (or duplicate the "✍️ Writing guide" page), fill in Title and Subtitle, write, then tick **Published**. The article appears on the site within about 5 minutes. For "show it now", open:
+**Publishing.** In Notion, open **Website → Insights**, click **New** (or duplicate the "✍️ Writing guide" page), fill in Title and Subtitle, write, then tick **Published**. The article appears on the site within about a minute. For "show it now", open:
 
 ```
 https://afnewenergy.com/api/revalidate?secret=YOUR_SECRET
@@ -317,7 +317,8 @@ Both capabilities are switched off after setup; tick the one needed, press the b
 
 | What | Refreshed |
 |---|---|
-| Home, projects, Insights list, articles | Every 5 minutes (in the background, when visited) |
+| Home, Insights list, articles | Every minute (in the background, when visited) |
+| Projects | Every 5 minutes |
 | About, services, contact | Every hour |
 | `sitemap.xml`, `feed.xml` | Every hour |
 | Photos from Notion (relay) | Cached for a year per version |
@@ -361,7 +362,7 @@ Already in place:
 - **Only articles are editable without code.** About, services, projects, the timeline and the headline figures need a code change and a push.
 - **Articles are English unless a translated copy is added** in Notion. Page text and menus are in all six languages.
 - **No analytics** until recommendation 4 is done.
-- **Changes in Notion take up to 5 minutes** to appear (or use the refresh link).
+- **Changes in Notion take about a minute** to appear (or use the refresh link). The first visit after that minute starts the refresh, so reload once if the old version still shows.
 - **Notion rate limits** (about 3 requests a second per connection) are fine for this site, but a very large number of articles would make refreshes slower.
 - **Spam protection is basic** (spam trap and rate limit). Add a captcha if spam becomes a problem.
 - **Tests are not in the repository.** Changes are checked by building (`npm run build`) and by reviewing a Vercel preview deployment.
@@ -375,7 +376,7 @@ Already in place:
 |---|---|---|
 | Vercel: `npm error code EOVERRIDE` | An `overrides` entry conflicts with a dependency of the same name | Point the override at the dependency: `"sharp": "$sharp"` |
 | Vercel build stops with "Could not read insights from Notion" | Notion was unreachable or the token was rejected during the build | Check `NOTION_TOKEN` and that the Website page is shared with the connection, then redeploy. The previous version stays live meanwhile. |
-| A new article does not appear | **Published** not ticked, or less than 5 minutes have passed | Tick Published, wait, or open the refresh link |
+| A new article does not appear | **Published** not ticked, or less than a minute has passed | Tick Published, wait, or open the refresh link |
 | Setup link says "Setup is locked" | `REVALIDATE_SECRET` is not set for Production, or not redeployed after setting it | Set it for Production and redeploy |
 | Setup link says "Wrong secret" | The value in the link differs from Vercel's | Check for spaces or missing characters |
 | "Too many attempts" | 10 wrong secrets from the same address within an hour | Wait an hour |

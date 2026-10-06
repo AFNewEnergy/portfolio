@@ -913,7 +913,7 @@ export const WRITING_GUIDE: SampleArticle = {
       num('Write the headline as the page title, and one or two sentences in Subtitle.'),
       num('Add a cover photo: hover over the top of the page, then Add cover, then Upload.'),
       num('Pick a Topic. Add Tags if you like.'),
-      num('When it is ready, tick Published. The website updates within about five minutes.'),
+      num('When it is ready, tick Published. The website updates within about a minute.'),
       num('Optional: Share, then Publish, then Publish to web. That shows a “Read on Notion” button on the article.'),
     ], '✍️'),
     para('To hide an article again, untick Published. To change it, just edit it here. The site follows.'),

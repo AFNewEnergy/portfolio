@@ -239,7 +239,7 @@ export async function GET(req: NextRequest) {
     return page('Insights is set up', `
       <div class="box"><p>The Insights database has <strong>${rows.length}</strong> page(s), ${published} of them published.</p></div>
       <p><a href="${esc(ds.url ?? 'https://www.notion.so')}">Open it in Notion</a> · <a href="/en/insights">See the Insights page</a></p>
-      <p>New articles appear on the site within about five minutes of ticking Published. Nothing else to do here.</p>
+      <p>New articles appear on the site within about a minute of ticking Published. Nothing else to do here.</p>
       <p style="color:#555">Optional, for extra reliability: add <code>NOTION_INSIGHTS_DS</code> = <code>${esc(existing)}</code> in Vercel (Settings, Environment Variables) and redeploy. The site then goes straight to this database instead of searching Notion for it.</p>
       ${fixes.length ? `<div class="box"><p><strong>${fixes.length} sample article(s) still show photos of Faisal</strong> (${photoCount(fixes)} photo(s)): ${fixes.map(f => esc(titleOf(f.row))).join(', ')}.</p>
         <p>This swaps them for the power-sector photos, with new captions. Photos you added or changed yourself are left alone. It needs the connection’s <strong>Update content</strong> capability: tick it in Notion’s Developer portal first, and untick it afterwards.</p></div>

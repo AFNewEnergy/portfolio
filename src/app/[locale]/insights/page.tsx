@@ -10,7 +10,7 @@ import { InsightsIndex, type Card } from '@/components/insights/InsightsIndex'
 import { CtaBand } from '@/components/sections/CtaBand'
 import { JsonLd } from '@/components/seo/JsonLd'
 
-export const revalidate = 300
+export const revalidate = 60
 type Props = { params: Promise<{ locale: Locale }> }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

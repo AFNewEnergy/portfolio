@@ -8,8 +8,8 @@ import { clientIp, secretFailed, secretLocked } from '@/lib/rate-limit'
  *   /api/revalidate?secret=…&path=/en/insights   — one path
  *   /api/revalidate?secret=…                     — the whole site, every locale
  *
- * The site already refreshes from Notion on its own within about five
- * minutes; this is for "show it now". Bookmark it, or call it from a Notion
+ * The site already refreshes from Notion on its own within about a
+ * minute; this is for "show it now". Bookmark it, or call it from a Notion
  * button or automation.
  */
 async function handle(req: NextRequest) {

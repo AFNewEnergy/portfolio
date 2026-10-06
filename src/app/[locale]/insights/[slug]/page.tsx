@@ -14,7 +14,7 @@ import { JsonLd } from '@/components/seo/JsonLd'
 import { ArticleToc, ReferenceTabs, ShareBar, VideoFacade } from '@/components/insights/ArticleParts'
 import { videoEmbedUrl } from '@/content/notion/render'
 
-export const revalidate = 300
+export const revalidate = 60
 export const dynamicParams = true
 
 type Props = { params: Promise<{ locale: Locale; slug: string }> }

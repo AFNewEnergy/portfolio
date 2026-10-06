@@ -16,7 +16,7 @@ import { CtaBand } from '@/components/sections/CtaBand'
 import { Reveal } from '@/components/primitives/Reveal'
 import { Icon } from '@/components/primitives/Icon'
 
-export const revalidate = 300
+export const revalidate = 60
 const FEATURED_COUNT = 6
 
 type Props = { params: Promise<{ locale: Locale }> }
