@@ -14,7 +14,8 @@
     "openMenu": "فتح القائمة",
     "closeMenu": "إغلاق القائمة",
     "language": "اللغة",
-    "mainNav": "التنقل الرئيسي"
+    "mainNav": "التنقل الرئيسي",
+    "backToTop": "العودة إلى الأعلى"
   },
   "meta": {
     "skipToContent": "تخطَّ إلى المحتوى",

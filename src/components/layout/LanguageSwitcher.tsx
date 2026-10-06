@@ -6,8 +6,13 @@ import { usePathname, useRouter } from '@/i18n/navigation'
 import { LOCALES, LOCALE_NAMES, type Locale } from '@/config/site'
 import { Icon } from '@/components/primitives/Icon'
 
-/** Switches locale and stays on the same route, dynamic segments included. */
-export function LanguageSwitcher() {
+/**
+ * Switches locale and stays on the same route, dynamic segments included.
+ * `placement="up"` opens the menu above the button (used in the footer, where
+ * there is no room below) and adds a chevron that shows which way it opens.
+ */
+export function LanguageSwitcher({ placement = 'down' }: { placement?: 'down' | 'up' }) {
+  const up = placement === 'up'
   const locale = useLocale() as Locale
   const router = useRouter()
   const pathname = usePathname()
@@ -30,15 +35,16 @@ export function LanguageSwitcher() {
   }
 
   return (
-    <div className="relative" ref={box}>
+    <div className={up ? 'lang-switch lang-switch--up relative' : 'relative'} ref={box}>
       <button className="pill-btn" onClick={() => setOpen(o => !o)}
         aria-expanded={open} aria-haspopup="listbox" disabled={pending}>
         <Icon name="globe" strokeWidth={1.3} />
         <span>{LOCALE_NAMES[locale]}</span>
+        {up && <Icon name="chevronUp" strokeWidth={1.6} className="lang-chev" />}
       </button>
 
       {open && (
-        <div className="menu-pop" role="listbox">
+        <div className={up ? 'menu-pop menu-pop--up' : 'menu-pop'} role="listbox">
           {LOCALES.map(l => (
             <button key={l} role="option" aria-selected={l === locale} aria-current={l === locale}
               className="menu-item" onClick={() => pick(l)}>

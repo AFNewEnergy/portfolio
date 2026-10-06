@@ -14,7 +14,8 @@
     "openMenu": "打开菜单",
     "closeMenu": "关闭菜单",
     "language": "语言",
-    "mainNav": "主导航"
+    "mainNav": "主导航",
+    "backToTop": "返回顶部"
   },
   "meta": {
     "skipToContent": "跳至主要内容",

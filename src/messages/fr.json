@@ -14,7 +14,8 @@
     "openMenu": "Ouvrir le menu",
     "closeMenu": "Fermer le menu",
     "language": "Langue",
-    "mainNav": "Navigation principale"
+    "mainNav": "Navigation principale",
+    "backToTop": "Retour en haut"
   },
   "meta": {
     "skipToContent": "Aller au contenu",

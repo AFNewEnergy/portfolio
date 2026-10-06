@@ -38,6 +38,8 @@ export const ICONS = {
   link: 'M9.5 14.5l5-5M11 6.5l1.7-1.7a4 4 0 0 1 5.6 5.6L16.6 12M13 17.5l-1.7 1.7a4 4 0 0 1-5.6-5.6L7.4 12',
   copy: 'M8.5 8.5h11v11h-11zM15.5 8.5v-4h-11v11h4',
   play: 'M7 4.5v15l12.5-7.5z',
+  chevronUp: 'M6.5 14.5 12 9l5.5 5.5',
+  arrowUp: 'M12 19.5V5M6 11l6-6 6 6',
 } as const
 
 export type IconName = keyof typeof ICONS
