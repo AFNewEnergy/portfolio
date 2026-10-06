@@ -1,7 +1,7 @@
 import { getTranslations } from 'next-intl/server'
 import { Link } from '@/i18n/navigation'
 import type { Project, Stage } from '@/content/types'
-import { capacityParts } from '@/lib/format'
+import { projectSize } from '@/lib/format'
 import { Reveal } from '@/components/primitives/Reveal'
 import { cn } from '@/lib/cn'
 import type { Locale } from '@/config/site'
@@ -34,7 +34,7 @@ export async function Register({ locale, projects }: { locale: Locale; projects:
       </div>
 
       {projects.map((p, i) => {
-        const cap = capacityParts(p.capacityMW)
+        const cap = projectSize(p)
         return (
           <Reveal key={p.slug} delay={Math.min(i, 8) * 30}>
             <Link href={`/projects/${p.slug}`} className={cn('reg-grid', 'reg-row')}>

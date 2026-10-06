@@ -1,137 +1,68 @@
 import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/config/site'
+import { CAREER } from '@/content/local/career'
 import { Reveal } from '@/components/primitives/Reveal'
 
 /**
- * Career history, dated from the Revised CV (08/08/2026).
+ * Career history as an accordion: one native <details> per role.
  *
- * Job titles live in the message files (they translate); organisation names,
- * dates and project lines live here (they do not). To add a role, add an entry
- * plus an `about.roles.<key>` message in all six locales — `npm run preflight`
- * will tell you if you miss one.
+ * Closed, a role shows its dates, organisation, title and a few brief lines.
+ * Clicking anywhere on it opens the full CV detail in its place (the brief
+ * lines hide), and clicking again closes it, so the page stays short.
+ *
+ * <details> needs no JavaScript, works with the keyboard and screen readers,
+ * and the browser's "Find in page" still finds text inside a closed entry.
+ * The data lives in src/content/local/career.ts. Detail lines are English on
+ * every language version, so each one keeps its own direction (dir="auto"):
+ * on the Arabic pages a line like "1,000 MW + 20% BESS" still reads correctly.
  */
-export const CAREER = [
-  {
-    key: 'mz_director',
-    when: 'Dec 2024 – Present',
-    org: 'MZ Consulting Services',
-    lines: [
-      '100 MW solar plant, approved by government (JV-NEPCS-BMSTAR)',
-      '400 MW solar under PPP guideline for Feemac Solar Limited',
-      'Strategy, external stakeholder relationships and business development',
-    ],
-  },
-  {
-    key: 'mz_consultant',
-    when: 'Aug 2022 – Nov 2024',
-    org: 'MZ Consulting Services',
-    lines: [
-      'Authored winning proposals and tender documents for over 1,500 MW of solar',
-      '1,000 MWac + 20% BESS for Eleris Energy Global (Pacific Group, USA)',
-      '100 MWac + 20% BESS for Sumitomo Corporation and East Coast Group',
-      'Site selection, land acquisition, tariff negotiation and off-taker gap analysis',
-    ],
-  },
-  {
-    key: 'metito',
-    when: 'Sep 2020 – Jul 2023',
-    org: 'Consortium of Metito Utilities, Aljomaih Energy & Water, and Jinko Solar',
-    lines: [
-      'Local stakeholder engagement for the consortium on visits to Bangladesh',
-      'Permits, licences, land and right of way for the transmission line',
-      'Support through project agreement negotiations with BPDB',
-    ],
-  },
-  {
-    key: 'rangunia',
-    when: 'Sep 2020 – Jul 2022',
-    org: 'Rangunia Solar Limited',
-    lines: [
-      '55 MWac solar power plant, Rangunia, Chittagong',
-      'Led financial close and the operating financial model for the SPC',
-      'EPC and O&M contract supervision, board and PPA reporting',
-    ],
-  },
-  {
-    key: 'xsergy',
-    when: 'Feb 2019 – Aug 2020',
-    org: 'XSERGY Limited',
-    lines: [
-      'Clients: Power China, State Grid of China, Shangdong KERUI, XJ Group, Sterling & Wilson, General Electric, Sonatrach',
-      '2,000 MWac phased solar (Chandpur) · 3,600 MW CCPP and LNG import terminal',
-      'Transmission and pipeline tenders: 400 kV, 230 kV, GTCL, Jalalabad',
-      'Petroleum products and LNG supply to the Government of Bangladesh (G2G)',
-    ],
-  },
-  {
-    key: 'reliance',
-    when: 'Jan 2017 – Jan 2019',
-    org: 'Reliance Bangladesh LNG & Power Limited',
-    lines: [
-      '750 MWac RLNG-fired combined cycle plant, Narayanganj',
-      '500 mmscfd FSRU-based LNG terminal, Kutubdia Island',
-      'Liaison with BPDB, PGCB, Petrobangla, Titas, GTCL, Power and Energy Divisions',
-      'PPA, IA, GSA and LLA negotiation, vetting and management',
-    ],
-  },
-  {
-    key: 'symbior',
-    when: 'Feb 2018 – Apr 2018',
-    org: 'Symbior Solar Bangladesh Limited',
-    lines: [
-      '9.6 MWac and 10 MWac grid-tied solar plants, Tetulia and Moulvibazar',
-      'Investor due diligence, RFPs and EPC offer evaluation',
-      'ESG and EHS compliance process and reporting',
-    ],
-  },
-  {
-    key: 'om',
-    when: 'Nov 2013 – Dec 2016',
-    org: 'O&M Solutions Bangladesh Limited',
-    lines: [
-      'Feasibility, IEE, EIA and SIA across 1,320 MW, 350 MW and 225 MW studies',
-      "Owner's engineer support for Ghorashal 365 MW and Bibiyana South 400 MW",
-      'Financial modelling for solicited and unsolicited power projects',
-    ],
-  },
-  {
-    key: 'eclectic',
-    when: 'May 2013 – Oct 2013',
-    org: 'Eclectic Limited',
-    lines: [
-      'Electrical safety and energy audits across a dozen major RMG factories, organised by GIZ',
-      'Audits to BNBC 2010, NEC, NFPA-70 and NFPA-70E',
-      'Cleaner production audit under IFC-SEDF',
-    ],
-  },
-  {
-    key: 'aloron',
-    when: 'Mar 2012 – Dec 2016',
-    org: 'Aloron Technologies',
-    lines: [
-      'Founded and led the company: strategy, capital allocation, business development',
-      'Inventory, educational institution and hospital management systems',
-    ],
-  },
-] as const
-
 export async function Timeline({ locale }: { locale: Locale }) {
-  const t = await getTranslations({ locale, namespace: 'about.roles' })
+  const tr = await getTranslations({ locale, namespace: 'about.roles' })
+  const tc = await getTranslations({ locale, namespace: 'about.career' })
 
   return (
-    <div>
+    <ol className="tl">
       {CAREER.map((r, i) => (
-        <Reveal key={r.key} className="tl-row" delay={Math.min(i, 6) * 40}>
-          <span className="tl-when t-mono">{r.when}</span>
-          <div>
-            <div className="tl-org">{r.org}</div>
-            <div className="tl-role">{t(r.key)}</div>
-            <ul className="tl-list">
-              {r.lines.map(l => <li key={l}>{l}</li>)}
-            </ul>
-          </div>
+        <Reveal as="li" key={r.key} className="tl-item" delay={Math.min(i, 6) * 40}>
+          <details className="tl-d" id={`career-${r.key}`}>
+            <summary className="tl-sum">
+              <span className="tl-when t-mono">{r.when}</span>
+              <span className="tl-main">
+                <span className="tl-org">{r.org}</span>
+                <span className="tl-role">{tr(r.key)}</span>
+                {/* A preview of the detail below; hidden from screen readers, which get the full list on opening. */}
+                <span className="tl-brief" aria-hidden="true">
+                  {r.brief.map(line => <span key={line} className="tl-li"><span dir="auto">{line}</span></span>)}
+                </span>
+              </span>
+              <span className="tl-toggle" aria-hidden="true">
+                <span className="tl-toggle-text t-mono">
+                  <span className="tl-more">{tc('more')}</span>
+                  <span className="tl-less">{tc('less')}</span>
+                </span>
+                <span className="tl-plus" />
+              </span>
+            </summary>
+
+            <div className="tl-detail">
+              {r.note && <p className="tl-note" dir="auto">{r.note}</p>}
+              <div className="tl-groups">
+                {r.groups.map(g => (
+                  <section key={g.group} className="tl-group">
+                    <p className="tl-group-h t-mono">
+                      {tc(`groups.${g.group}`)}
+                      <span className="tl-group-n" aria-hidden="true">{String(g.items.length).padStart(2, '0')}</span>
+                    </p>
+                    <ul className="tl-list">
+                      {g.items.map(item => <li key={item}><span dir="auto">{item}</span></li>)}
+                    </ul>
+                  </section>
+                ))}
+              </div>
+            </div>
+          </details>
         </Reveal>
       ))}
-    </div>
+    </ol>
   )
 }

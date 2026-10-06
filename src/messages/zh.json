@@ -248,6 +248,34 @@
       "eclectic": "执行顾问",
       "aloron": "首席执行官"
     },
+    "career": {
+      "more": "查看详情",
+      "less": "收起",
+      "groups": {
+        "responsibilities": "职责",
+        "scope": "工作范围",
+        "projects": "参与项目",
+        "emerging": "新兴业务与政策领域",
+        "clients": "主要客户",
+        "powerProjects": "参与的电厂项目",
+        "tenders": "参与的招标",
+        "energyProjects": "参与的能源项目",
+        "roleBizDev": "职能：业务拓展",
+        "roleSupervision": "职能：项目监督与管理",
+        "special": "特别职责",
+        "roleLocal": "职能：本地协调",
+        "rolePm": "职能：项目管理监督",
+        "assigned": "负责项目",
+        "pipeline": "储备项目",
+        "roleOffice": "项目经历 · 行政协调",
+        "roleDocControl": "项目经历 · 文件控制",
+        "assessments": "电厂评估报告",
+        "solarProposals": "太阳能电站方案",
+        "audits": "审计工作",
+        "factories": "审计的工厂",
+        "software": "开发的软件模块"
+      }
+    },
     "education": {
       "title": "教育背景",
       "items": "电子电气工程学士，孟加拉国美国国际大学（AIUB），2013|主修：可再生能源技术 · 蜂窝移动通信|毕业设计：重力水涡流发电站"
@@ -283,7 +311,10 @@
     "title": "开始<em>沟通。</em>",
     "lede": "告诉我技术路线、装机容量和当前所处阶段。我会在一个工作日内回复。",
     "emailLabel": "邮箱",
-    "phoneLabel": "电话 / WhatsApp",
+    "callLabel": "电话 · 仅限直接通话",
+    "whatsappLabel": "仅限 WhatsApp · 不接电话",
+    "callShort": "仅限通话",
+    "whatsappShort": "仅限 WhatsApp",
     "locationLabel": "所在地",
     "locationValue": "孟加拉国达卡 · GMT+6",
     "responseLabel": "回复时间",

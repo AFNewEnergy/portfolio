@@ -90,7 +90,7 @@ Named size classes, not raw tags — so heading *level* (semantics) and heading
 | `.t-title` | `clamp(1.7rem, 3.6vw, 3rem)` |
 | `.t-sub` | `clamp(1.15rem, 1.9vw, 1.5rem)` |
 | `.t-lede` | `clamp(1.05rem, 1.5vw, 1.28rem)`, max 48ch |
-| `.t-mono` | `0.68rem`, `0.14em` tracking, uppercase |
+| `.t-mono` | `0.72rem`, `0.14em` tracking, uppercase |
 
 **Script-aware emphasis.** Arabic and Chinese have no true italic; browsers
 synthesise a slant that looks broken. Those locales get an accent-coloured
@@ -122,7 +122,7 @@ that makes the page feel like a single document rather than stacked cards.
 | `.register` | The project table. Serif capacities, stage markers that fill by maturity |
 | `.ribbons` | Three moving logo ribbons; government row in the accent wash. White monochrome logos in dark mode, colour in light. Pauses on hover and with a button; still under reduced motion |
 | `.post-row` | Editorial list; serif title turns accent on hover |
-| `.tl-row` | Career timeline, two columns |
+| `.tl`, `.tl-d` | Career timeline: one `<details>` per role, brief lines when closed, full CV detail when open |
 | `.facts` | Project-detail spec grid |
 | `.cta-band` | Surface-toned band, no glow |
 | `.wordmark` | Outlined stroke type in the footer |
@@ -198,7 +198,7 @@ and checks each file exists.
 | Change the display font | `[locale]/layout.tsx` (import) + `tokens.css` (`--serif`) |
 | Restyle the register | `globals.css` → `.register`, `.reg-*` |
 | Add a capability | `sections/Plates.tsx` → `CAPABILITIES` + `capabilities.items.<key>` in all six locales |
-| Add a career role | `sections/Timeline.tsx` → `CAREER` + `about.roles.<key>` |
+| Add a career role | `content/local/career.ts` → `CAREER` + `about.roles.<key>` (and `about.career.groups.<group>` for a new heading) |
 | Add a technology | `content/types.ts` → `TECHNOLOGIES`, an icon in `TECH_ICON`, a `tech.<name>` message |
 | Add a nav item | `config/site.ts` → `NAV` + `NAV_PATH`, a `nav.<key>` message, a page folder |
 | Swap a photo | drop the file in `public/photos/`, update `site.photos` (path **and** dimensions) |

@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server'
 import { Link } from '@/i18n/navigation'
-import { NAV, NAV_PATH, LOCALES, LOCALE_NAMES, site, type Locale } from '@/config/site'
+import { NAV, NAV_PATH, LOCALES, LOCALE_NAMES, EMAILS, site, type Locale } from '@/config/site'
 import { TECHNOLOGIES } from '@/content/types'
 import { Sigil, SocialIcon, Icon } from '@/components/primitives/Icon'
 import { socialLinks } from '@/lib/social'
@@ -44,15 +44,28 @@ export async function Footer({ locale }: { locale: Locale }) {
           <div>
             <h2 className="t-mono footer-h">{t('footer.contact')}</h2>
             <p>{t('contact.locationValue')}</p>
-            <a href={`mailto:${site.email}`}>{site.email}</a>
-            <a href={`tel:${site.phone}`} className="t-num">{site.phoneDisplay}</a>
+            {EMAILS.map(e => <a key={e} href={`mailto:${e}`}>{e}</a>)}
+            {/* Two numbers with two jobs: one for calls, one for WhatsApp messages. */}
+            <a href={`tel:${site.phone}`} className="footer-num">
+              <span className="t-num">{site.phoneDisplay}</span>
+              <span className="footer-num-tag t-mono">{t('contact.callShort')}</span>
+            </a>
+            <a href={`https://wa.me/${site.whatsapp}`} target="_blank" rel="noopener noreferrer" className="footer-num">
+              <span className="t-num">{site.whatsappDisplay}</span>
+              <span className="footer-num-tag t-mono">{t('contact.whatsappShort')}</span>
+            </a>
           </div>
         </div>
 
-        <div className="wordmark" aria-hidden="true">{site.nickname.toUpperCase()}</div>
+        {/* Outline title in the footer. Decorative: the same words are in the page metadata. */}
+        <div className="wordmark" aria-hidden="true">{site.jobTitle}</div>
 
         <div className="footer-bottom t-mono">
-          <span>© {new Date().getFullYear()} {site.name} · {site.company.name}</span>
+          {/* English on every language version, like the Copyright & disclaimer page it links to. */}
+          <span lang="en">
+            © {new Date().getFullYear()} {site.name} · {site.company.name}. All rights reserved.{' '}
+            <Link href="/copyright" className="footer-legal">Copyright &amp; disclaimer</Link>
+          </span>
           <a href={site.company.url} className="footer-domain">{site.company.domain}</a>
           <span>{LOCALES.map(l => LOCALE_NAMES[l]).join(' · ')}</span>
         </div>

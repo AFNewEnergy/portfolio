@@ -258,7 +258,7 @@ Vercel may mark values as **Sensitive**, which hides them after saving. A hidden
 | Name, company, email, phone, WhatsApp, social links, headline figures, photos | `src/config/site.ts` | Yes |
 | Page text and labels in all six languages | `src/messages/<language>.json` (keep the same keys in every file) | Yes |
 | Project register and project pages | `src/content/local/projects.ts` | Yes |
-| Career timeline | `src/components/sections/Timeline.tsx` | Yes |
+| Career timeline (every role and its full CV detail) | `src/content/local/career.ts` | Yes |
 | Services (the four capability plates) | `src/components/sections/Plates.tsx` (list) and `capabilities.items` in the message files (text) | Yes |
 | Logo ribbons | `src/config/organisations.ts` and `public/logos/` | Yes |
 | Colours, fonts, spacing | `src/styles/tokens.css`, then run `npm run contrast` | Yes |

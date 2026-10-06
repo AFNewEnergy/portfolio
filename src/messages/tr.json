@@ -248,6 +248,34 @@
       "eclectic": "Yönetici Danışman",
       "aloron": "Genel Müdür"
     },
+    "career": {
+      "more": "Ayrıntılar",
+      "less": "Ayrıntıları gizle",
+      "groups": {
+        "responsibilities": "Sorumluluklar",
+        "scope": "İş kapsamı",
+        "projects": "Yer aldığı projeler",
+        "emerging": "Yeni iş alanları ve politikalar",
+        "clients": "Başlıca müşteriler",
+        "powerProjects": "Santral projeleri",
+        "tenders": "İhaleler",
+        "energyProjects": "Enerji projeleri",
+        "roleBizDev": "Görev: iş geliştirme",
+        "roleSupervision": "Görev: proje denetimi ve yönetimi",
+        "special": "Özel sorumluluklar",
+        "roleLocal": "Görev: yerel koordinasyon",
+        "rolePm": "Görev: proje yönetimi denetimi",
+        "assigned": "Atanan projeler",
+        "pipeline": "Planlanan projeler",
+        "roleOffice": "Proje deneyimi · idari koordinasyon",
+        "roleDocControl": "Proje deneyimi · doküman kontrolü",
+        "assessments": "Santral değerlendirme raporları",
+        "solarProposals": "Güneş santrali teklifleri",
+        "audits": "Denetim çalışmaları",
+        "factories": "Denetlenen fabrikalar",
+        "software": "Geliştirilen yazılım modülleri"
+      }
+    },
     "education": {
       "title": "Eğitim",
       "items": "Elektrik-Elektronik Mühendisliği Lisans, American International University-Bangladesh (AIUB), 2013|Ana dal: Yenilenebilir Enerji Teknolojisi · Hücresel Mobil Haberleşme|Bitirme projesi: Yerçekimsel Su Girdabı Santrali"
@@ -283,7 +311,10 @@
     "title": "<em>Görüşmeye</em> başlayın.",
     "lede": "Bana teknolojiyi, kapasiteyi ve bulunduğunuz aşamayı söyleyin. Bir iş günü içinde yanıtlarım.",
     "emailLabel": "E-posta",
-    "phoneLabel": "Telefon / WhatsApp",
+    "callLabel": "Telefon · yalnızca doğrudan arama",
+    "whatsappLabel": "Yalnızca WhatsApp · arama yok",
+    "callShort": "Yalnızca arama",
+    "whatsappShort": "Yalnızca WhatsApp",
     "locationLabel": "Konum",
     "locationValue": "Dakka, Bangladeş · GMT+6",
     "responseLabel": "Yanıt süresi",

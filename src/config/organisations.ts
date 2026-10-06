@@ -42,10 +42,14 @@ export const ORGANISATIONS: readonly Organisation[] = [
   { id: 'titas', name: 'Titas Gas T&D Company', group: 'gov', ratio: 0.994 },
   { id: 'gtcl', name: 'Gas Transmission Company Limited', group: 'gov', ratio: 0.976 },
 
-  // Private & international
+  // Private & international (wide wordmarks alternate with square marks)
+  { id: 'sumitomo', name: 'Sumitomo Corporation', group: 'pvt', ratio: 10.059 },
   { id: 'ge', name: 'General Electric', group: 'pvt', ratio: 1.0 },
+  { id: 'nepcs', name: 'China Northeast Electric Power Engineering & Services (NEPCS)', group: 'pvt', ratio: 1.74 },
   { id: 'reliance', name: 'Reliance Power', group: 'pvt', ratio: 6.02 },
+  { id: 'mz', name: 'MZ Consulting Services', group: 'pvt', ratio: 0.991 },
   { id: 'intraco', name: 'Intraco Group', group: 'pvt', ratio: 1.382 },
+  { id: 'east-coast', name: 'East Coast Group', group: 'pvt', ratio: 5.528 },
   { id: 'posco', name: 'POSCO E&C', group: 'pvt', ratio: 2.571 },
   { id: 'oms', name: 'O&M Solutions', group: 'pvt', ratio: 1.594 },
   { id: 'jinko', name: 'JinkoSolar', group: 'pvt', ratio: 2.94 },

@@ -134,7 +134,7 @@ does nothing until you redeploy.
 | Variable | Value |
 |---|---|
 | `RESEND_API_KEY` | `re_...` from resend.com → API Keys |
-| `CONTACT_TO_EMAIL` | `faisal473345@gmail.com` |
+| `CONTACT_TO_EMAIL` | `afnewenergy@gmail.com` |
 | `CONTACT_FROM_EMAIL` | `website@your-domain.com` |
 
 `CONTACT_FROM_EMAIL` must be on a domain you have **verified in Resend**

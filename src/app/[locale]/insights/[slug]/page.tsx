@@ -196,6 +196,16 @@ export default async function InsightPage({ params }: Props) {
               )}
             </div>
 
+            {/* Rights notice, in English on every language version (see /copyright). */}
+            <aside className="art-rights" lang="en" dir="ltr" aria-label="Copyright">
+              <span className="art-rights-mark" aria-hidden="true">©</span>
+              <p>
+                {post.date ? post.date.slice(0, 4) : new Date().getFullYear()} {site.name}. Republishing this article, in full or
+                in part, needs written permission. Short quotes with a link back are welcome.{' '}
+                <Link href="/copyright" className="art-rights-link">Copyright &amp; disclaimer</Link>
+              </p>
+            </aside>
+
             <section className="author-card" aria-label={ta('aboutAuthor')}>
               {/* The company mark, not a portrait: photos of Faisal stay off the article pages. */}
               <span className="author-mark" aria-hidden="true"><i /></span>

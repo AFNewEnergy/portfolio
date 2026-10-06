@@ -61,6 +61,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }
 
   for (const p of await src.getProjects(DEFAULT_LOCALE)) add(`/projects/${p.slug}`, 0.6, 'monthly')
+  // English only: every language address of this page names the English one as canonical.
+  add('/copyright', 0.2, 'yearly', { langs: [DEFAULT_LOCALE] })
   // One entry per language the article is written in, each with that version's own date and cover.
   for (const [slug, versions] of written) {
     const langs = [...versions.keys()]

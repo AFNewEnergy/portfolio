@@ -1,14 +1,5 @@
 import type { Locale } from '@/config/site'
-
-/** 1000 → "1 GW" · 1500 → "1.5 GW" · 750 → "750 MW" */
-export function capacityLabel(mw: number | null | undefined): string {
-  if (mw == null) return ''
-  if (mw >= 1000) {
-    const gw = mw / 1000
-    return `${Number.isInteger(gw) ? gw : gw.toFixed(1)} GW`
-  }
-  return `${mw.toLocaleString('en-US')} MW`
-}
+import type { Project } from '@/content/types'
 
 /** Split for the register table, where the unit is styled separately. */
 export function capacityParts(mw: number | null | undefined): { value: string; unit: string } {
@@ -18,6 +9,22 @@ export function capacityParts(mw: number | null | undefined): { value: string; u
     return { value: Number.isInteger(gw) ? String(gw) : gw.toFixed(1), unit: 'GW' }
   }
   return { value: mw.toLocaleString('en-US'), unit: 'MW' }
+}
+
+/**
+ * A project's size for display: its MW capacity, or for terminals and lines
+ * (no MW figure) its rating, e.g. 500 mmscfd or 400 kV.
+ */
+export function projectSize(p: Pick<Project, 'capacityMW' | 'rating'>): { value: string; unit: string } {
+  if (p.capacityMW != null) return capacityParts(p.capacityMW)
+  if (p.rating) return { value: p.rating.value.toLocaleString('en-US'), unit: p.rating.unit }
+  return { value: '', unit: '' }
+}
+
+/** The same as one string: "1.5 GW", "500 mmscfd", "400 kV". */
+export function projectSizeLabel(p: Pick<Project, 'capacityMW' | 'rating'>): string {
+  const { value, unit } = projectSize(p)
+  return value ? `${value} ${unit}` : ''
 }
 
 const INTL: Record<Locale, string> = {

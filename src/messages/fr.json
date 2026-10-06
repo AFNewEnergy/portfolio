@@ -248,6 +248,34 @@
       "eclectic": "Consultant exécutif",
       "aloron": "Directeur général"
     },
+    "career": {
+      "more": "Voir le détail",
+      "less": "Masquer le détail",
+      "groups": {
+        "responsibilities": "Responsabilités",
+        "scope": "Périmètre",
+        "projects": "Projets",
+        "emerging": "Secteurs et politiques émergents",
+        "clients": "Principaux clients",
+        "powerProjects": "Projets de centrales électriques",
+        "tenders": "Appels d'offres",
+        "energyProjects": "Projets énergétiques",
+        "roleBizDev": "Rôle : développement commercial",
+        "roleSupervision": "Rôle : supervision et gestion de projet",
+        "special": "Responsabilités particulières",
+        "roleLocal": "Rôle : coordination locale",
+        "rolePm": "Rôle : supervision de la gestion de projet",
+        "assigned": "Projets confiés",
+        "pipeline": "Projets en préparation",
+        "roleOffice": "Expérience projet · coordination administrative",
+        "roleDocControl": "Expérience projet · contrôle documentaire",
+        "assessments": "Rapports d'évaluation de centrales",
+        "solarProposals": "Propositions de centrales solaires",
+        "audits": "Travaux d'audit",
+        "factories": "Usines auditées",
+        "software": "Modules logiciels développés"
+      }
+    },
     "education": {
       "title": "Formation",
       "items": "Licence en génie électrique et électronique, American International University-Bangladesh (AIUB), 2013|Spécialité : technologies des énergies renouvelables · communication mobile cellulaire|Mémoire : centrale à vortex gravitationnel"
@@ -283,7 +311,10 @@
     "title": "Démarrer la <em>conversation.</em>",
     "lede": "Dites-moi la technologie, la capacité et le stade où vous en êtes. Je réponds sous un jour ouvré.",
     "emailLabel": "E-mail",
-    "phoneLabel": "Téléphone / WhatsApp",
+    "callLabel": "Téléphone · appels directs uniquement",
+    "whatsappLabel": "WhatsApp uniquement · pas d’appels",
+    "callShort": "Appels uniquement",
+    "whatsappShort": "WhatsApp uniquement",
     "locationLabel": "Localisation",
     "locationValue": "Dacca, Bangladesh · GMT+6",
     "responseLabel": "Délai de réponse",

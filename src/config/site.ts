@@ -82,15 +82,18 @@ export const site = {
 
   url: resolveSiteUrl(),
 
-  email: 'faisal473345@gmail.com',
+  /** Main address (work): shown first everywhere, and where the contact form sends. */
+  email: 'afnewenergy@gmail.com',
+  /** Second address, shown under the main one. */
+  emailAlt: 'faisal473345@gmail.com',
 
-  /** Mobile — for tel: links. */
-  phone: '+8801719473385',
-  phoneDisplay: '+880 1719 473385',
+  /** Direct calls only (no WhatsApp on this number). Used for tel: links. */
+  phone: '+8801700683566',
+  phoneDisplay: '+880 1700 683566',
 
-  /** WhatsApp is a DIFFERENT number from the mobile. Confirmed in the 2026 CV. */
-  whatsapp: '8801700683566',
-  whatsappDisplay: '+880 1700 683566',
+  /** WhatsApp only: messages, no calls. Used for wa.me links. */
+  whatsapp: '8801719473385',
+  whatsappDisplay: '+880 1719 473385',
 
   location: { city: 'Dhaka', country: 'Bangladesh', countryCode: 'BD', timezone: 'GMT+6' },
 
@@ -139,6 +142,9 @@ export const site = {
 } as const
 
 export type Photo = (typeof site.photos)[keyof typeof site.photos]
+
+/** Both public addresses, main one first. Every place that lists emails uses this. */
+export const EMAILS = [site.email, site.emailAlt] as const
 
 export const NAV = ['home', 'about', 'services', 'projects', 'insights', 'contact'] as const
 export type NavKey = (typeof NAV)[number]

@@ -6,7 +6,7 @@ import type { Locale } from '@/config/site'
 import { buildMetadata } from '@/lib/seo'
 import { projectSchema, breadcrumbSchema } from '@/lib/jsonld'
 import { content } from '@/content'
-import { capacityLabel } from '@/lib/format'
+import { projectSizeLabel } from '@/lib/format'
 import { Link } from '@/i18n/navigation'
 import { CtaBand } from '@/components/sections/CtaBand'
 import { Reveal } from '@/components/primitives/Reveal'
@@ -31,10 +31,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params
   const p = await (await content()).getProject(locale, slug)
   if (!p) return {}
-  const cap = capacityLabel(p.capacityMW)
+  const cap = projectSizeLabel(p)
   return buildMetadata({
     locale, path: `/projects/${slug}`,
-    title: cap ? `${p.title}, ${cap}` : p.title,
+    // Skip the size when the title already says it ("400 kV Payra–Gopalganj… transmission").
+    title: cap && !p.title.includes(cap) ? `${p.title}, ${cap}` : p.title,
     description: p.summary, type: 'article',
     ...(p.cover ? { image: p.cover } : {}),
   })
@@ -55,7 +56,7 @@ export default async function ProjectPage({ params }: Props) {
   const next = i >= 0 && i < all.length - 1 ? all[i + 1] : undefined
 
   const facts = [
-    { k: t('register.col.capacity'), v: capacityLabel(project.capacityMW) },
+    { k: t('register.col.capacity'), v: projectSizeLabel(project) },
     { k: t('project.technology'), v: project.technology.map(x => t(`tech.${x}`)).join(' · ') },
     { k: t('register.col.stage'), v: t(`register.stage.${project.stage}`) },
     { k: t('register.col.counterparty'), v: project.client ?? t('register.confidential') },

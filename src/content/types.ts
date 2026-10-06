@@ -36,11 +36,19 @@ export const coerceTechnology = (v: string): Technology | undefined =>
 export const coerceStage = (v: string, fallback: Stage = 'Development'): Stage =>
   isStage(v) ? v : (loose(STAGES, v) ?? fallback)
 
+/**
+ * The size of a project that is not measured in MW: an LNG terminal's
+ * throughput or a transmission line's voltage. Shown wherever capacity is.
+ */
+export type Rating = { value: number; unit: 'mmscfd' | 'kV' }
+
 export type Project = {
   slug: string
   title: string
   summary: string
   capacityMW: number | null
+  /** Only for projects with no MW figure (capacityMW null). */
+  rating?: Rating | null
   technology: Technology[]
   stage: Stage
   /** null when `confidential` is true — never leak the name through the type. */

@@ -248,6 +248,34 @@
       "eclectic": "Executive Consultant",
       "aloron": "Chief Executive Officer"
     },
+    "career": {
+      "more": "Full details",
+      "less": "Show less",
+      "groups": {
+        "responsibilities": "Responsibilities",
+        "scope": "Scope of work",
+        "projects": "Projects involved in",
+        "emerging": "Emerging sectors of business and policy",
+        "clients": "Major clients handled",
+        "powerProjects": "Power plant projects involved in",
+        "tenders": "Tenders involved in",
+        "energyProjects": "Energy projects involved in",
+        "roleBizDev": "Role: business development",
+        "roleSupervision": "Role: project supervision & management",
+        "special": "Special responsibilities",
+        "roleLocal": "Role: local coordination",
+        "rolePm": "Role: project management supervision",
+        "assigned": "Assigned projects",
+        "pipeline": "Pipeline projects",
+        "roleOffice": "Project experience · office admin coordination",
+        "roleDocControl": "Project experience · document controller",
+        "assessments": "Power plant assessment reports",
+        "solarProposals": "Solar power plant proposals",
+        "audits": "Audit work",
+        "factories": "Factories audited",
+        "software": "Software modules developed"
+      }
+    },
     "education": {
       "title": "Education",
       "items": "B.Sc. Electrical & Electronic Engineering, American International University-Bangladesh (AIUB), 2013|Major: Renewable Energy Technology · Cellular Mobile Communication|Thesis: Gravitational Water Vortex Power Plant"
@@ -283,7 +311,10 @@
     "title": "Start a <em>conversation.</em>",
     "lede": "Tell me the technology, the capacity and the stage you are at. I reply within one working day.",
     "emailLabel": "Email",
-    "phoneLabel": "Phone / WhatsApp",
+    "callLabel": "Phone · direct calls only",
+    "whatsappLabel": "WhatsApp only · no calls",
+    "callShort": "Calls only",
+    "whatsappShort": "WhatsApp only",
     "locationLabel": "Location",
     "locationValue": "Dhaka, Bangladesh · GMT+6",
     "responseLabel": "Response time",

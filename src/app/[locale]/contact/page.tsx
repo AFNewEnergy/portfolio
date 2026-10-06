@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
-import { site, type Locale } from '@/config/site'
+import { site, type Locale, EMAILS } from '@/config/site'
 import { buildMetadata } from '@/lib/seo'
 import { breadcrumbSchema } from '@/lib/jsonld'
 import { socialLinks } from '@/lib/social'
@@ -26,9 +26,9 @@ export default async function ContactPage({ params }: Props) {
   const t = await getTranslations({ locale, namespace: 'contact' })
   const tn = await getTranslations({ locale, namespace: 'nav' })
 
-  const rows: Array<{ icon: IconName; label: string; value: string; href?: string }> = [
-    { icon: 'mail', label: t('emailLabel'), value: site.email, href: `mailto:${site.email}` },
-    { icon: 'phone', label: t('phoneLabel'), value: site.whatsappDisplay, href: `https://wa.me/${site.whatsapp}` },
+  const rows: Array<{ icon: IconName | 'whatsapp'; label: string; value: string; href?: string }> = [
+    { icon: 'phone', label: t('callLabel'), value: site.phoneDisplay, href: `tel:${site.phone}` },
+    { icon: 'whatsapp', label: t('whatsappLabel'), value: site.whatsappDisplay, href: `https://wa.me/${site.whatsapp}` },
     { icon: 'pin', label: t('locationLabel'), value: t('locationValue') },
     { icon: 'clock', label: t('hoursLabel'), value: site.consultationHours },
     { icon: 'clock2', label: t('responseLabel'), value: t('responseValue') },
@@ -47,10 +47,22 @@ export default async function ContactPage({ params }: Props) {
               className="mb-8"
               sizes="(max-width: 960px) 92vw, 420px"
             />
+            {/* Email first: both addresses, the main one on top, each its own link. */}
+            <div className="flex items-start gap-3.5 border-b border-[var(--line)] py-4">
+              <Icon name="mail" className="mt-1 h-[18px] w-[18px] flex-none" style={{ color: 'var(--accent)' }} />
+              <div>
+                <span className="fact-key t-mono">{t('emailLabel')}</span>
+                {EMAILS.map(e => (
+                  <a key={e} href={`mailto:${e}`} className="fact-value block w-fit transition-colors hover:text-[var(--accent)]">{e}</a>
+                ))}
+              </div>
+            </div>
             {rows.map(r => {
               const body = (
                 <>
-                  <Icon name={r.icon} className="mt-1 h-[18px] w-[18px] flex-none" style={{ color: 'var(--accent)' }} />
+                  {r.icon === 'whatsapp'
+                    ? <span className="mt-1 h-[18px] w-[18px] flex-none" style={{ color: 'var(--accent)' }}><SocialIcon name="whatsapp" /></span>
+                    : <Icon name={r.icon} className="mt-1 h-[18px] w-[18px] flex-none" style={{ color: 'var(--accent)' }} />}
                   <div>
                     <span className="fact-key t-mono">{r.label}</span>
                     <span className="fact-value">{r.value}</span>

@@ -248,6 +248,34 @@
       "eclectic": "Executive Consultant",
       "aloron": "Geschäftsführer"
     },
+    "career": {
+      "more": "Alle Details",
+      "less": "Weniger anzeigen",
+      "groups": {
+        "responsibilities": "Aufgaben",
+        "scope": "Leistungsumfang",
+        "projects": "Beteiligte Projekte",
+        "emerging": "Neue Geschäftsfelder und Politikbereiche",
+        "clients": "Wichtige Kunden",
+        "powerProjects": "Kraftwerksprojekte",
+        "tenders": "Ausschreibungen",
+        "energyProjects": "Energieprojekte",
+        "roleBizDev": "Rolle: Geschäftsentwicklung",
+        "roleSupervision": "Rolle: Projektüberwachung und -management",
+        "special": "Besondere Verantwortung",
+        "roleLocal": "Rolle: lokale Koordination",
+        "rolePm": "Rolle: Überwachung des Projektmanagements",
+        "assigned": "Zugewiesene Projekte",
+        "pipeline": "Projekte in Vorbereitung",
+        "roleOffice": "Projekterfahrung · Verwaltungskoordination",
+        "roleDocControl": "Projekterfahrung · Dokumentenkontrolle",
+        "assessments": "Bewertungsberichte für Kraftwerke",
+        "solarProposals": "Angebote für Solarkraftwerke",
+        "audits": "Prüfungen",
+        "factories": "Geprüfte Fabriken",
+        "software": "Entwickelte Softwaremodule"
+      }
+    },
     "education": {
       "title": "Ausbildung",
       "items": "B.Sc. Elektro- und Elektroniktechnik, American International University-Bangladesh (AIUB), 2013|Schwerpunkt: Erneuerbare-Energien-Technik · Mobilfunk|Abschlussarbeit: Gravitationswasserwirbel-Kraftwerk"
@@ -283,7 +311,10 @@
     "title": "<em>Gespräch</em> beginnen.",
     "lede": "Nennen Sie mir Technologie, Kapazität und Projektstand. Ich antworte innerhalb eines Werktags.",
     "emailLabel": "E-Mail",
-    "phoneLabel": "Telefon / WhatsApp",
+    "callLabel": "Telefon · nur direkte Anrufe",
+    "whatsappLabel": "Nur WhatsApp · keine Anrufe",
+    "callShort": "Nur Anrufe",
+    "whatsappShort": "Nur WhatsApp",
     "locationLabel": "Standort",
     "locationValue": "Dhaka, Bangladesch · GMT+6",
     "responseLabel": "Antwortzeit",

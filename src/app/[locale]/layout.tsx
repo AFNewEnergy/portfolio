@@ -19,12 +19,14 @@ import { JsonLd } from '@/components/seo/JsonLd'
    Inter      (sans)   body and UI
    JetBrains  (mono)   labels, capacities, dates
    Noto       (script) Arabic and Simplified Chinese
-   All self-hosted by next/font: no render-blocking request, no CLS.     */
+   All self-hosted by next/font: no render-blocking request, no CLS.
+   Arabic and Chinese are not preloaded: only the ar and zh pages use them,
+   and the browser fetches them there on demand. English pages stay lighter. */
 const serif = Newsreader({ subsets: ['latin'], display: 'swap', weight: ['400', '500'], style: ['normal', 'italic'], variable: '--font-newsreader' })
 const sans = Inter({ subsets: ['latin'], display: 'swap', variable: '--font-inter' })
 const mono = JetBrains_Mono({ subsets: ['latin'], display: 'swap', weight: ['400', '500'], variable: '--font-mono' })
-const arabic = Noto_Sans_Arabic({ subsets: ['arabic'], display: 'swap', weight: ['300', '400', '600'], variable: '--font-arabic' })
-const chinese = Noto_Sans_SC({ subsets: ['latin'], display: 'swap', weight: ['300', '400', '500'], variable: '--font-sc' })
+const arabic = Noto_Sans_Arabic({ subsets: ['arabic'], display: 'swap', weight: ['300', '400', '600'], variable: '--font-arabic', preload: false })
+const chinese = Noto_Sans_SC({ subsets: ['latin'], display: 'swap', weight: ['300', '400', '500'], variable: '--font-sc', preload: false })
 
 const FONTS = [serif, sans, mono, arabic, chinese].map(f => f.variable).join(' ')
 

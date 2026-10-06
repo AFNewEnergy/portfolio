@@ -52,7 +52,7 @@ const SRC = {
   tbs31: ['Govt mulls 31 renewable power projects cancelled during interim govt',
     'https://www.tbsnews.net/bangladesh/govt-mulls-31-renewable-power-projects-cancelled-during-interim-govt-1422991',
     'The Business Standard · April 2026'],
-  mppPolicy: ['Policy on Commercial Electricity Generation or Establishment of Power Plants Based on Renewable Energy with Private Participation, 2025',
+  mppPolicy: ['Policy for Enhancement of Private Participation in the Renewable Energy-based Power Generation, 2025',
     'https://www.solar.sreda.gov.bd/doc/Policy%20on%20Commercial%20Electricity%20Generation%20or%20Establishment%20of%20Power%20Plants%20Based%20on%20Renewable%20Energy%20with%20Private%20Participation-2025.pdf',
     'Power Division · Bangladesh Gazette, 6 October 2025'],
 
@@ -175,6 +175,24 @@ const SRC = {
   aniNepal: ['Trilateral energy boost as Nepal resumes hydropower supply to Bangladesh via India',
     'https://aninews.in/news/world/asia/trilateral-energy-boost-as-nepal-resumes-hydropower-supply-to-bangladesh-via-india20260615105428/',
     'ANI · June 2026'],
+
+  dsDirect: ['Private firms can now sell renewable power directly to customers',
+    'https://www.thedailystar.net/business/news/private-firms-can-now-sell-renewable-power-directly-customers-4009276',
+    'The Daily Star · October 2025'],
+  dsCharges: ['Merchant power risks losing price appeal under proposed charges',
+    'https://www.thedailystar.net/business/economy/news/merchant-power-risks-losing-price-appeal-under-proposed-charges-4251941',
+    'The Daily Star · August 2026'],
+  feMppTariff: ['BERC panel proposes Tk 6.48 solar power tariff for MPPs',
+    'https://thefinancialexpress.com.bd/trade/berc-panel-proposes-tk-648-solar-power-tariff-for-mpps',
+    'The Financial Express · August 2026'],
+  dsHearing: ['Uproar at BERC hearing: Merchant power buyers slam proposed surcharges',
+    'https://www.thedailystar.net/news/bangladesh/news/uproar-berc-hearing-merchant-power-buyers-slam-proposed-surcharges-4255406',
+    'The Daily Star · August 2026'],
+  bgmeaHearing: ['BGMEA calls for renewable energy tariff reforms at BERC hearing',
+    'https://bgmea.com.bd/page/BGMEA_Calls_for_Renewable_Energy_Tariff_Reforms_at_BERC_Hearing',
+    'BGMEA · August 2026'],
+  bdnMerchant: ['Bangladesh’s ‘merchant’ renewable growth hinges on grid charges',
+    'https://bdnews24.com/business/3fc5903bccd2', 'bdnews24.com · May 2026'],
 } as const satisfies Record<string, Src>
 
 /** One numbered reference line: the title as a link, then the source. */
@@ -771,7 +789,111 @@ const future: SampleArticle = {
   ],
 }
 
-export const SAMPLE_ARTICLES: SampleArticle[] = [implement, proposals, system, solar, pppLand, future, vision, routes, grid, efficiency]
+/* ── 11 · merchant power ──────────────────────────────────── */
+
+const merchant: SampleArticle = {
+  slug: 'merchant-power-plants-bangladesh-how-the-policy-works',
+  title: 'Selling solar straight to factories: how Bangladesh’s merchant power policy works',
+  subtitle: 'Since October 2025, private renewable plants may sell power directly to large consumers over the national grid. Who can build one, who can buy, the approvals it needs, and what the 2026 tariff hearing means for the numbers.',
+  topic: 'Regulatory',
+  tags: ['MPP', 'Solar PV', 'Open access', 'Policy'],
+  date: '2026-10-06',
+  cover: `${P}solar-aerial.jpg`,
+  coverCaption: 'A merchant plant sells to factories, not to the state, but its power still travels on the national grid | Photo: Unsplash',
+  published: true,
+  blocks: [
+    callout('Key takeaways', [
+      bullet('A merchant power plant (MPP) is a private renewable plant that sells its output directly to large and bulk consumers, under a contract and at a price the two sides negotiate.[1][2]'),
+      bullet('The power travels over the national grid on open access. BERC sets what that costs, and those charges decide how much of the saving reaches the buyer.[1][3]'),
+      bullet('There is no government guarantee. A distribution utility may buy up to 20 percent of the output, but does not have to.[1]'),
+      bullet('Tariffs and open-access charges were argued at a BERC hearing in August 2026. Price them as a range until the final order is out.[4][5]'),
+    ]),
+
+    h1('What the policy is'),
+    para('The Power Division’s ', ital('Policy for Enhancement of Private Participation in the Renewable Energy-based Power Generation, 2025'), ' was published in the Bangladesh Gazette on 6 October 2025 and took effect the same day. The press usually calls it the merchant power policy.[1][2]'),
+    para('It ends BPDB’s role as the only buyer of new private power. A private company can build a renewable plant, find its own customers and sell to them directly, as long as those customers are large or bulk consumers.[2] Solar, wind, geothermal, biomass and municipal waste all qualify. Storage is optional, and its terms can be written into the plant’s service agreement with the grid.[1]'),
+
+    h1('Who can build a merchant plant'),
+    para('Private investors with the financial capacity and experience in building or running power plants, or in EPC work, may apply. Loan defaulters, companies that owe money to the government and anyone barred by a government body are excluded. Companies under the Power Division that already generate or distribute power may not develop MPPs, to avoid a conflict of interest.[1]'),
+    para('The policy sets no minimum or maximum size. Capacity depends on a grid study of the connection point, and each plant must connect through its own Electrical Interconnection Facility (EIF).[1] In practice the grid study and the EIF route decide the project before the contract does.'),
+
+    h1('Who can buy'),
+    para('Buyers are large consumers in economic zones, EPZs, special economic zones, industrial parks and estates, hi-tech parks and large real estate projects, plus bulk power consumers as defined in BERC’s Grid Code Regulations 2023.[1] The policy groups them by the size of their load and the voltage that serves it:'),
+    para('Table 1 · Large-consumer load bands in the policy'),
+    table([
+      ['Connection voltage', 'Consumer load'],
+      ['230 kV', 'Above 140 MW'],
+      ['132 kV', '30 to 140 MW'],
+      ['33 kV', '5 to 30 MW'],
+      ['11 kV', 'Below 5 MW'],
+    ], { header: true, rowHeader: true }),
+    para('Export manufacturers are the obvious customers. Their own buyers increasingly ask for green power, and a rooftop system rarely covers enough. One garment supplier puts it at 10 to 15 percent of a mid-sized factory’s demand from its roof, against 50 to 70 percent or more from an off-site plant.[6]'),
+
+    h1('How the power and the money move'),
+    image(`${P}mpp-structure.png`, 'Wide: How a merchant power project fits together: the plant sells to its buyers under an MPPA, and the national grid carries the power on open access'),
+    para('Four agreements hold a merchant project together:'),
+    num(bold('The MPPA.'), ' A bilateral merchant power purchase agreement between the plant and each buyer, at a negotiated price.[1][2] A plant may sell to several buyers.'),
+    num(bold('Open access.'), ' Power Grid and every distribution licensee must give the plant non-discriminatory access to their networks, for an open-access tariff that BERC sets. BERC also sets the transmission and distribution losses the plant bears.[1]'),
+    num(bold('The service level agreement (SLA).'), ' Signed between the plant, Power Grid and BPDB. NLDC, the national load dispatch centre, operates the system and can tell the plant to reduce, hold or raise output. Nobody is compensated for those instructions.[1]'),
+    num(bold('An optional utility sale.'), ' A distribution utility may buy up to 20 percent of the plant’s declared monthly output at a tariff BERC sets, with payment secured by a bank guarantee or letter of credit. It is a right, not an obligation.[1][2]'),
+    para('Two more pieces matter to buyers. SREDA issues renewable energy certificates to international standards, and the plant can pass them to its customers with the power. Disputes go first to the parties, then to BERC, then to arbitration under the MPPA.[1]'),
+    para('Table 2 · Who does what'),
+    table([
+      ['Party', 'Role in a merchant project'],
+      ['Power Division', 'Approves the MPP application'],
+      ['BERC', 'Generation licence, open-access tariff, T&D losses, tariff for utility purchases, disputes'],
+      ['DoE', 'Environmental impact assessment and clearance'],
+      ['SREDA', 'Renewable energy certificates, transferable to buyers'],
+      ['IDRA', 'Approves the project insurance'],
+      ['Power Grid, BPDB, distribution utility', 'Carry the power on open access; sign the SLA'],
+      ['NLDC', 'Operates the system and dispatches the plant'],
+      ['Large and bulk consumers', 'Buy the power under MPPAs'],
+      ['Lenders', 'Project finance from local and international banks'],
+      ['EPC and O&M contractors', 'Build and run the plant'],
+      ['Owner’s engineer and adviser', 'Development, commercial and technical advice, then site supervision'],
+    ], { header: true, rowHeader: true }),
+
+    h1('Approvals, in order'),
+    num(bold('Power Division approval'), ' of the MPP application, which needs the grid study and a clear EIF route.[1]'),
+    num(bold('Environmental clearance.'), ' The EIA goes to the Department of Environment.[1]'),
+    num(bold('BERC generation licence.'), '[1]'),
+    num(bold('The SLA'), ' with Power Grid and BPDB, and an MPPA with each buyer.[1]'),
+    num(bold('Insurance approved by IDRA'), ' and finance from local or international lenders.[1]'),
+    para('None of these is new to anyone who has developed an IPP. What is new is that the buyer’s signature, not BPDB’s, is what the lender will look at.'),
+
+    h1('The 2026 tariff hearing'),
+    para('BERC held a public hearing on merchant power charges on 23 August 2026. Its technical committee proposed Tk 6.48 per unit as the solar tariff, worked out for a 50 MW plant, as the price for the share of output a state utility may buy. It also suggested fitting battery storage of 10 to 20 percent of a plant’s capacity.[4][5]'),
+    para('Before the hearing, the proposed open-access charges were published. On a Tk 9 to 10 per unit factory deal, the charges could add Tk 2 to 4 or more per unit, which is most of the saving against grid power.[3]'),
+    para('Table 3 · Open-access charges proposed before the hearing (Tk per unit)'),
+    table([
+      ['Charge', 'Proposed'],
+      ['Power Grid wheeling, 230 kV', '0.4657'],
+      ['Power Grid wheeling, 132 kV', '0.4901'],
+      ['Power Grid wheeling, 33 kV', '0.7891'],
+      ['Wheeling charge in use today', '0.37 to 0.38'],
+      ['Receiving charge, including the cross-subsidy surcharge', '1.14 to 2.90'],
+      ['DPDC injection charge', '0.97 to 1.58'],
+    ], { header: true, rowHeader: true }),
+    para('The response was sharp. The Consumers Association of Bangladesh questioned why private producers should carry the utilities’ subsidies, and critics compared the Tk 6.48 tariff with about Tk 3.80 in India and Tk 3.90 in Pakistan. The renewable energy association asked for an open-access tariff of Tk 0.50 for the first five years, and merchant power buyers objected to the cross-subsidy surcharge.[4][5] BGMEA asked for ten years’ relief from the surcharge and the receiving charge, a VAT exemption at plant level and a green export electricity tariff.[7]'),
+    para('As of early October 2026, BERC has not published a final order. Any financial model built today should test the full proposed charges and the lower figures the industry asked for.'),
+
+    h1('Why it matters'),
+    para('Bangladesh wants 20 percent of its power from renewables by 2030 and 30 percent by 2040.[2][8] In October 2025 grid-connected solar and wind came to about 829 MW, roughly 3 percent of capacity.[2] Tenders and PPP land alone will not close that gap at the speed the targets need. Merchant plants bring private buyers, and private balance sheets, into the market for the first time.'),
+    say('A merchant plant is only as bankable as its buyers and its open-access bill. Settle both before anything else.'),
+
+    h1('What to settle first'),
+    bullet(bold('The grid study and the EIF route.'), ' They fix the capacity and much of the cost.'),
+    bullet(bold('The buyers.'), ' Their credit, their daytime load, and whether they sit inside a zone the policy names.'),
+    bullet(bold('The charges.'), ' Model wheeling, receiving and loss charges at the proposed levels until BERC’s order is final.'),
+    bullet(bold('The MPPA terms.'), ' Term, price indexation, take-or-pay, and who carries the curtailment risk the SLA leaves uncompensated.'),
+    bullet(bold('Storage.'), ' Optional in the policy, but BERC’s committee has signalled it wants it.'),
+    para('That groundwork, from site and grid to the agreements and the approvals, is the work I do for sponsors.'),
+
+    ...refs(SRC.mppPolicy, SRC.dsDirect, SRC.dsCharges, SRC.feMppTariff, SRC.dsHearing, SRC.bdnMerchant, SRC.bgmeaHearing, SRC.tbsTargets),
+  ],
+}
+
+export const SAMPLE_ARTICLES: SampleArticle[] = [merchant, implement, proposals, system, solar, pppLand, future, vision, routes, grid, efficiency]
 
 /* ── the writing guide (Notion only, never published) ──────── */
 
