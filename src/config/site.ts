@@ -88,12 +88,12 @@ export const site = {
   emailAlt: 'faisal473345@gmail.com',
 
   /** Direct calls only (no WhatsApp on this number). Used for tel: links. */
-  phone: '+8801700683566',
-  phoneDisplay: '+880 1700 683566',
+  phone: '+8801719473385',
+  phoneDisplay: '+880 1719 473385',
 
   /** WhatsApp only: messages, no calls. Used for wa.me links. */
-  whatsapp: '8801719473385',
-  whatsappDisplay: '+880 1719 473385',
+  whatsapp: '8801700683566',
+  whatsappDisplay: '+880 1700 683566',
 
   location: { city: 'Dhaka', country: 'Bangladesh', countryCode: 'BD', timezone: 'GMT+6' },
 
